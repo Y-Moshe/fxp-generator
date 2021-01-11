@@ -5,5 +5,5 @@ export default function Header() {
         <header>
             <h1>FxP Generator - כלי לייצור קוד להכרזות והודעות פרטיות</h1>
         </header>
-    )
+    );
 }

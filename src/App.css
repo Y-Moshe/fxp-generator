@@ -7,5 +7,28 @@
 
 .Main {
   flex-grow: 1;
-  width: 30%;
+  width: 40%;
+}
+
+.WeeklyChallengesMessage {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.TemplateContainer {
+  box-shadow: 0 0 15px gray;
+  margin: 50px 0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+textarea:focus { outline: none; }
+textarea { border: none; }
+.HtmlTemplate {
+  padding: 5px;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 15px black;
+  margin: 50px 0;
 }

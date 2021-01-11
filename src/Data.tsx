@@ -25,8 +25,8 @@ const basicInputs = [
     }
 ];
 
-const inputs: any = {
-    [DECLARATION_WEEKLY_CHALLENGES]: [
+export const inputs: any = {
+    [ DECLARATION_WEEKLY_CHALLENGES ]: [
         {
             label: 'שם הפורום',
             name: 'forumName'
@@ -36,32 +36,40 @@ const inputs: any = {
             name: 'investorName'
         },
         {
-            label: 'קישור לאשכול (הזוכה)',
+            label: 'זוכה אשכול',
+            name: 'postWinner'
+        },
+        {
+            label: 'לינק לאשכול',
             name: 'postLink'
+        },
+        {
+            label: 'שם האשכול',
+            name: 'postName'
         }
     ],
-    [PM_WINNER]: [],
-    [PM_NICK]: [
+    [ PM_WINNER ]: [],
+    [ PM_NICK ]: [
         ...basicInputs
     ],
-    [PM_SUBNICK_TEXT]: [
+    [ PM_SUBNICK_TEXT ]: [
         ...basicInputs,
         {
             label: 'ימים / נקודות',
             name: 'daysAndPoints'
         }
     ],
-    [PM_SUBNICK_IMG]: [
+    [ PM_SUBNICK_IMG ]: [
         ...basicInputs,
         {
             label: 'ימים / נקודות',
             name: 'daysAndPoints'
         }
     ],
-    [PM_CHAMP]: [
+    [ PM_CHAMP ]: [
         ...basicInputs
     ],
-    [PM_FXP_POINTS]: [
+    [ PM_FXP_POINTS ]: [
         ...basicInputs,
         {
             label: 'ימים / נקודות',
