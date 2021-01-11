@@ -6,16 +6,24 @@ import {
     Select as MSelect
 } from '@material-ui/core';
 
-import './Select.css';
+import {
+    DECLARATION_WEEKLY_CHALLENGES,
+    PM_WINNER,
+    PM_NICK,
+    PM_SUBNICK_TEXT,
+    PM_SUBNICK_IMG,
+    PM_CHAMP,
+    PM_FXP_POINTS
+} from '../../../Data';
 
 const options = [
-    { title: 'הכרזה - משקיען ואשכול השבוע',                id: 'declaration-weekly-challenges' },
-    { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: 'pm-winner' },
-    { title: 'הודעה פרטית - זכייה בשינוי ניק',                id: 'pm-nick' },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',        id: 'pm-subnick-text' },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',        id: 'pm-subnick-img' },
-    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',             id: 'pm-champ' },
-    { title: 'הודעה פרטית - זכייה בנקודות FxP',              id: 'pm-fxp-points' }
+    { title: 'הכרזה - משקיען ואשכול השבוע',                id: DECLARATION_WEEKLY_CHALLENGES },
+    { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: PM_WINNER },
+    { title: 'הודעה פרטית - זכייה בשינוי ניק',                id: PM_NICK },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',        id: PM_SUBNICK_TEXT },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',        id: PM_SUBNICK_IMG },
+    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',             id: PM_CHAMP },
+    { title: 'הודעה פרטית - זכייה בנקודות FxP',              id: PM_FXP_POINTS }
 ];
 
 interface SelectProps {
