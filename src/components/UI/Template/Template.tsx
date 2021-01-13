@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Formik } from 'formik';
+import * as yup from 'yup';
 import {
     Button,
     TextField
@@ -15,27 +16,23 @@ interface TemplateProps {
 }
 
 export default function Template( props: TemplateProps ) {
-    const initialValues = useMemo( () => {
-        const obj = {};
-
-        Object.keys( inputs ).forEach( key => {
-            (inputs[ key ] as []).forEach( (inp: any) => {
-                // @ts-ignore
-                obj[ inp.name ] = '';
-            });
-        });
+    const { initialValues, validationSchema } = useMemo( () => {
+        const initObj = {};
+        const schemaObj = {};
         
-        return obj;
-    }, []);
-    
-    const handleValidation = ( values: any ) => {
-        const errors: any = {};
-        // if (!values.forumName) {
-        //   errors.forumName = 'Forum Required';
-        // }
+        (inputs[ props.template ] as []).forEach( (inp: any, i) => {
+            // @ts-ignore
+            initObj[ inp.name ] = '';
+            // @ts-ignore
+            schemaObj[ inp.name ] = inputs[ props.template ][ i ].validationSchema;
+        });
 
-        return errors;
-    };
+        const vSchema = yup.object().shape({
+            ...schemaObj
+        });
+
+        return { initialValues: initObj, validationSchema: vSchema };
+    }, [ props.template ]);
 
     const handleSubmission = ( values: any ) => {
         const htmlTemplate = getHtmlTemplate( props.template, {
@@ -54,9 +51,9 @@ export default function Template( props: TemplateProps ) {
 
     return (
         <Formik
-            initialValues = { initialValues }
-            validate      = { handleValidation }
-            onSubmit      = { handleSubmission } >
+            initialValues    = { initialValues }
+            validationSchema = { validationSchema }
+            onSubmit         = { handleSubmission } >
             {({
                 values,
                 errors,
@@ -65,7 +62,9 @@ export default function Template( props: TemplateProps ) {
                 handleBlur,
                 handleSubmit,
                 resetForm,
-                isSubmitting
+                isValid,
+                isValidating,
+                dirty
             }) => (
             <form
                 onSubmit = { handleSubmit }
@@ -74,20 +73,20 @@ export default function Template( props: TemplateProps ) {
                     backgroundColor: '#f8f9fa'
                 }}>
                 {
-                    (inputs[ props.template ] as [])?.map( ({ name: templateName, label }) => (
+                    (inputs[ props.template ] as [])?.map( ({ name, label, type }) => (
                         <TextField
-                            type     = "text"
-                            key      = { templateName }
-                            name     = { templateName }
-                            label    = { label }
-                            onChange = { handleChange }
-                            onBlur   = { handleBlur }
-                            value    = { values[templateName] }
-                            style    = {{ width: '100%' }} />
+                            type       = { type }
+                            key        = { name }
+                            name       = { name }
+                            label      = { label }
+                            onChange   = { handleChange }
+                            onBlur     = { handleBlur }
+                            helperText = { touched[name] && errors[name] ? errors[name] : '' }
+                            error      = { errors[name] }
+                            value      = { values[name] }
+                            style      = {{ width: '100%' }} />
                     ))
                 }
-                {/* Can be used */}
-                {/* { errors.email && touched.email && errors.email } */}
 
                 {props.template ?
                 <div>
@@ -95,7 +94,7 @@ export default function Template( props: TemplateProps ) {
                         type     = "submit"
                         variant  = "contained"
                         color    = "primary"
-                        disabled = { isSubmitting }
+                        disabled = { !isValid || isValidating || !dirty }
                         style    = {{
                             width: '100%',
                             marginTop: 10
@@ -103,9 +102,9 @@ export default function Template( props: TemplateProps ) {
                         בצע
                     </Button>
                     <Button
-                        type     = "button"
-                        onClick  = { () => handleReset( resetForm ) }
-                        style    = {{
+                        type    = "button"
+                        onClick = { () => handleReset( resetForm ) }
+                        style   = {{
                             width: '100%',
                             marginTop: 10
                         }}>

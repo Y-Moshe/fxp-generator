@@ -35,7 +35,8 @@ function App() {
           <ThemeProvider theme = { theme }>
             {template === DECLARATION_WEEKLY_CHALLENGES ?
               <div className = "WeeklyChallengesMessage">
-                ⓘ להזכירכם, בעת ההכרזה עליכם:
+                <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>
+                להזכירכם, בעת ההכרזה עליכם:
                 <ol>
                   <li>לבטל את הצגת החתימה בתגובה</li>
                   <li>למחוק את ההכרזה של השבוע הקודם</li>
@@ -47,10 +48,10 @@ function App() {
               <Select
                 template = { template }
                 onSelect = { value => setTemplate( value) } />
-              <Template
+              {template ? <Template
                 template = { template }
                 onSubmit = { ( htmlCode ) => setHtmlCode( htmlCode ) }
-                onReset  = { handleReset } />
+                onReset  = { handleReset } /> : null}
             </div>
 
             {htmlCode ?
