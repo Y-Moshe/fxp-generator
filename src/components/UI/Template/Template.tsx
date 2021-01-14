@@ -16,6 +16,13 @@ interface TemplateProps {
 }
 
 export default function Template( props: TemplateProps ) {
+    /**
+     * Basically, what we doing here is creating an initial state and validation schema for Formik
+     * By looping throws our 'inputs' we defined on Data.tsx !
+     * The state and the validation schema, will be re-created, or re-computed only when
+     * a different "props.template" was select, and only when the state is really different.
+     * "The magic of useMemo" :)
+     */
     const { initialValues, validationSchema } = useMemo( () => {
         const initObj = {};
         const schemaObj = {};
@@ -33,6 +40,7 @@ export default function Template( props: TemplateProps ) {
 
         return { initialValues: initObj, validationSchema: vSchema };
     }, [ props.template ]);
+    
 
     const handleSubmission = ( values: any ) => {
         const htmlTemplate = getHtmlTemplate( props.template, {
@@ -82,13 +90,12 @@ export default function Template( props: TemplateProps ) {
                             onChange   = { handleChange }
                             onBlur     = { handleBlur }
                             helperText = { touched[name] && errors[name] ? errors[name] : '' }
-                            error      = { errors[name] }
+                            error      = { errors[name] ? true : false }
                             value      = { values[name] }
                             style      = {{ width: '100%' }} />
                     ))
                 }
 
-                {props.template ?
                 <div>
                     <Button
                         type     = "submit"
@@ -110,7 +117,7 @@ export default function Template( props: TemplateProps ) {
                         }}>
                         אפס הכל
                     </Button>
-                </div> : null}
+                </div>
             </form>
             )}
       </Formik>

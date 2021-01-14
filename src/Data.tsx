@@ -1,12 +1,23 @@
 import * as yup from 'yup';
 
-export const DECLARATION_WEEKLY_CHALLENGES = 'declarationWeeklyChallenges',
-    PM_WINNER       = 'pmWinner',
-    PM_NICK         = 'pmNick',
-    PM_SUBNICK_TEXT = 'pmSubnickText',
-    PM_SUBNICK_IMG  = 'pmSubnickImg',
-    PM_CHAMP        = 'pmChamp',
-    PM_FXP_POINTS   = 'pmFxpPoints';
+export const
+    DECLARATION_WEEKLY_CHALLENGES = 'declarationWeeklyChallenges',
+    PM_WINNER                     = 'pmWinner',
+    PM_NICK                       = 'pmNick',
+    PM_SUBNICK_TEXT               = 'pmSubnickText',
+    PM_SUBNICK_IMG                = 'pmSubnickImg',
+    PM_CHAMP                      = 'pmChamp',
+    PM_FXP_POINTS                 = 'pmFxpPoints';
+
+export const options = [
+    { title: 'הכרזה - משקיען ואשכול השבוע',                id: DECLARATION_WEEKLY_CHALLENGES },
+    { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: PM_WINNER },
+    { title: 'הודעה פרטית - זכייה בשינוי ניק',                id: PM_NICK },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',        id: PM_SUBNICK_TEXT },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',        id: PM_SUBNICK_IMG },
+    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',             id: PM_CHAMP },
+    { title: 'הודעה פרטית - זכייה בנקודות FxP',              id: PM_FXP_POINTS }
+];
 
 const basicInputs = [
     {
@@ -44,19 +55,19 @@ export const inputs: any = {
         {
             label: 'ניק המשקיען',
             name: 'investorName',
-            text: 'text',
+            type: 'text',
             validationSchema: yup.string().min(3, 'קצר מידי')
         },
         {
             label: 'זוכה אשכול',
             name: 'postWinner',
-            text: 'text',
+            type: 'text',
             validationSchema: yup.string().min(3, 'קצר מידי')
         },
         {
             label: 'לינק לאשכול',
             name: 'postLink',
-            text: 'text',
+            type: 'text',
             validationSchema: yup
                 .string()
                 .matches(/^(https:\/\/www.fxp.co.il)\/.+/, { message: 'יש להזין קישור תקין' })
@@ -64,7 +75,7 @@ export const inputs: any = {
         {
             label: 'שם האשכול',
             name: 'postName',
-            text: 'text',
+            type: 'text',
             validationSchema: yup
                 .string()
                 .min(3, 'קצר מידי')
@@ -105,5 +116,7 @@ export const inputs: any = {
         }
     ]
 };
+
+export const contributors = ['Y_Moshe'];
 
 export default inputs;

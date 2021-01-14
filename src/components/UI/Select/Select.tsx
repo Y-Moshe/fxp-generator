@@ -6,25 +6,7 @@ import {
     Select as MSelect
 } from '@material-ui/core';
 
-import {
-    DECLARATION_WEEKLY_CHALLENGES,
-    PM_WINNER,
-    PM_NICK,
-    PM_SUBNICK_TEXT,
-    PM_SUBNICK_IMG,
-    PM_CHAMP,
-    PM_FXP_POINTS
-} from '../../../Data';
-
-const options = [
-    { title: 'הכרזה - משקיען ואשכול השבוע',                id: DECLARATION_WEEKLY_CHALLENGES },
-    { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: PM_WINNER },
-    { title: 'הודעה פרטית - זכייה בשינוי ניק',                id: PM_NICK },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',        id: PM_SUBNICK_TEXT },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',        id: PM_SUBNICK_IMG },
-    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',             id: PM_CHAMP },
-    { title: 'הודעה פרטית - זכייה בנקודות FxP',              id: PM_FXP_POINTS }
-];
+import { PM_WINNER, options } from '../../../Data';
 
 interface SelectProps {
     onSelect: ( value: any ) => void;
@@ -52,10 +34,10 @@ export default function Select( props: SelectProps ) {
         <FormControl style = {{ width: '100%' }}>
           <InputLabel id = "select-template-label"> בחר אופצייה </InputLabel>
           <MSelect
-            dir      = "rtl"
-            labelId  = "select-template-label"
-            value    = { props.template }
-            onChange = { handleChange } > { options2Render }
+             dir      = "rtl"
+             labelId  = "select-template-label"
+             value    = { props.template }
+             onChange = { handleChange } > { options2Render }
           </MSelect>
         </FormControl>
     )
