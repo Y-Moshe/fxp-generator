@@ -1,13 +1,11 @@
 import React, { useMemo } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import {
-    Button,
-    TextField
-} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import inputs from '../../../Data';
 import { getHtmlTemplate } from '../../../API';
+import Input from '../Input/Input';
 
 interface TemplateProps {
     template: string;
@@ -59,9 +57,12 @@ export default function Template( props: TemplateProps ) {
 
     return (
         <Formik
-            initialValues    = { initialValues }
             validationSchema = { validationSchema }
-            onSubmit         = { handleSubmission } >
+            onSubmit         = { handleSubmission }
+            initialValues    = {{
+                ...initialValues,
+                options: []
+            }} >
             {({
                 values,
                 errors,
@@ -72,7 +73,8 @@ export default function Template( props: TemplateProps ) {
                 resetForm,
                 isValid,
                 isValidating,
-                dirty
+                dirty,
+                setValues
             }) => (
             <form
                 onSubmit = { handleSubmit }
@@ -81,21 +83,22 @@ export default function Template( props: TemplateProps ) {
                     backgroundColor: '#f8f9fa'
                 }}>
                 {
-                    (inputs[ props.template ] as [])?.map( ({ name, label, type }) => (
-                        <TextField
+                    (inputs[ props.template ] as [])?.map( ({ name, label, type }) =>
+                        <Input 
                             type       = { type }
                             key        = { name }
                             name       = { name }
                             label      = { label }
                             onChange   = { handleChange }
                             onBlur     = { handleBlur }
-                            helperText = { touched[name] && errors[name] ? errors[name] : '' }
+                            hint       = { touched[name] && errors[name] ? errors[name] : '' }
                             error      = { errors[name] ? true : false }
                             value      = { values[name] }
-                            style      = {{ width: '100%' }} />
-                    ))
+                            options    = { values.options }
+                            setValues  = { setValues }
+                            values     = { values } />
+                    )
                 }
-
                 <div>
                     <Button
                         type     = "submit"

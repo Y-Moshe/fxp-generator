@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 import {
     DECLARATION_WEEKLY_CHALLENGES,
@@ -8,7 +8,15 @@ import {
     PM_SUBNICK_IMG,
     PM_CHAMP,
     PM_FXP_POINTS
-} from './Data'
+} from './Data';
+
+const API_URI = 'https://www.fxp.co.il/ajax.php';
+
+const getForumDisplayQSerach = ( query: string ) => {
+    return axios.get(API_URI.concat(`?do=forumdisplayqserach&name_startsWith=${ query }`));
+}
+
+export default getForumDisplayQSerach;
 
 export function getHtmlTemplate( template: string, values: any ) {
     let template2Return = '';
@@ -82,4 +90,4 @@ const htmlTemplates = {
     [ PM_SUBNICK_IMG ]: () => ``,
     [ PM_CHAMP ]: () => ``,
     [ PM_FXP_POINTS ]: () => ``
-}
+};
