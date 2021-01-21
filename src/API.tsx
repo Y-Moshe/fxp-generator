@@ -7,7 +7,10 @@ import {
     PM_SUBNICK_TEXT,
     PM_SUBNICK_IMG,
     PM_CHAMP,
-    PM_FXP_POINTS
+    PM_FXP_POINTS,
+    GENERAL_WARNING,
+    SPAM_WARNING,
+    IMPROPER_LANGUAGE_USE_WARNING
 } from './Data';
 
 const API_URI = 'https://www.fxp.co.il/ajax.php';
@@ -18,76 +21,75 @@ const getForumDisplayQSerach = ( query: string ) => {
 
 export default getForumDisplayQSerach;
 
-export function getHtmlTemplate( template: string, values: any ) {
-    let template2Return = '';
-
-    switch ( template ) {
-        case DECLARATION_WEEKLY_CHALLENGES:
-            template2Return = htmlTemplates[ DECLARATION_WEEKLY_CHALLENGES ]( values );
-            break;
-        case PM_WINNER:
-            
-            break;
-        case PM_NICK:
-            
-            break;
-        case PM_SUBNICK_TEXT:
-            
-            break;
-        case PM_SUBNICK_IMG:
-            
-            break;
-        case PM_CHAMP:
-            
-            break;
-        case PM_FXP_POINTS:
-            
-            break;
-    
-        default:
-            template2Return = 'no template!';
-            break;
-    }
-
-    return template2Return;
-};
+// @ts-ignore
+export const getHtmlTemplate = ( template: any, values: any ) => htmlTemplates[ template ]( values );
 
 /** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */
 const htmlTemplates = {
-    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, investorName, postWinner, postLink, postName }: any) =>
+    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, fourmImg, investorName, postWinner, postLink, postName }: any) =>
     `
-        [CENTER][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
-        [FONT=tahoma]
-        [IMG]https://images.weserv.nl/?url=i.imgur.com/s1ZEiwI.png[/IMG]
-        [COLOR=#008080][SIZE=4][B]משקיען ואשכול השבוע - בניית אתרים כללי[/B][/SIZE][/COLOR]
+        [CENTER][SIZE=3][FONT=tahoma][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
+        [IMG]${ fourmImg }[/IMG]
+        [SIZE=4][B][COLOR=#008080]משקיען ואשכול השבוע - ${ forumName }[/COLOR]
+        [/B][/SIZE]
+        גולשים יקרים!
+        כמדי שבוע, יבחר המשתמש אשר השקיע ובלט מבין שאר הגולשים ואשכול מושקע ו/או שעניין את הגולשים.
+        [U]אז, קבלו את משקיען ואשכול השבוע לתאריך [B][COLOR=#008080]${ date }[/COLOR][/B] בפורום ${ forumName }:[/U]
+        ${investorName ?
+        `
+            [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
+            [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#daa520]${ investorName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
+        ` : ''}
+        ${postWinner ?
+        `
+            [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
+            [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
 
-        [B]גולשים יקרים!
-        כמדי שבוע, יבחר המשתמש אשר השקיע ובלט מבין שאר הגולשים ואשכול מושקע ו/או שעניין את הגולשים.[/B]
-        [U][B]אז, קבלו את משקיען ואשכול השבוע לתאריך [COLOR=#008080]${ date }[/COLOR] בפורום בניית אתרים כללי:
+            [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ postLink }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
+        ` : ''}
+        ---------
 
-        [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
-        ${ investorName ? `[SUB][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][/SUB][/B][/U][SIZE=5][B][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#daa520][SUP][U]${ investorName }[/U][/SUP][/COLOR][/URL][/B][/SIZE][SUB][U][B][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]` : '' }
-        [/B][/U][/SUB][IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
-        ${ postWinner ? `[U][B][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][/B][/U][SIZE=5][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#daa520][SUP][U]${ postWinner }[/U][/SUP][/COLOR][/URL][/B][/SIZE][U][B][SUB][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][/SUB][/B][/U]
-        [/FONT]
-        [FONT=tahoma][SUB][SIZE=2][COLOR=#daa520][U][B]אשר פתח את האשכול:[/B][/U] [/COLOR][/SIZE][/SUB][/FONT][B][SIZE=3][COLOR=#daa520]"[URL="${ postLink }"]${ postName }[/URL]"[/COLOR][/SIZE][/B][FONT=tahoma][COLOR=#333333]
-        ---------[/COLOR]` : '' }
+        [U][B][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]${investorName && postWinner ? ' ו-' : ''}[U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U], ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
+        [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
+        ---------
 
-        ${ investorName ? `[SIZE=2][B][URL="https://www.fxp.co.il/member.php?username=${investorName}"][COLOR=#008080]${investorName}[/COLOR][/URL][/B][/SIZE]` : '' } ${ investorName && postWinner ? 'ו-' : '' }[B]${postWinner ? `[SIZE=2][URL="https://www.fxp.co.il/member.php?username=${postWinner}"][COLOR=#008080]${postWinner}[/COLOR][/URL][/SIZE]` : ''}, ${investorName && postWinner ? 'זוכים' : 'זוכה'} בלא פחות מ- 7 ימי ווינר ${investorName && postWinner ? 'כל אחד' : ''}.[/B][/FONT]
-        [FONT=tahoma][SUB][SIZE=2][COLOR=#008080][SIZE=3][B]מזל טוב ובהצלחה בשבוע הבא לכולם!
-        [/B][/SIZE][/COLOR]
-        [/SIZE][/SUB][COLOR=#333333]---------
-
-        [/COLOR][B]בברכה,
-        הנהלת פורום בניית אתרים כללי.
-        :flowers:
-        [/B][/FONT][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
-        [/CENTER]
+        בברכה,
+        הנהלת ${ forumName }
+        [IMG]https://static.fcdn.co.il/smilies2/flowers.gif[/IMG].
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
+        [/FONT][/SIZE][/CENTER]
     `,
     [ PM_WINNER ]: () => ``,
     [ PM_NICK ]: () => ``,
     [ PM_SUBNICK_TEXT ]: () => ``,
     [ PM_SUBNICK_IMG ]: () => ``,
     [ PM_CHAMP ]: () => ``,
-    [ PM_FXP_POINTS ]: () => ``
+    [ PM_FXP_POINTS ]: () => ``,
+    [ GENERAL_WARNING ]: ({ forumName, warning, reason }: any) =>
+    `
+        משתמש יקר,
+        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות [COLOR=#008000][B]${reason}[/B][/COLOR].
+        על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
+        הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
+        בברכה,
+        הנהלת פורום ${forumName}.
+    `,
+    [ SPAM_WARNING ]: ({ forumName, warning }: any) =>
+    `
+        משתמש יקר,
+        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות פרסום ספאם.
+        על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
+        הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
+        בברכה,
+        הנהלת פורום ${forumName}.
+    `,
+    [ IMPROPER_LANGUAGE_USE_WARNING ]: ({ forumName, warning }: any) =>
+    `
+        משתמש יקר,
+        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות שימוש בשפה לא נאותה, כזו שמטרתה לאיים, להעליב, לבזות, להטריד וכו..
+        על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
+        הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
+        בברכה,
+        הנהלת פורום ${forumName}.
+    `
 };

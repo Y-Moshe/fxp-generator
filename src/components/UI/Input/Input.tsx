@@ -1,5 +1,12 @@
 import React, { ChangeEvent } from 'react';
-import { StandardTextFieldProps, TextField } from '@material-ui/core';
+import {
+    StandardTextFieldProps,
+    TextField,
+    FormControl,
+    Select,
+    MenuItem,
+    InputLabel
+} from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
 import getForumDisplayQSerach from '../../../API';
@@ -7,9 +14,11 @@ import getForumDisplayQSerach from '../../../API';
 interface InputProps extends StandardTextFieldProps {
     hint: string;
     name: string;
-    options?: any[];
     setValues?: any;
     values?: any;
+    onChange: any;
+    autoCompleteOptions: any[];
+    selectOptions: any[];
 }
 
 export default function Input(props: InputProps) {
@@ -20,26 +29,26 @@ export default function Input(props: InputProps) {
         });
         getForumDisplayQSerach( e.target.value )
             .then(response => {
-                const options = response.data || [];
+                const autoCompleteOptions = response.data || [];
 
                 setValues(({
                     ...values,
-                    options
+                    autoCompleteOptions
                 }));
             }).catch (error => console.log( error ));
     };
 
-    if (props.name === 'forumName') {
+    if (props.type === 'autocomplete') {
     return <Autocomplete
         style          = {{ width: '100%' }}
-        options        = { props.values.options }
+        options        = { props.values.autoCompleteOptions }
         getOptionLabel = { ( option: any ) => option }
         value          = { props.value }
         onSelect       = { ( e: ChangeEvent<any> ) => props.setValues({ ...props.values, [props.name]: e.target.value }) }
         renderInput    = { params =>
             <TextField
                 { ...params }
-                type       = { props.type }
+                type       = "text"
                 name       = { props.name }
                 label      = { props.label }
                 helperText = { props.hint }
@@ -48,6 +57,20 @@ export default function Input(props: InputProps) {
                 onBlur     = { props.onBlur }
                 onChange   = { ( e: ChangeEvent<any> ) => handleUpdateOptions( props.setValues, props.values, e ) } />
         } />;
+    } else if (props.type === 'select') {
+        return (
+            <FormControl style = {{ width: '100%' }}>
+                <InputLabel id = { props.name + '-label' }> { props.label } </InputLabel>
+                <Select
+                    labelId  = { props.name + '-label' }
+                    name     = { props.name }
+                    value    = { props.value }
+                    onChange = { props.onChange } >
+                    {props.selectOptions
+                        .map( ({ title, value }) => <MenuItem key={value} value = {value}> {title} </MenuItem> )}
+                </Select>
+            </FormControl>
+        );
     }
 
     return (

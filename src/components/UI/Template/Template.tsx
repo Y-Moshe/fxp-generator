@@ -38,7 +38,6 @@ export default function Template( props: TemplateProps ) {
 
         return { initialValues: initObj, validationSchema: vSchema };
     }, [ props.template ]);
-    
 
     const handleSubmission = ( values: any ) => {
         const htmlTemplate = getHtmlTemplate( props.template, {
@@ -61,7 +60,7 @@ export default function Template( props: TemplateProps ) {
             onSubmit         = { handleSubmission }
             initialValues    = {{
                 ...initialValues,
-                options: []
+                autoCompleteOptions: []
             }} >
             {({
                 values,
@@ -83,20 +82,21 @@ export default function Template( props: TemplateProps ) {
                     backgroundColor: '#f8f9fa'
                 }}>
                 {
-                    (inputs[ props.template ] as [])?.map( ({ name, label, type }) =>
+                    (inputs[ props.template ] as [])?.map( ({ name, label, type, options }) =>
                         <Input 
-                            type       = { type }
-                            key        = { name }
-                            name       = { name }
-                            label      = { label }
-                            onChange   = { handleChange }
-                            onBlur     = { handleBlur }
-                            hint       = { touched[name] && errors[name] ? errors[name] : '' }
-                            error      = { errors[name] ? true : false }
-                            value      = { values[name] }
-                            options    = { values.options }
-                            setValues  = { setValues }
-                            values     = { values } />
+                            type                = { type }
+                            key                 = { name }
+                            name                = { name }
+                            label               = { label }
+                            onChange            = { handleChange }
+                            onBlur              = { handleBlur }
+                            hint                = { touched[name] && errors[name] ? errors[name] : '' }
+                            error               = { errors[name] ? true : false }
+                            value               = { values[name] }
+                            autoCompleteOptions = { values.autoCompleteOptions }
+                            selectOptions       = { options }
+                            setValues           = { setValues }
+                            values              = { values } />
                     )
                 }
                 <div>

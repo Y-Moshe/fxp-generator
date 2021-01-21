@@ -6,7 +6,7 @@ import {
     Select as MSelect
 } from '@material-ui/core';
 
-import { PM_WINNER, options } from '../../../Data';
+import { options } from '../../../Data';
 
 interface SelectProps {
     onSelect: ( value: any ) => void;
@@ -22,8 +22,9 @@ export default function Select( props: SelectProps ) {
 
     const options2Render = options.map( opt => (
         <MenuItem
-            // Disabling PM_WINNER because was not yet implemented.
-            disabled = { opt.id === PM_WINNER }
+            // Disabling PM_WINNER because was not yet implemented or if it is a category.
+            disabled = { opt.id.includes('category') }
+            divider  = { opt.id.includes('category') }
             dir      = "rtl"
             key      = { opt.id }
             value    = { opt.id } > { opt.title }

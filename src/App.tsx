@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   ThemeProvider,
-  createMuiTheme
+  createMuiTheme,
+  Button
 } from '@material-ui/core';
 
 import './App.css';
@@ -20,6 +21,19 @@ const theme = createMuiTheme({
 function App() {
   const [ template, setTemplate ] = useState<any>( '' );
   const [ htmlCode, setHtmlCode ] = useState<string>( '' );
+
+  const textAreaRef = useRef<any>();
+
+  const handleSubmission = ( htmlCode: string ) => {
+    setHtmlCode( htmlCode );
+
+    handleCopy();
+  };
+  
+  const handleCopy = () => {
+    textAreaRef.current?.select();
+    document.execCommand('copy');
+  };
 
   const handleReset = () => {
     setTemplate( '' );
@@ -50,14 +64,21 @@ function App() {
                 onSelect = { value => setTemplate( value) } />
               {template ? <Template
                 template = { template }
-                onSubmit = { ( htmlCode ) => setHtmlCode( htmlCode ) }
+                onSubmit = { handleSubmission }
                 onReset  = { handleReset } /> : null}
             </div>
 
             {htmlCode ?
               <div className = "HtmlTemplate">
+                <Button
+                    type    = "button"
+                    color   = "inherit"
+                    variant = "outlined"
+                    onClick = { handleCopy }
+                    fullWidth > העתק </Button>
                 <textarea
                   readOnly
+                  ref   = { textAreaRef }
                   value = { htmlCode }
                   style = {{
                     maxWidth: '100%',
