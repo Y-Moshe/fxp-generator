@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-export const DEFINE_CATEGORY = (categoryNumber: number) => `category-${categoryNumber}`,
+export const DEFINE_CATEGORY      = ( categoryNumber: number ) => `category-${categoryNumber}`,
     DECLARATION_WEEKLY_CHALLENGES = 'declarationWeeklyChallenges',
     PM_WINNER                     = 'pmWinner',
     PM_NICK                       = 'pmNick',
@@ -13,19 +13,19 @@ export const DEFINE_CATEGORY = (categoryNumber: number) => `category-${categoryN
     IMPROPER_LANGUAGE_USE_WARNING = 'improperLanguageUse';
 
 export const options = [
-    { title: 'הכרזות',                                  id: DEFINE_CATEGORY(1) },
-    { title: 'הכרזה - משקיען ואשכול השבוע',                id: DECLARATION_WEEKLY_CHALLENGES },
-    { title: 'הודעות פרטיות',                             id: DEFINE_CATEGORY(2) },
+    { title: 'הכרזות',                                             id: DEFINE_CATEGORY(1) },
+    { title: 'הכרזה - משקיען ואשכול השבוע',                      id: DECLARATION_WEEKLY_CHALLENGES },
+    { title: 'הודעות פרטיות',                                     id: DEFINE_CATEGORY(2) },
     { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: PM_WINNER },
-    { title: 'הודעה פרטית - זכייה בשינוי ניק',                id: PM_NICK },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',        id: PM_SUBNICK_TEXT },
-    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',        id: PM_SUBNICK_IMG },
-    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',             id: PM_CHAMP },
-    { title: 'הודעה פרטית - זכייה בנקודות FxP',              id: PM_FXP_POINTS },
-    { title: 'אזהרות',                                  id: DEFINE_CATEGORY(3) },
-    { title: 'אזהרה - כללי',                             id: GENERAL_WARNING },
-    { title: 'אזהרה - ספאם',                            id: SPAM_WARNING },
-    { title: 'אזהרה - שימוש בשפה לא נאותה',               id: IMPROPER_LANGUAGE_USE_WARNING }
+    { title: 'הודעה פרטית - זכייה בשינוי ניק',                   id: PM_NICK },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק טקסט',           id: PM_SUBNICK_TEXT },
+    { title: 'הודעה פרטית - זכייה בשינוי תת ניק תמונה',          id: PM_SUBNICK_IMG },
+    { title: 'הודעה פרטית - זכייה בנקודת צ׳אמפ',                 id: PM_CHAMP },
+    { title: 'הודעה פרטית - זכייה בנקודות FxP',                  id: PM_FXP_POINTS },
+    { title: 'אזהרות',                                             id: DEFINE_CATEGORY(3) },
+    { title: 'אזהרה - כללי',                                       id: GENERAL_WARNING },
+    { title: 'אזהרה - ספאם',                                       id: SPAM_WARNING },
+    { title: 'אזהרה - שימוש בשפה לא נאותה',                       id: IMPROPER_LANGUAGE_USE_WARNING }
 ];
 
 const basicInputs = [

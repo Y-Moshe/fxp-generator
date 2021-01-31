@@ -9,57 +9,47 @@ import {
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
-import getForumDisplayQSerach from '../../../API';
-
 interface InputProps extends StandardTextFieldProps {
     hint: string;
     name: string;
     setValues?: any;
-    values?: any;
     onChange: any;
-    autoCompleteOptions: any[];
+    autoCompleteOptions?: any;
     selectOptions: any[];
 }
 
-export default function Input(props: InputProps) {
-    const handleUpdateOptions = ( setValues: Function, values: any, e: React.ChangeEvent<any>) => {
-        setValues({
+export default function Input( props: InputProps ) {
+    const handleAutoCompleteSelect: any = ( e: ChangeEvent<any>, value: any ) => {
+        props.setValues(( values: any ) => ({
             ...values,
-            [e.target.name]: e.target.value
-        });
-        getForumDisplayQSerach( e.target.value )
-            .then(response => {
-                const autoCompleteOptions = response.data || [];
-
-                setValues(({
-                    ...values,
-                    autoCompleteOptions
-                }));
-            }).catch (error => console.log( error ));
+            ...value
+        }));
     };
 
     if (props.type === 'autocomplete') {
-    return <Autocomplete
-        style          = {{ width: '100%' }}
-        options        = { props.values.autoCompleteOptions }
-        getOptionLabel = { ( option: any ) => option }
-        value          = { props.value }
-        onSelect       = { ( e: ChangeEvent<any> ) => props.setValues({ ...props.values, [props.name]: e.target.value }) }
-        renderInput    = { params =>
-            <TextField
-                { ...params }
-                type       = "text"
-                name       = { props.name }
-                label      = { props.label }
-                helperText = { props.hint }
-                error      = { props.error }
-                value      = { props.value }
-                onBlur     = { props.onBlur }
-                onChange   = { ( e: ChangeEvent<any> ) => handleUpdateOptions( props.setValues, props.values, e ) } />
-        } />;
+        return (
+            <Autocomplete
+                fullWidth
+                freeSolo
+                options        = { props.autoCompleteOptions }
+                getOptionLabel = { ( forum: any ) => forum.forumName }
+                onChange       = { handleAutoCompleteSelect }
+                renderInput    = { params =>
+                <TextField
+                    { ...params }
+                    type       = "text"
+                    name       = { props.name }
+                    label      = { props.label }
+                    helperText = { props.hint }
+                    error      = { props.error }
+                    onBlur     = { props.onBlur }
+                    onChange   = { props.onChange }
+                    value      = { props.value } />
+            } />
+        );
     } else if (props.type === 'select') {
         return (
-            <FormControl style = {{ width: '100%' }}>
+            <FormControl fullWidth>
                 <InputLabel id = { props.name + '-label' }> { props.label } </InputLabel>
                 <Select
                     labelId  = { props.name + '-label' }
@@ -83,6 +73,6 @@ export default function Input(props: InputProps) {
             helperText = { props.hint }
             error      = { props.error }
             value      = { props.value }
-            style      = {{ width: '100%' }} />
-    )
+            fullWidth />
+    );
 }

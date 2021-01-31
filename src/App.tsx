@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ThemeProvider,
   createMuiTheme,
@@ -7,12 +7,15 @@ import {
 
 import './App.css';
 
+import { DECLARATION_WEEKLY_CHALLENGES } from './Data';
+import { getForumsList } from './API';
+
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import RTL from './components/UI/RTL/RTL';
 import Select from './components/UI/Select/Select';
-import Template from './components/UI/Template/Template';
-import { DECLARATION_WEEKLY_CHALLENGES } from './Data';
+import AddForumDialog from './containers/AddForumDialog/AddForumDialog';
+import Template from './containers/Template/Template';
 
 const theme = createMuiTheme({
   direction: 'rtl'
@@ -21,8 +24,15 @@ const theme = createMuiTheme({
 function App() {
   const [ template, setTemplate ] = useState<any>( '' );
   const [ htmlCode, setHtmlCode ] = useState<string>( '' );
+  const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
 
   const textAreaRef = useRef<any>();
+
+  useEffect(() => {
+    getForumsList()
+      .then(results => setAutoCompleteOptions(results))
+      .catch(err => console.log( err ));
+  }, []);
 
   const handleSubmission = ( htmlCode: string ) => {
     setHtmlCode( htmlCode );
@@ -47,6 +57,7 @@ function App() {
       <main className = "Main">
         <RTL>
           <ThemeProvider theme = { theme }>
+            <AddForumDialog />
             {template === DECLARATION_WEEKLY_CHALLENGES ?
               <div className = "WeeklyChallengesMessage">
                 <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>
@@ -63,9 +74,10 @@ function App() {
                 template = { template }
                 onSelect = { value => setTemplate( value) } />
               {template ? <Template
-                template = { template }
-                onSubmit = { handleSubmission }
-                onReset  = { handleReset } /> : null}
+                autoCompleteOptions = { autoCompleteOptions }
+                template            = { template }
+                onSubmit            = { handleSubmission }
+                onReset             = { handleReset } /> : null}
             </div>
 
             {htmlCode ?

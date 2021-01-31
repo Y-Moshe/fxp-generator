@@ -3,12 +3,14 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import { Button } from '@material-ui/core';
 
-import inputs from '../../../Data';
-import { getHtmlTemplate } from '../../../API';
-import Input from '../Input/Input';
+import inputs from '../../Data';
+import { getHtmlTemplate } from '../../API';
+
+import Input from '../../components/UI/Input/Input';
 
 interface TemplateProps {
     template: string;
+    autoCompleteOptions: any[];
     onSubmit: ( htmlCode: string ) => void;
     onReset: () => void;
 }
@@ -58,10 +60,7 @@ export default function Template( props: TemplateProps ) {
         <Formik
             validationSchema = { validationSchema }
             onSubmit         = { handleSubmission }
-            initialValues    = {{
-                ...initialValues,
-                autoCompleteOptions: []
-            }} >
+            initialValues    = {{ ...initialValues }} >
             {({
                 values,
                 errors,
@@ -93,10 +92,9 @@ export default function Template( props: TemplateProps ) {
                             hint                = { touched[name] && errors[name] ? errors[name] : '' }
                             error               = { errors[name] ? true : false }
                             value               = { values[name] }
-                            autoCompleteOptions = { values.autoCompleteOptions }
+                            autoCompleteOptions = { props.autoCompleteOptions }
                             selectOptions       = { options }
-                            setValues           = { setValues }
-                            values              = { values } />
+                            setValues           = { setValues } />
                     )
                 }
                 <div>

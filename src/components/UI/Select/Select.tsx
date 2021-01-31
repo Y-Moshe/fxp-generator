@@ -22,7 +22,6 @@ export default function Select( props: SelectProps ) {
 
     const options2Render = options.map( opt => (
         <MenuItem
-            // Disabling PM_WINNER because was not yet implemented or if it is a category.
             disabled = { opt.id.includes('category') }
             divider  = { opt.id.includes('category') }
             dir      = "rtl"
@@ -32,7 +31,7 @@ export default function Select( props: SelectProps ) {
     ));
 
     return (
-        <FormControl style = {{ width: '100%' }}>
+        <FormControl fullWidth>
           <InputLabel id = "select-template-label"> בחר אופצייה </InputLabel>
           <MSelect
              dir      = "rtl"
