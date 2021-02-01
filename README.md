@@ -19,9 +19,9 @@ try to follow the syntax plz, clear code, easy to understood.
 Add new option to the select options:
 ```
 export const options = [
-    { title: 'הכרזות',                                  id: DEFINE_CATEGORY(1) },
-    { title: 'הכרזה - משקיען ואשכול השבוע',                id: DECLARATION_WEEKLY_CHALLENGES },
-    { title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)', id: PM_WINNER },
+    { id: DEFINE_CATEGORY(1),            title: 'הכרזות' },
+    { id: DECLARATION_WEEKLY_CHALLENGES, title: 'הכרזה - משקיען ואשכול השבוע' },
+    { id: DEFINE_CATEGORY(2),            title: 'הודעות פרטיות' },
     ...,
     { title: 'אופצייה חדשה',                             id: NEW_ONE }
 ];

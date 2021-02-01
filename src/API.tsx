@@ -68,7 +68,22 @@ const htmlTemplates = {
         [/FONT][/SIZE][/CENTER]
     `,
     [ PM_WINNER ]: () => ``,
-    [ PM_NICK ]: () => ``,
+    [ PM_NICK ]: ({ forumName, winnerName, privateName, challengeName, challengeLink }: any) =>
+    `
+        ברכותיי, ${ winnerName }!
+        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#008000]שינוי ניק[/COLOR][/B].
+        
+        
+        [U][B]מהו שינוי ניק?[/B][/U]
+        משתמש אשר זכה באתגר אחד או יותר ברחבי האתר וקיבל שינוי ניק, רשאי לשנות את ניק המשתמש שלו (שם המשתמש) לכל ניק פנוי שירצה.
+        כיצד בודקים האם הניק פנוי? כותבים אותו במקום ה־"X" שבקישור [U][I][B][URL="https://www.fxp.co.il/member.php?username=X"]הזה[/URL][/B][/I][/U], ובודקים אם קיים פרופיל כזה או לא; אם לא – הניק פנוי, אם כן – הניק תפוס.
+        בכדי לממש את שינוי הניק, יש לפתוח אשכול ב[U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]תת פורום פרסים[/URL][/B][/I][/U], על־פי [U][I][B][URL="https://www.fxp.co.il/showthread.php?t=10946798"]הטופס המתאים[/URL][/B][/I][/U].
+        [B]שימ/י לב – ניתן לממש את שינוי הניק תוך מקסימום חודשיים לאחר הזכייה.[/B]
+        
+        
+        בברכה, ${ privateName }.
+        מנהל/ת ${ forumName }.       
+    `,
     [ PM_SUBNICK_TEXT ]: () => ``,
     [ PM_SUBNICK_IMG ]: () => ``,
     [ PM_CHAMP ]: () => ``,
