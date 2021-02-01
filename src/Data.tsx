@@ -129,7 +129,7 @@ export const inputs: any = {
             label: 'ימים / נקודות',
             name: 'daysAndPoints',
             type: 'number',
-            validationSchema: yup.number()
+            validationSchema: yup.number().required('נא לבחור ימים')
         }
     ],
     [ PM_SUBNICK_IMG ]: [
