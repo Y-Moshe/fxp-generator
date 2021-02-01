@@ -125,7 +125,21 @@ const htmlTemplates = {
         בברכה, ${ privateName }.
         מנהל/ת ${ forumName }.    
     `,
-    [ PM_FXP_POINTS ]: () => ``,
+    [ PM_FXP_POINTS ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, points }: any) =>
+    `
+        ברכותיי, ${ winnerName }!
+        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=yellowgreen]${ points } נקודות FxP[/COLOR][/B].
+        
+        [U][B]מהן נקודות FxP?[/B][/U]
+        נקודות FxP הן נקודות אשר ניתן להשיג ברחבי האתר, באתגרים ופעילויות שונות.
+        הדרך הראשית להשגת נקודות FxP היא דרך פורום [U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=576"][COLOR=#43c6db]היכל התהילה[/COLOR][/URL][/B][/I][/U]. הנקודות מצטברות בזכאות של כל משתמש ואפשר לחסוך אותן.
+        באמצעות נקודות FxP ניתן לרכוש פרסים שונים כדוגמת ימי Winner, שינויי ניק, תת־ניק ועוד. 
+        השימוש בנקודות FxP נעשה דרך תת הפורום [B][I][U][URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]פרסים[/URL][/U][/I][/B], בו ניתן לשאול כמה נקודות FxP ברשותכם ולרכוש פרסים שווים מ[U][I][B][URL="https://www.fxp.co.il/showthread.php?t=15814667"]חנות הפרסים[/URL][/B][/I][/U].
+        
+        
+        בברכה, ${ privateName }.
+        מנהל/ת ${ forumName }.    
+    `,
     [ GENERAL_WARNING ]: ({ forumName, warning, reason }: any) =>
     `
         משתמש יקר,

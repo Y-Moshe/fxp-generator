@@ -147,10 +147,10 @@ export const inputs: any = {
     [ PM_FXP_POINTS ]: [
         ...basicInputs,
         {
-            label: 'ימים / נקודות',
-            name: 'daysAndPoints',
+            label: 'נקודות',
+            name: 'points',
             type: 'number',
-            validationSchema: yup.number()
+            validationSchema: yup.number().required('נא לבחור נקודות')
         }
     ],
     [ GENERAL_WARNING ]: [
