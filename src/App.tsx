@@ -16,6 +16,7 @@ import RTL from './components/UI/RTL/RTL';
 import Select from './components/UI/Select/Select';
 import AddForumDialog from './containers/AddForumDialog/AddForumDialog';
 import Template from './containers/Template/Template';
+import SnackAlert from './components/UI/SnackAlert/SnackAlert';
 
 const theme = createMuiTheme({
   direction: 'rtl'
@@ -24,6 +25,7 @@ const theme = createMuiTheme({
 function App() {
   const [ template, setTemplate ] = useState<any>( '' );
   const [ htmlCode, setHtmlCode ] = useState<string>( '' );
+  const [alert, setAlert] = React.useState<any>( null );
   const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
 
   const textAreaRef = useRef<any>();
@@ -34,6 +36,13 @@ function App() {
       .catch(err => console.log( err ));
   }, []);
 
+  const handleNewForumAdded = (forum: any) => {
+    setAutoCompleteOptions(options => ([
+      ...options,
+      { ...forum }
+    ]));
+  };
+
   const handleSubmission = ( htmlCode: string ) => {
     setHtmlCode( htmlCode );
 
@@ -43,11 +52,18 @@ function App() {
   const handleCopy = () => {
     textAreaRef.current?.select();
     document.execCommand('copy');
+
+    setAlert({
+        message: 'התוצאה הועתקה בהצלחה(clipboard copied)',
+        status: 'success'
+    });
+    setTimeout(() => setAlert( null ), 3000);
   };
 
   const handleReset = () => {
     setTemplate( '' );
     setHtmlCode( '' );
+    setAlert( null );
   };
 
   return (
@@ -57,7 +73,9 @@ function App() {
       <main className = "Main">
         <RTL>
           <ThemeProvider theme = { theme }>
-            <AddForumDialog />
+            <AddForumDialog
+              onNewForumAdded = { handleNewForumAdded }
+              forums          = { autoCompleteOptions } />
             {template === DECLARATION_WEEKLY_CHALLENGES ?
               <div className = "WeeklyChallengesMessage">
                 <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>
@@ -104,6 +122,12 @@ function App() {
         </RTL>
       </main>
 
+      {alert ?
+        <SnackAlert
+          isOpen  = { alert !== null }
+          message = { alert.message }
+          status  = { alert.status }
+          onClose = { () => setAlert( null ) } /> : null}
       <Footer />
     </div>
   );
