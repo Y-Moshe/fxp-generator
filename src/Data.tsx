@@ -68,17 +68,24 @@ const warningSelect = {
     type: 'select',
     options: [
         {
-            title: 'צהובה',
+            label: 'צהובה',
             value: 'yellow'
         },
         {
-            title: 'אדומה',
+            label: 'אדומה',
             value: 'red'
         }
     ],
     validationSchema: yup.string().required('נא לבחור אזהרה')
 };
-
+/*
+    {
+        label: 'textLabel',
+        name: 'inputName',
+        type: 'text' | 'select' | 'autocomplete' | 'radio',
+        validationSchema: yup.string().min(5, 'קצר מידי').required('נא לציין סיבה').... and so on.
+    }
+*/
 export const inputs: any = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: [
         {
@@ -119,7 +126,38 @@ export const inputs: any = {
                 .min(3, 'קצר מידי')
         }
     ],
-    [ PM_WINNER ]: [],
+    [ PM_WINNER ]: [
+        ...basicInputs,
+        {
+            label: 'דרגה נוכחית של הזוכה',
+            name: 'currentRank',
+            type: 'radio',
+            radios: [
+                {
+                    label: 'משתמש ללא דרגה',
+                    value: 'unRanked'
+                },
+                {
+                    label: 'משתמש ווינר',
+                    value: 'winner'
+                },
+                {
+                    label: 'מנהל/ת',
+                    value: 'admin'
+                },
+                {
+                    label: 'חבר/ת צוות',
+                    value: 'teammate'
+                }
+            ]
+        },
+        {
+            label: 'ימים',
+            name: 'days',
+            type: 'number',
+            validationSchema: yup.number().required('נא לבחור ימים')
+        }
+    ],
     [ PM_NICK ]: [
         ...basicInputs
     ],

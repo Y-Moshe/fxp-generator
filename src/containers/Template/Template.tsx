@@ -30,6 +30,11 @@ export default function Template( props: TemplateProps ) {
         (inputs[ props.template ] as []).forEach( (inp: any, i) => {
             // @ts-ignore
             initObj[ inp.name ] = '';
+            // Applying default value.
+            if (inp.name === 'currentRank') {
+                // @ts-ignore
+                initObj[ inp.name ] = 'unRanked';
+            }
             // @ts-ignore
             schemaObj[ inp.name ] = inputs[ props.template ][ i ].validationSchema;
         });
@@ -81,7 +86,7 @@ export default function Template( props: TemplateProps ) {
                     backgroundColor: '#f8f9fa'
                 }}>
                 {
-                    (inputs[ props.template ] as [])?.map( ({ name, label, type, options }) =>
+                    (inputs[ props.template ] as [])?.map( ({ name, label, type, options, radios }) =>
                         <Input 
                             type                = { type }
                             key                 = { name }
@@ -94,6 +99,7 @@ export default function Template( props: TemplateProps ) {
                             value               = { values[name] }
                             autoCompleteOptions = { props.autoCompleteOptions }
                             selectOptions       = { options }
+                            radioOptions        = { radios }
                             setValues           = { setValues } />
                     )
                 }

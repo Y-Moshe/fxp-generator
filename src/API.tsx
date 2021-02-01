@@ -29,6 +29,28 @@ export const addForum = ( forumData: any ) => {
 // @ts-ignore
 export const getHtmlTemplate = ( template: any, values: any ) => htmlTemplates[ template ]( values );
 
+const getRankNote = (currentRank: string) => {
+    let text2Return = '';
+
+    switch (currentRank) {
+        case 'winner':
+            text2Return = ' כיוון שאת/ה נוכח/ת כעת בדרגת ה־Winner, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם באמצעות פתיחת אשכול ב[URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]תת פורום פרסים[/URL] :)';
+            break;
+        case 'admin':
+            text2Return = 'משום שאת/ה מנהל/ת, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם באמצעות פתיחת אשכול ב[URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]תת פורום פרסים[/URL] :)';
+            break;
+        case 'teammate':
+            text2Return = 'כיוון שאת/ה חבר/ת צוות, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם כיוון שאת/ה חבר/ת צוות, יש לך גישה להיכל התהילה, לכן לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם :)';
+            break;
+        //    unRanked
+        default:
+            text2Return = '';
+            break;
+    }
+
+    return text2Return;
+}
+
 /** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */
 const htmlTemplates = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, fourmImg, investorName, postWinner, postLink, postName }: any) =>
@@ -67,7 +89,22 @@ const htmlTemplates = {
         [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
         [/FONT][/SIZE][/CENTER]
     `,
-    [ PM_WINNER ]: () => ``,
+    [ PM_WINNER ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days, currentRank }: any) =>
+    `
+        ברכותיי, ${ winnerName }!
+        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [COLOR=#2bb1e2][B]${ days } ימי Winner[/B][/COLOR].
+        
+        [U][B]מהי דרגת ה־Winner?[/B][/U]
+        דרגה זו ניתנת למשתמש אשר זכה באתגר אחד או יותר ברחבי האתר. דרגה זו ניתנת לזמן מוגבל (בהתאם לאתגר) ומקנה למשתמש הזוכה צבע שם משתמש בצבע תכלת וסמל של הדרגה ליד כינויו, תת ניק מעוצב של "FxP Winner" וגישה לפורום "[U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=576"][COLOR=#43c6db]היכל התהילה[/COLOR][/URL][/B][/I][/U]".
+        [B]ווינר/ית חדש/ה? אין לכם/ן שמץ מהו [U][I][URL="https://www.fxp.co.il/forumdisplay.php?f=576"][COLOR=#43C6DB]פורום היכל התהילה[/COLOR][/URL][/I][/U]? [I][URL="https://www.fxp.co.il/showthread.php?t=2758803&p=119477099#post119477099"][U]לחצו כאן[/U][/URL][/I] לקבלת הסבר מלא על פורום היכל התהילה![/B]
+        
+        ${ getRankNote( currentRank ) }
+
+        את/ה מוזמנ/ת להיכנס לפורום [U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=576"][COLOR=#43c6db]היכל התהילה[/COLOR][/URL][/B][/I][/U] ולהנות! :)
+        
+        בברכה, ${ privateName }.
+        מנהל/ת ${ forumName }.    
+    `,
     [ PM_NICK ]: ({ forumName, winnerName, privateName, challengeName, challengeLink }: any) =>
     `
         ברכותיי, ${ winnerName }!
