@@ -84,10 +84,10 @@ const htmlTemplates = {
         בברכה, ${ privateName }.
         מנהל/ת ${ forumName }.       
     `,
-    [ PM_SUBNICK_TEXT ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, daysAndPoints }: any) =>
+    [ PM_SUBNICK_TEXT ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר "[URL="${ challengeLink }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק טקסט ל־${ daysAndPoints } ימים[/COLOR][/B].
+        זכית באתגר "[URL="${ challengeLink }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק טקסט ל־${ days } ימים[/COLOR][/B].
         
         
         [U][B]מהו שינוי תת־ניק?[/B][/U]
@@ -98,7 +98,18 @@ const htmlTemplates = {
         בברכה, ${ privateName }.
         מנהל/ת ${ forumName }.    
     `,
-    [ PM_SUBNICK_IMG ]: () => ``,
+    [ PM_SUBNICK_IMG ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days }: any) =>
+    `
+        ברכותיי, ${ winnerName }!
+        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק תמונה ל־${ days } ימים[/COLOR][/B].
+        
+        [U][B]מהו שינוי תת־ניק?[/B][/U]
+        תת־ניק זוהי השורה מתחת לשם המשתמש שלך (המציינת בדר"כ את דרגת המשתמש).
+        כאשר משתמש זוכה בשינוי תת־ניק, הוא יכול לבקש לשנות את תת־הניק שלו לטקסט (אלא אם זכה בשינוי תת־ניק לתמונה) לבחירתו. את שינוי תת־הניק תוכלו לבקש בפורום [U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]פרסים[/URL][/B][/I][/U].
+        
+        בברכה, ${ privateName }.
+        מנהל/ת ${ forumName }.    
+    `,
     [ PM_CHAMP ]: () => ``,
     [ PM_FXP_POINTS ]: () => ``,
     [ GENERAL_WARNING ]: ({ forumName, warning, reason }: any) =>

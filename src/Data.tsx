@@ -126,8 +126,8 @@ export const inputs: any = {
     [ PM_SUBNICK_TEXT ]: [
         ...basicInputs,
         {
-            label: 'ימים / נקודות',
-            name: 'daysAndPoints',
+            label: 'ימים',
+            name: 'days',
             type: 'number',
             validationSchema: yup.number().required('נא לבחור ימים')
         }
@@ -135,10 +135,10 @@ export const inputs: any = {
     [ PM_SUBNICK_IMG ]: [
         ...basicInputs,
         {
-            label: 'ימים / נקודות',
-            name: 'daysAndPoints',
+            label: 'ימים',
+            name: 'days',
             type: 'number',
-            validationSchema: yup.number()
+            validationSchema: yup.number().required('נא לבחור ימים')
         }
     ],
     [ PM_CHAMP ]: [
