@@ -110,7 +110,21 @@ const htmlTemplates = {
         בברכה, ${ privateName }.
         מנהל/ת ${ forumName }.    
     `,
-    [ PM_CHAMP ]: () => ``,
+    [ PM_CHAMP ]: ({ forumName, winnerName, privateName, challengeName, challengeLink }: any) =>
+    `
+        ברכותיי, ${ winnerName }!
+        זכית באתגר "[URL="${ challengeLink }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#daa520]נקודה לצ'אמפ[/COLOR][/B].
+        
+        
+        [U][B]מהי נקודה לצ'אמפ?[/B][/U]
+        משתמש אשר זכה באתגר אחד או יותר ברחבי האתר וקיבל נקודה לצ'אמפ, אינו זכאי לפרס או לדרגה כלשהם, אך אם הוא צובר 8 נקודות לצ'אמפ, הוא מקבל את דרגת ה־[B][COLOR=#daa520]Fxp Champ[/COLOR][/B] הנחשקת.
+        במידה ואתם זכאים ל־8 נקודות צ'אמפ ומעלה (ניתן לברר את זכאותכם בפורום [U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]פרסים[/URL][/B][/I][/U]), תוכלו לבקש להפעיל את הדרגה בפורום [U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]פרסים[/URL][/B][/I][/U].
+        פרטים נוספים על דרגת ה־[B][COLOR=#daa520]Fxp Champ[/COLOR][/B] תוכל/י למצוא [U][I][B][URL="https://www.fxp.co.il/showthread.php?t=860344"]כאן[/URL][/B][/I][/U].
+        
+        
+        בברכה, ${ privateName }.
+        מנהל/ת ${ forumName }.    
+    `,
     [ PM_FXP_POINTS ]: () => ``,
     [ GENERAL_WARNING ]: ({ forumName, warning, reason }: any) =>
     `
