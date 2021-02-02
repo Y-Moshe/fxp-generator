@@ -1,7 +1,5 @@
 import React from 'react';
 
-import githubIcon from './github.svg'
-
 export default function Header() {
     return (
         <header>
@@ -11,7 +9,7 @@ export default function Header() {
                     href   = "https://github.com/Y-Moshe/fxp-generator"
                     target = "_blank"
                     rel    = "noreferrer">
-                    <img src = {githubIcon} alt = "Github"/>
+                    <img src = "https://i.imagesup.co/images2/fabe53eb72f9b6d3d47cd95aff31ffc45c2fdbf8.png" alt = "Github"/>
                 </a>
             </h1>
         </header>
