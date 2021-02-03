@@ -1,6 +1,25 @@
 # A Generate tool for [Fxp](https://www.fxp.co.il) common tasks.
 URL: https://y-moshe.github.io/fxp-generator/
 
+# Getting Started
+First, Download and clone the Project:  
+```git clone https://github.com/Y-Moshe/fxp-generator.git```  
+Then install the deps using yarn or npm:  
+```
+cd fxp-generator
+yarn or npm install
+```
+Then the first step to do after cloned, is to make a separated branch from master:  
+```git checkout -b [branch-name]  ```  
+will create a new branch with the name and switch / checkout to it.  
+And then just run the start script:  
+```yarn start or npm run start```  
+After u done making ur changes / work, commit the changes and push ur branch name to origin:  
+```
+git push -u origin [branch-name]
+```
+And let me know about ur change :), thanks.
+
 ## Contribute Guide, How to add a new option
 The main focus is at just 2 files, ```API.tsx, Data.tsx```.
 
