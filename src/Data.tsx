@@ -93,9 +93,10 @@ export const inputs: any = {
         },
         {
             label: 'תמונת הפורום (קישור)',
-            name: 'fourmImg',
+            name: 'forumImg',
             type: 'text',
             validationSchema: yup.string().required('נא לציין קישור לתמונת הפורום').min(3, 'קצר מידי')
+                .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/)
         },
         {
             label: 'ניק המשקיען',

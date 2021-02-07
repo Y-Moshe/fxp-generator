@@ -23,9 +23,10 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  const [ showButton, setShowButton ] = useState( false );
   const [ template, setTemplate ] = useState<any>( '' );
   const [ htmlCode, setHtmlCode ] = useState<string>( '' );
-  const [alert, setAlert] = React.useState<any>( null );
+  const [ alert, setAlert ] = React.useState<any>( null );
   const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
 
   const textAreaRef = useRef<any>();
@@ -66,16 +67,27 @@ function App() {
     setAlert( null );
   };
 
+  const handleGClick = () => {
+    if (showButton) {
+      return;
+    }
+
+    const password = window.prompt('enter something:');
+    if (password && password === 'pxf') {
+      setShowButton( true );
+    }
+  };
+
   return (
     <div className = "App">
-      <Header />
+      <Header onGClick = { handleGClick } />
 
       <main className = "Main">
         <RTL>
           <ThemeProvider theme = { theme }>
-            <AddForumDialog
+            { showButton ? <AddForumDialog
               onNewForumAdded = { handleNewForumAdded }
-              forums          = { autoCompleteOptions } />
+              forums          = { autoCompleteOptions } /> : null }
             {template === DECLARATION_WEEKLY_CHALLENGES ?
               <div className = "WeeklyChallengesMessage">
                 <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>

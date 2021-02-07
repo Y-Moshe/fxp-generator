@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function Header() {
+interface HeaderProps {
+    onGClick: () => void;
+}
+
+export default function Header(props: HeaderProps) {
     return (
         <header>
-            <h1 style = {{ textAlign: 'center' }}>FxP Generator - כלי לייצור קוד להכרזות והודעות פרטיות -
+            <h1 style = {{ textAlign: 'center' }}>FxP <span onClick = { props.onGClick }>G</span>enerator - כלי לייצור קוד להכרזות והודעות פרטיות -
                 <a
                     style  = {{ margin: 5 }}
                     href   = "https://github.com/Y-Moshe/fxp-generator"

@@ -14,6 +14,7 @@ import {
 import { Autocomplete } from '@material-ui/lab';
 
 interface InputProps extends StandardTextFieldProps {
+    value: any;
     hint: string;
     name: string;
     setValues?: any;
@@ -102,16 +103,31 @@ export default function Input( props: InputProps ) {
     
         default:
             jsx2Return = (
-                <TextField
-                    type       = { props.type }
-                    name       = { props.name }
-                    label      = { props.label }
-                    onChange   = { props.onChange }
-                    onBlur     = { props.onBlur }
-                    helperText = { props.hint }
-                    error      = { props.error }
-                    value      = { props.value }
-                    fullWidth />
+                <>
+                    <TextField
+                        type       = { props.type }
+                        name       = { props.name }
+                        label      = { props.label }
+                        onChange   = { props.onChange }
+                        onBlur     = { props.onBlur }
+                        helperText = { props.hint }
+                        error      = { props.error }
+                        value      = { props.value }
+                        fullWidth />
+                    {
+                        props.value && !props.error && props.name === 'forumImg' ?
+                        <div style = {{ display: 'flex', margin: 10 }}>
+                           <img
+                            src    = { props.value }
+                            alt    = "Preview"
+                            style  = {{
+                                margin: 'auto',
+                                boxShadow: '0 0 8px grey',
+                                maxHeight: 100
+                            }} /> 
+                        </div> : null
+                    }
+                </>
             );
             break;
     }

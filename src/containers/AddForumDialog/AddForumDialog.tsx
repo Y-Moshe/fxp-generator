@@ -111,11 +111,11 @@ export default function AddForumDialog(props: AddForumDialogProps) {
                 onSubmit         = { handleSubmission }
                 validationSchema = { yup.object().shape({
                   forumName: formInputs[0].validationSchema,
-                  fourmImg: formInputs[1].validationSchema
+                  forumImg: formInputs[1].validationSchema
                 })}
                 initialValues    = {{
                   forumName: '',
-                  fourmImg: ''
+                  forumImg: ''
                 }} >
                 {({
                     values,
