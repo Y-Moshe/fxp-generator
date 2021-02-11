@@ -224,6 +224,6 @@ export const inputs: any = {
     ]
 };
 
-export const contributors = ['Y_Moshe'];
+export const contributors = [ 'Y_Moshe', 'MultiApple', 'DeLucifer' ];
 
 export default inputs;
