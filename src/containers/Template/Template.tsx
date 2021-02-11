@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { Button } from '@material-ui/core';
 
 import inputs from '../../Data';
-import { getHtmlTemplate } from '../../API';
+import { getHtmlTemplate, getFormatDate } from '../../API';
 
 import Input from '../../components/UI/Input/Input';
 
@@ -49,7 +49,7 @@ export default function Template( props: TemplateProps ) {
     const handleSubmission = ( values: any ) => {
         const htmlTemplate = getHtmlTemplate( props.template, {
             ...values,
-            date: new Date().toLocaleDateString()
+            date: getFormatDate()
         });
 
         props.onSubmit( htmlTemplate );

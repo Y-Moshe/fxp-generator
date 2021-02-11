@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { contributors } from '../../Data';
+import { getFormatDate } from '../../API';
 
 export default function Footer() {
-    const date = new Date().toLocaleDateString();
+    const date = getFormatDate();
 
     const contributors2Render = contributors.map( name => (
         <a
@@ -16,18 +17,14 @@ export default function Footer() {
 
     return (
         <footer>
-           <h4>
-               <span>נוצר על ידי</span>
-               <span>
-                    Copyright <sup>©</sup> 10/1/2021 - { date }
-                    {contributors2Render}
-               </span>
-            </h4>
             <p>אהבתם את הכלי? מצאתם באג? תרגישו חופשי לשלוח הודעה <a
-            style  = {{ margin: 5 }}
-            href   = "https://www.fxp.co.il/member.php?username=Y_Moshe"
-            target = "_blank"
-            rel    = "noreferrer"> Y_Moshe </a> :)</p>
+                style  = {{ margin: 5 }}
+                href   = "https://www.fxp.co.il/member.php?username=Y_Moshe"
+                target = "_blank"
+                rel    = "noreferrer"> Y_Moshe </a> :)</p>
+            <h4 style = {{ textAlign: 'center' }}>
+               Developed By: { contributors2Render } 10.01.21 - { date }
+            </h4>
         </footer>
     );
 }

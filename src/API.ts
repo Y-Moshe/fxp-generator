@@ -26,8 +26,30 @@ export const addForum = ( forumData: any ) => {
     return axios.post( FIREBASE_DB, forumData );
 }
 
-// @ts-ignore
-export const getHtmlTemplate = ( template: any, values: any ) => htmlTemplates[ template ]( values );
+/**
+ * Will Generate as follows: dd.mm.yy, example: 05.02,20.
+ */
+export const getFormatDate = () =>
+    new Date().toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: '2-digit',
+        year: '2-digit'
+    }).replaceAll('/', '.');
+
+export const getHtmlTemplate = ( template: any, values: any ) => {
+    const values2Return: any = {};
+
+    Object.keys(values).forEach(key => {
+        if (typeof values2Return[key] === 'string') {
+            values2Return[key] = (values[key] as string).trim();
+        } else {
+            values2Return[key] = values[key];
+        }
+    });
+
+    // @ts-ignore
+    return htmlTemplates[ template ]( values2Return );
+}
 
 const getRankNote = (currentRank: string) => {
     let text2Return = '';
@@ -53,10 +75,10 @@ const getRankNote = (currentRank: string) => {
 
 /** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */
 const htmlTemplates = {
-    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, fourmImg, investorName, postWinner, postLink, postName }: any) =>
+    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, investorName, postWinner, postLink, postName }: any) =>
     `
         [CENTER][SIZE=3][FONT=tahoma][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
-        [IMG]${ fourmImg }[/IMG]
+        [IMG]${ forumImg }[/IMG]
         [SIZE=4][B][COLOR=#008080]משקיען ואשכול השבוע - ${ forumName }[/COLOR]
         [/B][/SIZE]
         גולשים יקרים!
@@ -66,19 +88,18 @@ const htmlTemplates = {
         `
             [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
             [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#daa520]${ investorName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
-        ` : ''}
+        ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא משקיען[/SIZE][/B][/COLOR]' }
         ${ postWinner ?
         `
             [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
             [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
 
             [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ postLink }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
-        ` : ''}
-        ${ !investorName && !postWinner ? '[COLOR=#daa520][B][SIZE=4]לצערנו לא נמצא אשכול / משקיען.[/SIZE][/B][/COLOR]' : '' }
+        ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא אשכול[/SIZE][/B][/COLOR]'}
         ---------
         ${ investorName || postWinner ?
         `
-            [U][B][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]${ investorName && postWinner ? ' ו-' : '' }[U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U], ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
+            ${ investorName ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]` : '' }${ investorName && postWinner ? ' ו-' : '' }${ postWinner ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U]` : '' }, ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
             [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
             ---------
         ` : '' }
