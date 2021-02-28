@@ -78,28 +78,28 @@ const htmlTemplates = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, investorName, postWinner, postLink, postName }: any) =>
     `
         [CENTER][SIZE=3][FONT=tahoma][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
-        [IMG]${ forumImg }[/IMG]
+        [IMG]${ encodeURI( forumImg ) }[/IMG]
         [SIZE=4][B][COLOR=#008080]משקיען ואשכול השבוע - ${ forumName }[/COLOR]
         [/B][/SIZE]
         גולשים יקרים!
         כמדי שבוע, יבחר המשתמש אשר השקיע ובלט מבין שאר הגולשים ואשכול מושקע ו/או שעניין את הגולשים.
         [U]אז, קבלו את משקיען ואשכול השבוע לתאריך [B][COLOR=#008080]${ date }[/COLOR][/B] בפורום ${ forumName }:[/U]
-        ${ investorName ?
-        `
-            [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
-            [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#daa520]${ investorName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
-        ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא משקיען[/SIZE][/B][/COLOR]' }
+
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
+        ${ investorName ? `[IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( investorName ) }"][COLOR=#daa520]${ investorName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]`
+            : '[COLOR=#daa520][B][SIZE=3]לא נימצא משקיען[/SIZE][/B][/COLOR]' }
+
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
         ${ postWinner ?
         `
-            [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
-            [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
+            [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
 
-            [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ postLink }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
+            [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ encodeURI( postLink ) }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
         ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא אשכול[/SIZE][/B][/COLOR]'}
         ---------
         ${ investorName || postWinner ?
         `
-            ${ investorName ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ investorName }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]` : '' }${ investorName && postWinner ? ' ו-' : '' }${ postWinner ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ postWinner }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U]` : '' }, ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
+            ${ investorName ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( investorName ) }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]` : '' }${ investorName && postWinner ? ' ו-' : '' }${ postWinner ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U]` : '' }, ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
             [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
             ---------
         ` : '' }
@@ -113,7 +113,7 @@ const htmlTemplates = {
     [ PM_WINNER ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days, currentRank }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [COLOR=#2bb1e2][B]${ days } ימי Winner[/B][/COLOR].
+        זכית באתגר [URL="${ encodeURI( challengeLink ) }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [COLOR=#2bb1e2][B]${ days } ימי Winner[/B][/COLOR].
         
         [U][B]מהי דרגת ה־Winner?[/B][/U]
         דרגה זו ניתנת למשתמש אשר זכה באתגר אחד או יותר ברחבי האתר. דרגה זו ניתנת לזמן מוגבל (בהתאם לאתגר) ומקנה למשתמש הזוכה צבע שם משתמש בצבע תכלת וסמל של הדרגה ליד כינויו, תת ניק מעוצב של "FxP Winner" וגישה לפורום "[U][I][B][URL="https://www.fxp.co.il/forumdisplay.php?f=576"][COLOR=#43c6db]היכל התהילה[/COLOR][/URL][/B][/I][/U]".
@@ -129,7 +129,7 @@ const htmlTemplates = {
     [ PM_NICK ]: ({ forumName, winnerName, privateName, challengeName, challengeLink }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#008000]שינוי ניק[/COLOR][/B].
+        זכית באתגר [URL="${ encodeURI( challengeLink ) }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#008000]שינוי ניק[/COLOR][/B].
         
         
         [U][B]מהו שינוי ניק?[/B][/U]
@@ -145,7 +145,7 @@ const htmlTemplates = {
     [ PM_SUBNICK_TEXT ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר "[URL="${ challengeLink }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק טקסט ל־${ days } ימים[/COLOR][/B].
+        זכית באתגר "[URL="${ encodeURI( challengeLink ) }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק טקסט ל־${ days } ימים[/COLOR][/B].
         
         
         [U][B]מהו שינוי תת־ניק?[/B][/U]
@@ -159,7 +159,7 @@ const htmlTemplates = {
     [ PM_SUBNICK_IMG ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, days }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק תמונה ל־${ days } ימים[/COLOR][/B].
+        זכית באתגר [URL="${ encodeURI( challengeLink ) }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#ff0000]שינוי תת־ניק תמונה ל־${ days } ימים[/COLOR][/B].
         
         [U][B]מהו שינוי תת־ניק?[/B][/U]
         תת־ניק זוהי השורה מתחת לשם המשתמש שלך (המציינת בדר"כ את דרגת המשתמש).
@@ -171,7 +171,7 @@ const htmlTemplates = {
     [ PM_CHAMP ]: ({ forumName, winnerName, privateName, challengeName, challengeLink }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר "[URL="${ challengeLink }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#daa520]נקודה לצ'אמפ[/COLOR][/B].
+        זכית באתגר "[URL="${ encodeURI( challengeLink ) }"]${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=#daa520]נקודה לצ'אמפ[/COLOR][/B].
         
         
         [U][B]מהי נקודה לצ'אמפ?[/B][/U]
@@ -186,7 +186,7 @@ const htmlTemplates = {
     [ PM_FXP_POINTS ]: ({ forumName, winnerName, privateName, challengeName, challengeLink, points }: any) =>
     `
         ברכותיי, ${ winnerName }!
-        זכית באתגר [URL="${ challengeLink }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=yellowgreen]${ points } נקודות FxP[/COLOR][/B].
+        זכית באתגר [URL="${ encodeURI( challengeLink ) }"]"${ challengeName }"[/URL] ב${ forumName }, דבר המעניק לך [B][COLOR=yellowgreen]${ points } נקודות FxP[/COLOR][/B].
         
         [U][B]מהן נקודות FxP?[/B][/U]
         נקודות FxP הן נקודות אשר ניתן להשיג ברחבי האתר, באתגרים ופעילויות שונות.
@@ -201,28 +201,28 @@ const htmlTemplates = {
     [ GENERAL_WARNING ]: ({ forumName, warning, reason }: any) =>
     `
         משתמש יקר,
-        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות [COLOR=#008000][B]${reason}[/B][/COLOR].
+        קיבלת אזהרה ${ warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]' } בעקבות [COLOR=#008000][B]${ reason }[/B][/COLOR].
         על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
         הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
         בברכה,
-        הנהלת פורום ${forumName}.
+        הנהלת פורום ${ forumName }.
     `,
     [ SPAM_WARNING ]: ({ forumName, warning }: any) =>
     `
         משתמש יקר,
-        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות פרסום ספאם.
+        קיבלת אזהרה ${ warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]' } בעקבות פרסום ספאם.
         על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
         הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
         בברכה,
-        הנהלת פורום ${forumName}.
+        הנהלת פורום ${ forumName }.
     `,
     [ IMPROPER_LANGUAGE_USE_WARNING ]: ({ forumName, warning }: any) =>
     `
         משתמש יקר,
-        קיבלת אזהרה ${warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]'} בעקבות שימוש בשפה לא נאותה, כזו שמטרתה לאיים, להעליב, לבזות, להטריד וכו..
+        קיבלת אזהרה ${ warning === 'yellow' ? '[COLOR=#ffd700][B]צהובה[/B][/COLOR]' : '[B][COLOR=#ff0000]אדומה[/COLOR][/B]' } בעקבות שימוש בשפה לא נאותה, כזו שמטרתה לאיים, להעליב, לבזות, להטריד וכו..
         על-מנת להימנע מאזהרות נוספות גם בעתיד, אנא קרא בקפידה את חוקי הפורום.
         הנך רשאי לערער על אזהרה זו, על ידי הגשת ערעור בתת-פורום תלונות בהתאם לטופס המתאים בנעוץ.
         בברכה,
-        הנהלת פורום ${forumName}.
+        הנהלת פורום ${ forumName }.
     `
 };
