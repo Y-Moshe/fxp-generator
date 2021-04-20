@@ -1,7 +1,7 @@
 # A Generate tool for [Fxp](https://www.fxp.co.il) common tasks.
 URL: https://y-moshe.github.io/fxp-generator/
 
-# Getting Started
+# Contribute Guide
 First, Download and clone the Project:  
 ```git clone https://github.com/Y-Moshe/fxp-generator.git```  
 Then install the deps using yarn or npm:  
@@ -20,7 +20,7 @@ git push -u origin [branch-name]
 ```
 And let me know about ur change :), thanks.
 
-## Contribute Guide, How to add a new option
+## Getting Started, How to add a new option
 The main focus is at just 2 files, ```API.tsx, Data.tsx```.
 
 ## Step 1
@@ -98,7 +98,7 @@ const htmlTemplates = {
 Use the "extract object syntax", to define which variables u gonna use, like i did at: ```DECLARATION_WEEKLY_CHALLENGES```  
 Plz note that the value of it is an function that returns a generated string using the variables u defined.  
 Pay attention to ```/** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */```, in our case: ```newOne```  
-NOTE: date variable will always available to use, will generate a string in the following format 'dd/mm/yyyy' of the current date ofc.
+NOTE: date variable will always available to use, will generate a string in the following format 'dd.mm.yy' of the current date ofc.
 ## Step 5, last one
 Go back to ```Data.tsx```, and add yourself to contributors array that we looping at Footer component.
 ```
