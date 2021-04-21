@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import {
     DECLARATION_WEEKLY_CHALLENGES,
+    DECLARATION_WEEKLY_RESPONSE,
     PM_WINNER,
     PM_NICK,
     PM_SUBNICK_TEXT,
@@ -77,7 +78,8 @@ const getRankNote = (currentRank: string) => {
 const htmlTemplates = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, investorName, postWinner, postLink, postName }: any) =>
     `
-        [CENTER][SIZE=3][FONT=tahoma][IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
+        [CENTER][SIZE=3][FONT=tahoma]
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
         [IMG]${ encodeURI( forumImg ) }[/IMG]
         [SIZE=4][B][COLOR=#008080]משקיען ואשכול השבוע - ${ forumName }[/COLOR]
         [/B][/SIZE]
@@ -103,6 +105,29 @@ const htmlTemplates = {
             [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
             ---------
         ` : '' }
+
+        בברכה,
+        הנהלת פורום ${ forumName }
+        [IMG]https://static.fcdn.co.il/smilies2/flowers.gif[/IMG].
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
+        [/FONT][/SIZE][/CENTER]
+    `,
+    [ DECLARATION_WEEKLY_RESPONSE ]: ({ date, forumName, forumImg, winnerName, storyName, storyLink }: any) =>
+    `
+        [CENTER][SIZE=3][FONT=tahoma]
+        [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
+        [IMG]${ encodeURI( forumImg ) }[/IMG]
+
+        [SIZE=4][B][COLOR=#008080]תגובת השבוע בפורום - ${ forumName }[/COLOR][/B][/SIZE]
+
+        גולשים יקרים!
+        כמדי שבוע, יבחר תגובה אשר הושקעה ובלטה מבין שאר התגובות בפורום
+        [U]אז, קבלו את תגובת השבוע לתאריך [B][COLOR=#008080]${ date }[/COLOR][/B] בפורום ${ forumName }:[/U]
+
+        השבוע נבחרה תגובתו של [URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#daa520][B]${winnerName}[/B][/COLOR][/URL] שהגיב בסיפורה של "[URL="${storyLink}"][B]${storyName}[/B][/URL]"
+
+        [URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#daa520][B]${winnerName}[/B][/COLOR][/URL] זוכה בלא פחות מ- 7 ימי ווינר
+        [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
 
         בברכה,
         הנהלת פורום ${ forumName }

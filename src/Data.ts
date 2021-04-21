@@ -2,6 +2,7 @@ import * as yup from 'yup';
 
 export const DEFINE_CATEGORY      = ( categoryNumber: number ) => `category-${categoryNumber}`,
     DECLARATION_WEEKLY_CHALLENGES = 'declarationWeeklyChallenges',
+    DECLARATION_WEEKLY_RESPONSE   = 'declarationWeeklyResponse',
     PM_WINNER                     = 'pmWinner',
     PM_NICK                       = 'pmNick',
     PM_SUBNICK_TEXT               = 'pmSubnickText',
@@ -15,6 +16,7 @@ export const DEFINE_CATEGORY      = ( categoryNumber: number ) => `category-${ca
 export const options = [
     { id: DEFINE_CATEGORY(1),            title: 'הכרזות' },
     { id: DECLARATION_WEEKLY_CHALLENGES, title: 'הכרזה - משקיען ואשכול השבוע' },
+    { id: DECLARATION_WEEKLY_RESPONSE,   title: 'הכרזה - תגובת השבוע' },
     { id: DEFINE_CATEGORY(2),            title: 'הודעות פרטיות' },
     { id: PM_WINNER,                     title: 'הודעה פרטית - זכייה בווינר (משקיען/אשכול השבוע)' },
     { id: PM_NICK,                       title: 'הודעה פרטית - זכייה בשינוי ניק' },
@@ -83,7 +85,7 @@ const warningSelect = {
         label: 'textLabel',
         name: 'inputName',
         type: 'text' | 'select' | 'autocomplete' | 'radio',
-        validationSchema: yup.string().min(5, 'קצר מידי').required('נא לציין סיבה').... and so on.
+        validationSchema: yup.string().min(5, 'קצר מידי').required('נדרש למלא!').... and so on.
     }
 */
 export const inputs: any = {
@@ -95,8 +97,10 @@ export const inputs: any = {
             label: 'תמונת הפורום (קישור)',
             name: 'forumImg',
             type: 'text',
-            validationSchema: yup.string().required('נא לציין קישור לתמונת הפורום').min(3, 'קצר מידי')
-                .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/)
+            validationSchema: yup.string()
+                                 .required('נא לציין קישור לתמונת הפורום')
+                                 .min(3, 'קצר מידי')
+                                 .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/)
         },
         {
             label: 'ניק המשקיען',
@@ -114,17 +118,42 @@ export const inputs: any = {
             label: 'לינק לאשכול',
             name: 'postLink',
             type: 'text',
-            validationSchema: yup
-                .string()
-                .matches(/^(https:\/\/www.fxp.co.il)\/.+/, { message: 'יש להזין קישור תקין' })
+            validationSchema: yup.string()
+                                 .matches(/^(https:\/\/www.fxp.co.il)\/.+/, { message: 'יש להזין קישור תקין' })
         },
         {
             label: 'שם האשכול',
             name: 'postName',
             type: 'text',
-            validationSchema: yup
-                .string()
-                .min(3, 'קצר מידי')
+            validationSchema: yup.string().min(3, 'קצר מידי')
+        }
+    ],
+    [ DECLARATION_WEEKLY_RESPONSE ]: [
+        { ...basicInputs[0] },
+        {
+            label: 'תמונת הפורום (קישור)',
+            name: 'forumImg',
+            type: 'text',
+            validationSchema: yup.string()
+                                 .required('נא לציין קישור לתמונת הפורום').min(3, 'קצר מידי')
+                                 .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/)
+        },
+        { ...basicInputs[1] },
+        {
+            label: 'שם הסיפור / אשכול',
+            name: 'storyName',
+            type: 'text',
+            validationSchema: yup.string()
+                                 .required('נא לציין שם הסיפור / אשכול')
+                                 .min(3, 'קצר מידי')
+        },
+        {
+            label: 'קישור לשם הסיפור / אשכול',
+            name: 'storyLink',
+            type: 'text',
+            validationSchema: yup.string()
+                                 .required('נא לציין קישור לסיפור / אשכול')
+                                 .matches(/^(https:\/\/www.fxp.co.il)\/.+/, { message: 'יש להזין קישור תקין' })
         }
     ],
     [ PM_WINNER ]: [
