@@ -7,14 +7,14 @@ import {
 
 import './App.css';
 
-import { DECLARATION_WEEKLY_CHALLENGES } from './Data';
+import { DECLARATION_WEEKLY_CHALLENGES, DECLARATION_WEEKLY_RESPONSE } from './Data';
 import { getForumsList } from './API';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import RTL from './components/UI/RTL/RTL';
 import Select from './components/UI/Select/Select';
-import AddForumDialog from './containers/AddForumDialog/AddForumDialog';
+import ManipulateForumDialog from './containers/ManipulateForumDialog/ManipulateForumDialog';
 import Template from './containers/Template/Template';
 import SnackAlert from './components/UI/SnackAlert/SnackAlert';
 
@@ -23,7 +23,6 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  const [ showButton, setShowButton ] = useState( false );
   const [ template, setTemplate ] = useState<any>( '' );
   const [ htmlCode, setHtmlCode ] = useState<string>( '' );
   const [ alert, setAlert ] = React.useState<any>( null );
@@ -37,11 +36,26 @@ function App() {
       .catch(err => console.log( err ));
   }, []);
 
-  const handleNewForumAdded = (forum: any) => {
-    setAutoCompleteOptions(options => ([
-      ...options,
-      { ...forum }
-    ]));
+  const handleForumManipulation = (operation: string, forum: any) => {
+    switch (operation) {
+      case 'POST':
+        setAutoCompleteOptions(forums => ([
+          ...forums,
+          { ...forum }
+        ]));
+        break;
+      case 'PATCH':
+        setAutoCompleteOptions(forums => ([
+          ...forums.filter(f => f.id !== forum.id),
+          { ...forum }
+        ]));
+        break;
+      case 'DELETE':
+        setAutoCompleteOptions(forums => ([
+          ...forums.filter(f => f.id !== forum.id)
+        ]));
+        break;
+    }
   };
 
   const handleSubmission = ( htmlCode: string ) => {
@@ -67,28 +81,16 @@ function App() {
     setAlert( null );
   };
 
-  const handleGClick = () => {
-    if (showButton) {
-      return;
-    }
-
-    const password = window.prompt('enter something:');
-    if (password && password === 'pxf') {
-      setShowButton( true );
-    }
-  };
-
   return (
     <div className = "App">
-      <Header onGClick = { handleGClick } />
+      <Header />
 
       <main className = "Main">
         <RTL>
           <ThemeProvider theme = { theme }>
-            { showButton ? <AddForumDialog
-              onNewForumAdded = { handleNewForumAdded }
-              forums          = { autoCompleteOptions } /> : null }
-            {template === DECLARATION_WEEKLY_CHALLENGES ?
+            {
+              template === DECLARATION_WEEKLY_CHALLENGES ||
+              template === DECLARATION_WEEKLY_RESPONSE ?
               <div className = "WeeklyChallengesMessage">
                 <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>
                 להזכירכם, בעת ההכרזה עליכם:
@@ -110,6 +112,10 @@ function App() {
                 onSubmit            = { handleSubmission }
                 onReset             = { handleReset } /> : null}
             </div>
+
+            <ManipulateForumDialog
+              forums             = { autoCompleteOptions }
+              onForumManipulated = { handleForumManipulation } />
 
             {htmlCode ?
               <div className = "HtmlTemplate">

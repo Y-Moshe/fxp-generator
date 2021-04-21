@@ -15,7 +15,7 @@ import { Autocomplete } from '@material-ui/lab';
 
 interface InputProps extends StandardTextFieldProps {
     value: any;
-    hint: string;
+    hint?: string;
     name: string;
     setValues?: any;
     onChange: any;
@@ -105,6 +105,7 @@ export default function Input( props: InputProps ) {
             jsx2Return = (
                 <>
                     <TextField
+                        disabled   = { props.disabled }
                         type       = { props.type }
                         name       = { props.name }
                         label      = { props.label }
