@@ -9,6 +9,8 @@
   flex-grow: 1;
   min-width: 400px;
   width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .WeeklyChallengesMessage {

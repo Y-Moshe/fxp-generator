@@ -1,0 +1,17 @@
+.AppHeader {
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    background: #343a40 url('https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: white;
+}
+
+.AppVersion {
+    direction: ltr;
+}
+
+.AppVersion a {
+    margin: 5px;
+}
