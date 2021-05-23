@@ -1,6 +1,5 @@
 import Snackbar from '@material-ui/core/Snackbar';
 import { Alert } from '@material-ui/lab';
-import React from 'react';
 
 interface MessageProps {
     isOpen: boolean | undefined;

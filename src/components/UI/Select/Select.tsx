@@ -1,4 +1,4 @@
-import React from 'react';
+import { ChangeEvent } from 'react';
 import {
     FormControl,
     InputLabel,
@@ -14,7 +14,7 @@ interface SelectProps {
 }
 
 export default function Select( props: SelectProps ) {
-    const handleChange = ( e: React.ChangeEvent<any> ) => {
+    const handleChange = ( e: ChangeEvent<any> ) => {
         const id = options.find( opt => opt.id === e.target.value )?.id;
     
         props.onSelect( id );
