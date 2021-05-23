@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 import {
     DECLARATION_WEEKLY_CHALLENGES,
     DECLARATION_WEEKLY_RESPONSE,
@@ -14,25 +12,14 @@ import {
     IMPROPER_LANGUAGE_USE_WARNING
 } from './Data';
 
-const FIREBASE_DB = 'https://fxp-gen-default-rtdb.europe-west1.firebasedatabase.app/forums';
+import { forums } from './forums-data.json';
 
-export const getForumsList = async () => {
-    const response = await axios.get<any>( FIREBASE_DB.concat('.json') );
-    const results = Object.keys(response.data).map(key => ({ ...response.data[key], id: key }));
+export const getForumsList = () => {
+    const results = Object.keys(forums)
+        // @ts-ignore
+        .map( key => ({ ...forums[key], id: key }) );
     
     return results;
-}
-
-export const addForum = ( forumData: any ) => {
-    return axios.post( FIREBASE_DB.concat('.json'), forumData );
-}
-
-export const updateForum = ( id: string, forumData: any ) => {
-    return axios.patch( FIREBASE_DB.concat('/', id, '.json'), forumData );
-}
-
-export const deleteForum = ( id: string ) => {
-    return axios.delete( FIREBASE_DB.concat('/', id, '.json'));
 }
 
 /**

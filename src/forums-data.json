@@ -1,20 +1,16 @@
 {
   "forums" : {
+    "006e62f2-c9e3-42e2-999a-b02385d115e9" : {
+      "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/RjnuCPC.png",
+      "forumName" : "VALHEIM"
+    },
     "006e62f2-c9e3-42e2-999a-b02385d185e9" : {
       "forumImg" : "https://i.imagesup.co/images2/7170fe917defd868ee1486437ad3332431234bd7.png",
       "forumName" : "תוכנות להורדה"
     },
-    "01910b71-a954-4254-8dbf-e5876c19c0d8" : {
-      "forumImg" : "https://i.imagesup.co/images2/e31debcb7f414ff2b877a7eb6b64b57fa53ac59d.png",
-      "forumName" : "The Elder Scrolls"
-    },
     "02e6c6c3-01d0-41e8-a592-abc2f7505532" : {
       "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/RraZVK6.png",
       "forumName" : "השוטרים"
-    },
-    "03ed9a42-ff0e-433a-806c-bb4fd8b9f99d" : {
-      "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/HeZ0NHj.png",
-      "forumName" : "הפועל באר שבע"
     },
     "04aae596-3e06-4a3d-be18-b2c3edfcfbf4" : {
       "forumImg" : "https://i.imagesup.co/images2/0b4c7f0f04a46ecd4f6a94c258ec9018fa90df9c.png",
@@ -31,10 +27,6 @@
     "05b82c5d-7797-4f7b-b706-b68c7551a1d8" : {
       "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/Tw8kOSA.png",
       "forumName" : "Setup"
-    },
-    "06031723-21c9-403a-b1de-875a841cf922" : {
-      "forumImg" : "https://i.imagesup.co/images2/83b9b218f07efae291f9a464bd1b1b962bd6c9bc.png",
-      "forumName" : "Fall Guys"
     },
     "06c940ea-b36a-41fa-8782-0b8d39b0047b" : {
       "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/Tiw3ZdJ.png",
@@ -476,10 +468,6 @@
       "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/vh81VJo.png",
       "forumName" : "Dota"
     },
-    "56c553f4-cdc1-484d-9138-3d137b9a9203" : {
-      "forumImg" : "https://i.imagesup.co/images2/daff4b30f89a04ef5ab22024dc79dac87bc3ec33.png",
-      "forumName" : "Instagram"
-    },
     "5722620b-1ec7-447c-8344-29fb47ddbfaf" : {
       "forumImg" : "https://i.imagesup.co/images2/4b5122d1c111e803fbdff5f5a7a147e21000883f.png",
       "forumName" : "צמחונות וטבעונות"
@@ -569,7 +557,7 @@
       "forumName" : "Winner"
     },
     "67f19013-61d4-406b-94b4-0b4e386cfbe4" : {
-      "forumImg" : "https://images.weserv.nl/?url=i.imgur.com/UGEQHz7.png",
+      "forumImg" : "https://i.imagesup.co/images2/4d2f898df0d770592a9e8652f5148658e7cc040c.png",
       "forumName" : "Memes"
     },
     "680b6bd5-0c4b-4579-be52-5b26d67897d0" : {

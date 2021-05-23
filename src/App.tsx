@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ThemeProvider,
   createMuiTheme,
@@ -14,7 +14,6 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import RTL from './components/UI/RTL/RTL';
 import Select from './components/UI/Select/Select';
-import ManipulateForumDialog from './containers/ManipulateForumDialog/ManipulateForumDialog';
 import Template from './containers/Template/Template';
 import SnackAlert from './components/UI/SnackAlert/SnackAlert';
 
@@ -23,40 +22,17 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  const [ template, setTemplate ] = useState<any>( '' );
-  const [ htmlCode, setHtmlCode ] = useState<string>( '' );
-  const [ alert, setAlert ] = React.useState<any>( null );
+  const [ template, setTemplate ] = useState( '' );
+  const [ htmlCode, setHtmlCode ] = useState( '' );
+  const [ alert, setAlert ] = useState<any>( null );
   const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
 
   const textAreaRef = useRef<any>();
 
   useEffect(() => {
-    getForumsList()
-      .then(results => setAutoCompleteOptions(results))
-      .catch(err => console.log( err ));
+    const list = getForumsList();
+    setAutoCompleteOptions( list );
   }, []);
-
-  const handleForumManipulation = (operation: string, forum: any) => {
-    switch (operation) {
-      case 'POST':
-        setAutoCompleteOptions(forums => ([
-          ...forums,
-          { ...forum }
-        ]));
-        break;
-      case 'PATCH':
-        setAutoCompleteOptions(forums => ([
-          ...forums.filter(f => f.id !== forum.id),
-          { ...forum }
-        ]));
-        break;
-      case 'DELETE':
-        setAutoCompleteOptions(forums => ([
-          ...forums.filter(f => f.id !== forum.id)
-        ]));
-        break;
-    }
-  };
 
   const handleSubmission = ( htmlCode: string ) => {
     setHtmlCode( htmlCode );
@@ -112,10 +88,6 @@ function App() {
                 onSubmit            = { handleSubmission }
                 onReset             = { handleReset } /> : null}
             </div>
-
-            <ManipulateForumDialog
-              forums             = { autoCompleteOptions }
-              onForumManipulated = { handleForumManipulation } />
 
             {htmlCode ?
               <div className = "HtmlTemplate">
