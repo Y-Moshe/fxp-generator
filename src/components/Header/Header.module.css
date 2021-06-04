@@ -1,17 +1,45 @@
 .AppHeader {
     width: 100%;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.AppInfo {
     text-align: center;
     font-family: cursive;
-    background: #343a40 url('https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png');
-    background-repeat: no-repeat;
-    background-position: right top;
     color: white;
 }
 
-.AppVersion {
-    direction: ltr;
+.Logo { margin: 5px; }
+.AppVersion { direction: ltr; }
+.AppVersion a { margin: 5px; }
+
+/* UserSettings panel, yet to be implemented */
+.UserSettings {
+    display: none; /* should be remove when implemented */
+    margin: 10px;
+    border: 1px solid red;
+    width: 250px;
+    height: 100px;
 }
 
-.AppVersion a {
-    margin: 5px;
+/* styles to be applied when screen size > 1048px */
+@media (min-width: 1048px) {
+    .AppHeader {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Logo {
+        align-self: flex-start;
+    }
+
+    /* should be remove when implemented */
+    .UserSettings {
+        display: block;
+        visibility: hidden;
+    }
 }
