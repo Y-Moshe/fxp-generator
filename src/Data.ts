@@ -104,7 +104,7 @@ export const inputs: any = {
         },
         {
             label: 'ניק המשקיען',
-            name: 'investorName',
+            name: 'winnerName',
             type: 'text',
             validationSchema: yup.string().min(3, 'קצר מידי')
         },

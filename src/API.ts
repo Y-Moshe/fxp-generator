@@ -71,7 +71,7 @@ const getRankNote = (currentRank: string) => {
 
 /** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */
 const htmlTemplates = {
-    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, investorName, postWinner, postLink, postName }: any) =>
+    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, winnerName, postWinner, postLink, postName }: any) =>
     `
         [CENTER][SIZE=3][FONT=tahoma]
         [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
@@ -83,7 +83,7 @@ const htmlTemplates = {
         [U]אז, קבלו את משקיען ואשכול השבוע לתאריך [B][COLOR=#008080]${ date }[/COLOR][/B] בפורום ${ forumName }:[/U]
 
         [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
-        ${ investorName ? `[IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( investorName ) }"][COLOR=#daa520]${ investorName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]`
+        ${ winnerName ? `[IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#daa520]${ winnerName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]`
             : '[COLOR=#daa520][B][SIZE=3]לא נימצא משקיען[/SIZE][/B][/COLOR]' }
 
         [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
@@ -94,9 +94,9 @@ const htmlTemplates = {
             [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ encodeURI( postLink ) }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
         ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא אשכול[/SIZE][/B][/COLOR]'}
         ---------
-        ${ investorName || postWinner ?
+        ${ winnerName || postWinner ?
         `
-            ${ investorName ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( investorName ) }"][COLOR=#008080]${ investorName }[/COLOR][/URL][/B][/U]` : '' }${ investorName && postWinner ? ' ו-' : '' }${ postWinner ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U]` : '' }, ${ investorName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
+            ${ winnerName ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#008080]${ winnerName }[/COLOR][/URL][/B][/U]` : '' }${ winnerName && postWinner ? ' ו-' : '' }${ postWinner ? `[U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#008080]${ postWinner }[/COLOR][/URL][/B][/U]` : '' }, ${ winnerName && postWinner ? 'זוכים בלא פחות מ- 7 ימי ווינר כל אחד' : 'זוכה בלא פחות מ- 7 ימי ווינר' }.
             [B][COLOR=#008080]מזל טוב ובהצלחה בשבוע הבא לכולם![/COLOR][/B]
             ---------
         ` : '' }
