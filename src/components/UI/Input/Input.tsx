@@ -1,4 +1,3 @@
-import { ChangeEvent } from 'react';
 import {
     StandardTextFieldProps,
     TextField,
@@ -9,7 +8,8 @@ import {
     RadioGroup,
     FormControlLabel,
     Radio,
-    FormLabel
+    FormLabel,
+    Switch
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
@@ -22,10 +22,12 @@ interface InputProps extends StandardTextFieldProps {
     autoCompleteOptions?: any;
     selectOptions?: any[];
     radioOptions?: any[];
+    icon?: any;
+    checkedIcon?: any;
 }
 
 export default function Input( props: InputProps ) {
-    const handleAutoCompleteSelect: any = ( e: ChangeEvent<any>, value: any ) => {
+    const handleAutoCompleteSelect: any = ( value: any ) => {
         props.setValues(( values: any ) => ({
             ...values,
             ...value
@@ -33,7 +35,7 @@ export default function Input( props: InputProps ) {
     };
     let jsx2Return: any;
 
-    switch (props.type) {
+    switch ( props.type ) {
         case 'autocomplete':
             jsx2Return = (
                 <Autocomplete
@@ -41,7 +43,7 @@ export default function Input( props: InputProps ) {
                     freeSolo
                     options        = { props.autoCompleteOptions }
                     getOptionLabel = { ( forum: any ) => forum.forumName }
-                    onChange       = { handleAutoCompleteSelect }
+                    onChange       = { ( e, value ) => handleAutoCompleteSelect( value ) }
                     renderInput    = { params =>
                     <TextField
                         { ...params }
@@ -80,7 +82,7 @@ export default function Input( props: InputProps ) {
         case 'radio':
             jsx2Return = (
                 <FormControl style = {{ margin: 10 }}>
-                    <FormLabel> {props.label} </FormLabel>
+                    <FormLabel>{ props.label }</FormLabel>
                     <RadioGroup
                         aria-label = { props.name }
                         name       = { props.name }
@@ -100,21 +102,33 @@ export default function Input( props: InputProps ) {
                 </FormControl>
             );
             break;
+        case 'switch':
+            jsx2Return = (
+                <FormControl fullWidth>
+                    <Switch
+                        color       = { props.color }
+                        checked     = { props.value }
+                        onChange    = { props.onChange }
+                        name        = { props.name }
+                        icon        = { props.icon }
+                        checkedIcon = { props.checkedIcon } />
+                </FormControl>
+            );
+            break;
     
         default:
-            jsx2Return = (
-                <>
-                    <TextField
-                        disabled   = { props.disabled }
-                        type       = { props.type }
-                        name       = { props.name }
-                        label      = { props.label }
-                        onChange   = { props.onChange }
-                        onBlur     = { props.onBlur }
-                        helperText = { props.hint }
-                        error      = { props.error }
-                        value      = { props.value }
-                        fullWidth />
+            jsx2Return = (<>
+                <TextField
+                    disabled   = { props.disabled }
+                    type       = { props.type }
+                    name       = { props.name }
+                    label      = { props.label }
+                    onChange   = { props.onChange }
+                    onBlur     = { props.onBlur }
+                    helperText = { props.hint }
+                    error      = { props.error }
+                    value      = { props.value }
+                    fullWidth />
                     {
                         props.value && !props.error && props.name === 'forumImg' ?
                         <div style = {{ display: 'flex', margin: 10 }}>
@@ -128,8 +142,7 @@ export default function Input( props: InputProps ) {
                             }} /> 
                         </div> : null
                     }
-                </>
-            );
+            </>);
             break;
     }
 
