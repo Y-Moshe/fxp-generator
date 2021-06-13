@@ -5,10 +5,11 @@ import { Button } from '@material-ui/core';
 
 import inputs from '../../Data';
 import { getHtmlTemplate, getFormatDate } from '../../API';
-
 import Input from '../../components/UI/Input/Input';
+import { UserSettings } from '../Header/Header';
 
 interface TemplateProps {
+    userSettings: UserSettings | {};
     template: string;
     autoCompleteOptions: any[];
     onSubmit: ( htmlCode: string ) => void;
@@ -26,14 +27,20 @@ export default function Template( props: TemplateProps ) {
     const { initialValues, validationSchema } = useMemo( () => {
         const initObj = {};
         const schemaObj = {};
-        
+
         (inputs[ props.template ] as []).forEach( (inp: any, i) => {
             // @ts-ignore
             initObj[ inp.name ] = '';
+            
             // Applying default value.
             if (inp.name === 'currentRank') {
                 // @ts-ignore
                 initObj[ inp.name ] = 'unRanked';
+            }
+            
+            if ( inp.name === 'privateName' ) {
+                // @ts-ignore
+                initObj[ inp.name ] = props.userSettings?.privateName;
             }
             // @ts-ignore
             schemaObj[ inp.name ] = inputs[ props.template ][ i ].validationSchema;
@@ -44,7 +51,7 @@ export default function Template( props: TemplateProps ) {
         });
 
         return { initialValues: initObj, validationSchema: vSchema };
-    }, [ props.template ]);
+    }, [ props.template, props.userSettings ]);
 
     const handleSubmission = ( values: any ) => {
         const htmlTemplate = getHtmlTemplate( props.template, {
@@ -83,7 +90,7 @@ export default function Template( props: TemplateProps ) {
                 onSubmit = { handleSubmit }
                 style    = {{
                     padding: 10,
-                    backgroundColor: '#f8f9fa'
+                    backgroundColor: 'var(--bg-light)'
                 }}>
                 {
                     (inputs[ props.template ] as [])?.map( ({ name, label, type, options, radios }) =>

@@ -17,16 +17,16 @@
 .AppVersion { direction: ltr; }
 .AppVersion a { margin: 5px; }
 
-/* UserSettings panel, yet to be implemented */
 .UserSettings {
-    display: none; /* should be remove when implemented */
+    background-color: var(--bg-light);
+    box-shadow: 0 0 7px black;
+    border-radius: 5px;
     margin: 10px;
-    border: 1px solid red;
+    padding: 5px;
     width: 250px;
-    height: 100px;
 }
 
-/* styles to be applied when screen size > 1048px */
+/* styles to be applied when screen width > 1048px */
 @media (min-width: 1048px) {
     .AppHeader {
         flex-direction: row;
@@ -35,11 +35,5 @@
 
     .Logo {
         align-self: flex-start;
-    }
-
-    /* should be remove when implemented */
-    .UserSettings {
-        display: block;
-        visibility: hidden;
     }
 }
