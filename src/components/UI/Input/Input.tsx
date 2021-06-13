@@ -8,8 +8,7 @@ import {
     RadioGroup,
     FormControlLabel,
     Radio,
-    FormLabel,
-    Switch
+    FormLabel
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
@@ -22,8 +21,6 @@ interface InputProps extends StandardTextFieldProps {
     autoCompleteOptions?: any;
     selectOptions?: any[];
     radioOptions?: any[];
-    icon?: any;
-    checkedIcon?: any;
 }
 
 export default function Input( props: InputProps ) {
@@ -102,19 +99,6 @@ export default function Input( props: InputProps ) {
                 </FormControl>
             );
             break;
-        case 'switch':
-            jsx2Return = (
-                <FormControl fullWidth>
-                    <Switch
-                        color       = { props.color }
-                        checked     = { props.value }
-                        onChange    = { props.onChange }
-                        name        = { props.name }
-                        icon        = { props.icon }
-                        checkedIcon = { props.checkedIcon } />
-                </FormControl>
-            );
-            break;
     
         default:
             jsx2Return = (<>
@@ -125,6 +109,7 @@ export default function Input( props: InputProps ) {
                     label      = { props.label }
                     onChange   = { props.onChange }
                     onBlur     = { props.onBlur }
+                    size       = { props.size }
                     helperText = { props.hint }
                     error      = { props.error }
                     value      = { props.value }
