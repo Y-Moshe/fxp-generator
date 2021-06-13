@@ -12,6 +12,8 @@ import {
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
+import ForumImgPreview from '../../../containers/ForumImgPreview/ForumImgPreview';
+
 interface InputProps extends StandardTextFieldProps {
     value: any;
     hint?: string;
@@ -115,17 +117,9 @@ export default function Input( props: InputProps ) {
                     value      = { props.value }
                     fullWidth />
                     {
-                        props.value && !props.error && props.name === 'forumImg' ?
-                        <div style = {{ display: 'flex', margin: 10 }}>
-                           <img
-                            src    = { props.value }
-                            alt    = "Preview"
-                            style  = {{
-                                margin: 'auto',
-                                boxShadow: '0 0 8px grey',
-                                maxHeight: 100
-                            }} /> 
-                        </div> : null
+                        props.value && !props.error &&
+                        props.name === 'forumImg' &&
+                        <ForumImgPreview imageURL = { props.value } />
                     }
             </>);
             break;
