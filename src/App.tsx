@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ThemeProvider,
   createMuiTheme,
@@ -17,11 +17,6 @@ import Select from './components/UI/Select/Select';
 import Template from './containers/Template/Template';
 import SnackAlert from './components/UI/SnackAlert/SnackAlert';
 
-
-const theme = createMuiTheme({
-    direction: 'rtl'
-});
-
 function App() {
     const [ userSettings, setUserSettings ] = useState<UserSettings | {}>( {} );
     const [ template, setTemplate ] = useState( '' );
@@ -29,6 +24,12 @@ function App() {
     const [ alert, setAlert ] = useState<any>( null );
     const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
     
+    const theme = useMemo(() => createMuiTheme({
+        direction: 'rtl',
+        palette: {
+            type: (userSettings as UserSettings).theme || 'light'
+        }
+    }), [ userSettings ]);
 
     const textAreaRef = useRef<any>();
 
@@ -76,59 +77,57 @@ function App() {
     }
 
     return (
-        <div className = "App">
+        <RTL>
+        <ThemeProvider theme = { theme }>
+        <div
+            className = "App"
+            style = {{
+                backgroundColor: (userSettings as UserSettings).theme === 'light'
+                 ? theme.palette.background.default : theme.palette.grey[400]
+            }}>
             <Header
                 onSaveChanges = { saveUserSettings } 
                 userSettings  = { userSettings } />
 
             <main className = "Main">
-                <RTL>
-                <ThemeProvider theme = { theme }>
-                    {(  template === DECLARATION_WEEKLY_CHALLENGES ||
-                        template === DECLARATION_WEEKLY_RESPONSE ) &&
-                    <div className = "WeeklyChallengesMessage">
-                        <p style={{ textAlign: 'center', margin: 0 }}> ⓘ </p>
-                        להזכירכם, בעת ההכרזה עליכם:
-                        <ol>
-                        <li>לבטל את הצגת החתימה בתגובה</li>
-                        <li>למחוק את ההכרזה של השבוע הקודם</li>
-                        <li>ליידע את מפקח הקטגורייה באשכול הדיון</li>
-                        </ol>
-                    </div>}
+                {(  template === DECLARATION_WEEKLY_CHALLENGES ||
+                    template === DECLARATION_WEEKLY_RESPONSE ) &&
+                <div className = "WeeklyChallengesMessage">
+                    <p>ⓘ</p>
+                    להזכירכם, בעת ההכרזה עליכם:
+                    <ol>
+                    <li>לבטל את הצגת החתימה בתגובה</li>
+                    <li>למחוק את ההכרזה של השבוע הקודם</li>
+                    <li>ליידע את מפקח הקטגורייה באשכול הדיון</li>
+                    </ol>
+                </div>}
 
-                    <div className = "TemplateContainer">
-                        <Select
-                            template = { template }
-                            onSelect = { value => setTemplate( value) } />
-                        {template && <Template
-                            userSettings        = { userSettings }
-                            autoCompleteOptions = { autoCompleteOptions }
-                            template            = { template }
-                            onSubmit            = { handleSubmission }
-                            onReset             = { handleReset } />}
-                    </div>
+                <div className = "TemplateContainer">
+                    <Select
+                        template = { template }
+                        onSelect = { value => setTemplate( value) } />
+                    {template && <Template
+                        userSettings        = { userSettings }
+                        autoCompleteOptions = { autoCompleteOptions }
+                        template            = { template }
+                        onSubmit            = { handleSubmission }
+                        onReset             = { handleReset } />}
+                </div>
 
-                    {htmlCode && <div className = "HtmlTemplate">
-                        <Button
-                            type    = "button"
-                            color   = "inherit"
-                            variant = "outlined"
-                            onClick = { handleCopy }
-                            fullWidth > העתק </Button>
-                        <textarea
-                            readOnly
-                            ref   = { textAreaRef }
-                            value = { htmlCode }
-                            style = {{
-                                maxWidth: '100%',
-                                minWidth: '100%',
-                                minHeight: 500,
-                                width: '100%',
-                                height: 500
-                            }}></textarea>
-                    </div>}
-                </ThemeProvider>
-                </RTL>
+                {htmlCode && <div className = "HtmlTemplate">
+                    <Button
+                        type    = "button"
+                        color   = "inherit"
+                        variant = "outlined"
+                        onClick = { handleCopy }
+                        fullWidth > העתק </Button>
+                    <textarea
+                        style = {{ color: theme.palette.type === 'light'
+                         ? 'black' : theme.palette.text.primary }}
+                        readOnly
+                        ref   = { textAreaRef }
+                        value = { htmlCode }></textarea>
+                </div>}
             </main>
 
             {alert && <SnackAlert
@@ -137,7 +136,10 @@ function App() {
                 status  = { alert.status }
                 onClose = { () => setAlert( null ) } />}
             <Footer />
+
         </div>
+        </ThemeProvider>
+        </RTL>
     );
 }
 

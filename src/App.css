@@ -1,37 +1,48 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
 }
 
 .Main {
-  flex-grow: 1;
-  min-width: 300px;
-  width: 40%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    flex-grow: 1;
+    min-width: 300px;
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .WeeklyChallengesMessage {
-  color: var(--bold-info);
-  background-color: var(--bg-info);
-  padding: 10px;
-  border-radius: 5px;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    padding: 10px;
+    border-radius: 5px;
+}
+.WeeklyChallengesMessage p {
+    text-align: center;
+    margin: 0;
 }
 
 .TemplateContainer {
-  box-shadow: 0 0 15px gray;
-  margin: 50px 0;
-  padding: 15px;
-  border-radius: 8px;
+    box-shadow: 0 0 15px gray;
+    margin: 50px 0;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 textarea:focus { outline: none; }
-textarea { border: none; }
+textarea {
+    margin-top: 7px;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    min-height: 500px;
+    background-color: transparent;
+}
 .HtmlTemplate {
-  padding: 5px;
-  border-radius: 0 15px 15px 0;
-  box-shadow: 0 0 15px black;
-  margin: 50px 0;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px black;
+    margin: 50px 0;
 }

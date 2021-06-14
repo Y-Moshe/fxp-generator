@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { Button } from '@material-ui/core';
+import { Button, useTheme } from '@material-ui/core';
 
 import inputs from '../../Data';
 import { getHtmlTemplate, getFormatDate } from '../../API';
@@ -17,6 +17,7 @@ interface TemplateProps {
 }
 
 export default function Template( props: TemplateProps ) {
+    const { palette } = useTheme();
     /**
      * Basically, what we doing here is creating an initial state and validation schema for Formik
      * By looping throws our 'inputs' we defined on Data.tsx !
@@ -90,7 +91,7 @@ export default function Template( props: TemplateProps ) {
                 onSubmit = { handleSubmit }
                 style    = {{
                     padding: 10,
-                    backgroundColor: 'var(--bg-light)'
+                    backgroundColor: palette.type === 'light' ? palette.grey[200] : palette.grey[500]
                 }}>
                 {
                     (inputs[ props.template ] as [])?.map( ({ name, label, type, options, radios }) =>

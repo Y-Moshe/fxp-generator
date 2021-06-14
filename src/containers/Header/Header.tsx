@@ -1,25 +1,64 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Formik } from 'formik';
-import { Button, useMediaQuery, Switch } from '@material-ui/core';
-import { DarkMode, LightMode } from '@material-ui/icons';
+import {
+    Button,
+    useMediaQuery,
+    Switch,
+    PaletteType,
+    makeStyles,
+    Theme,
+    createStyles
+} from '@material-ui/core';
+import { DarkMode, LightMode, GitHub } from '@material-ui/icons';
 
-import classes from './Header.module.css';
 import { version } from '../../../package.json';
 import Input from '../../components/UI/Input/Input';
 
-export interface UserSettings {
-    privateName: string;
-    theme: string;
-}
+const useStyles = makeStyles(({ palette }: Theme) => createStyles({
+    appHeader: {
+        width: '100%',
+        backgroundColor: palette.grey[800],
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
+    logo: { margin: 5 },
+    appVersion: {
+        direction: 'ltr',
+        '& a': {
+            margin: 5
+        }
+    },
+    appInfo: {
+        textAlign: 'center',
+        fontFamily: 'cursive',
+        color: 'white'
+    },
+    userSettings: {
+        backgroundColor: palette.type === 'light' ? palette.background.default : palette.grey[700],
+        boxShadow: '0 0 7px black',
+        borderRadius: 5,
+        margin: 10,
+        padding: 5,
+        width: 250
+    },
 
-interface HeaderProps {
-    userSettings: UserSettings | {};
-    onSaveChanges: ( values: any ) => void;
-}
+    '@media (min-width: 1048px)': {
+        appHeader: {
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+        },
+        logo: {
+            alignSelf: 'flex-start'
+        }
+    }
+}));
 
-const darkIcon  = <DarkMode  style = {{ color: 'var(--bg-dark)' }} />;
-const lightIcon = <LightMode style = {{ color: '#ffee00' }} />;
+const darkIcon   = <DarkMode  style = {{ color: '#343a40' }} />;
+const lightIcon  = <LightMode style = {{ color: '#ffee00' }} />;
+const githubIcon = <GitHub    style = {{ color: 'white' }} />
 
 const themeOptions = [
     {
@@ -30,11 +69,22 @@ const themeOptions = [
         label: <>{ darkIcon } - כהה</>,
         value: 'dark'
     }
-]
+];
+
+export interface UserSettings {
+    privateName: string;
+    theme: PaletteType;
+}
+
+interface HeaderProps {
+    userSettings: UserSettings | {};
+    onSaveChanges: ( values: any ) => void;
+}
 
 export default function Header( props: HeaderProps ) {
     const matches = useMediaQuery( '(min-width: 1048px)' );
     const [showPanel, setShowPanel] = useState( false );
+    const classes = useStyles();
 
     // Keep update panel visibility whenever screen size changes
     useEffect(() => {
@@ -50,21 +100,19 @@ export default function Header( props: HeaderProps ) {
     }, [ props.userSettings ]);
 
     return (
-        <header className = { classes.AppHeader }>
+        <header className = { classes.appHeader }>
             <img
                 src       = "https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png"
                 alt       = "fxp logo"
-                className = { classes.Logo } />
+                className = { classes.logo } />
 
-            <main className = { classes.AppInfo }>
-                <h2 className = { classes.AppVersion }> FxP Generator v{version} -
+            <main className = { classes.appInfo }>
+                <h2 className = { classes.appVersion }> FxP Generator v{version} -
                     <a
                         href   = "https://github.com/Y-Moshe/fxp-generator"
                         target = "_blank"
                         rel    = "noreferrer">
-                        <img
-                            src = "https://i.imagesup.co/images2/fabe53eb72f9b6d3d47cd95aff31ffc45c2fdbf8.png"
-                            alt = "Github"/>
+                        { githubIcon }
                     </a>
                 </h2>
 
@@ -77,7 +125,7 @@ export default function Header( props: HeaderProps ) {
                     onChange    = { () => setShowPanel( prevVal => !prevVal ) }
                     checked     = { showPanel } />}
             <div
-                className = { classes.UserSettings }
+                className = {  classes.userSettings }
                 hidden = { !showPanel }>
                 <Formik
                     onSubmit      = { props.onSaveChanges }
