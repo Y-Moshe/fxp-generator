@@ -15,23 +15,17 @@ import { Autocomplete } from '@material-ui/lab';
 import ForumImgPreview from '../../../containers/ForumImgPreview/ForumImgPreview';
 
 interface InputProps extends StandardTextFieldProps {
-    value: any;
-    hint?: string;
     name: string;
-    setValues?: any;
+    value: any;
     onChange: any;
+    hint?: any;
     autoCompleteOptions?: any;
+    onAutoCompleteChange?: ( value: any ) => void;
     selectOptions?: any[];
     radioOptions?: any[];
 }
 
 export default function Input( props: InputProps ) {
-    const handleAutoCompleteSelect: any = ( value: any ) => {
-        props.setValues(( values: any ) => ({
-            ...values,
-            ...value
-        }));
-    };
     let jsx2Return: any;
 
     switch ( props.type ) {
@@ -42,7 +36,7 @@ export default function Input( props: InputProps ) {
                     freeSolo
                     options        = { props.autoCompleteOptions }
                     getOptionLabel = { ( forum: any ) => forum.forumName }
-                    onChange       = { ( e, value ) => handleAutoCompleteSelect( value ) }
+                    onChange       = { ( e, value ) => props.onAutoCompleteChange && props.onAutoCompleteChange( value ) }
                     renderInput    = { params =>
                     <TextField
                         { ...params }
