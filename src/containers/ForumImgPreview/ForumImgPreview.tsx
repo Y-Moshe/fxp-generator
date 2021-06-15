@@ -13,7 +13,11 @@ export default function ForumImgPreview( props: ForumImgPreviewProps ) {
     }, [ props.imageURL ])
 
     return (
-        <div style = {{ display: 'flex', margin: 10 }}>
+        <div style = {{
+            display: 'flex',
+            margin: 10,
+            height: 100
+        }}>
             <img
                 hidden = { isLoading }
                 onLoad = { () => setIsLoading( false ) }
