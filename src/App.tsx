@@ -82,8 +82,8 @@ function App() {
         <div
             className = "App"
             style = {{
-                backgroundColor: (userSettings as UserSettings).theme === 'light'
-                 ? theme.palette.background.default : theme.palette.grey[400]
+                backgroundColor: (userSettings as UserSettings).theme === 'dark'
+                 ? theme.palette.grey[400] : theme.palette.background.default
             }}>
             <Header
                 onSaveChanges = { saveUserSettings } 
