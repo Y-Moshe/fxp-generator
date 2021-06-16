@@ -14,16 +14,27 @@ import {
 
 import { forums } from './forums-data.json';
 
+export interface ForumData {
+    forumImg: string;
+    forumName: string;
+    challengeLink: string;
+}
+
+/**
+ * Retrieve all forums available data from `forums-data.json`.
+ * @returns ForumData[]
+ */
 export const getForumsList = () => {
-    const results = Object.keys(forums)
+    const results: ForumData[] = Object.keys( forums )
         // @ts-ignore
-        .map( key => ({ ...forums[key], id: key }) );
+        .map( key => ({ ...forums[key], id: key }));
     
     return results;
 }
 
 /**
- * Will Generate as follows: dd.mm.yy, example: 05.02,20.
+ * Will Generate as follows: dd.mm.yy, example: 05.02.20.
+ * @returns date as string
  */
 export const getFormatDate = () =>
     new Date().toLocaleDateString('en-GB', {
@@ -32,19 +43,26 @@ export const getFormatDate = () =>
         year: '2-digit'
     }).replaceAll('/', '.');
 
-export const getHtmlTemplate = ( template: any, values: any ) => {
-    const values2Return: any = {};
+/**
+ * Get a generate template as a string using it's own template `data(values arg)`.
+ * @param template which template, use the templates constants from `Data.tsx`
+ * @param values templateData, should be the submitted values!
+ * @returns the generated template with the relevant data
+ */
+export const getHtmlTemplate = ( template: string, values: any ) => {
+    const templateData: any = {};
 
-    Object.keys(values).forEach(key => {
-        if (typeof values2Return[key] === 'string') {
-            values2Return[key] = (values[key] as string).trim();
+    // if values.prop is of type "string" use the .trim() function to remove any white spaces
+    Object.keys( values ).forEach( key => {
+        if (typeof values[ key ] === 'string') {
+            templateData[ key ] = (values[ key ] as string).trim();
         } else {
-            values2Return[key] = values[key];
+            templateData[ key ] = values[ key ];
         }
     });
 
     // @ts-ignore
-    return htmlTemplates[ template ]( values2Return );
+    return (htmlTemplates[ template ]( templateData ) as string);
 }
 
 const getRankNote = (currentRank: string) => {
@@ -69,7 +87,7 @@ const getRankNote = (currentRank: string) => {
     return text2Return;
 }
 
-/** Variables must be identical to the 'name' prop of inputs from ./Data.tsx */
+/** each `templateData` must be identical to it's own 'name' inputs prop declared at `Data.tsx` */
 const htmlTemplates = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, winnerName, postWinner, postLink, postName }: any) =>
     `

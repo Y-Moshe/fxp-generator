@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { Button, useTheme } from '@material-ui/core';
 
 import inputs, { PM_WINNER } from '../../Data';
-import { getHtmlTemplate, getFormatDate } from '../../API';
+import { getHtmlTemplate, getFormatDate, ForumData } from '../../API';
 import Input from '../../components/UI/Input/Input';
 import { UserSettings } from '../Header/Header';
 import { usePrevious } from '../../hooks';
@@ -12,8 +12,8 @@ import { usePrevious } from '../../hooks';
 interface TemplateProps {
     userSettings: UserSettings | {};
     template: string;
-    autoCompleteOptions: any[];
-    onSubmit: ( htmlCode: string ) => void;
+    autoCompleteOptions: ForumData[];
+    onSubmit: ( BBCode: string ) => void;
     onReset: () => void;
 }
 

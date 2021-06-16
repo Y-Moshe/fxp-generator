@@ -9,8 +9,8 @@ import {
 import { options } from '../../../Data';
 
 interface SelectProps {
-    onSelect: ( value: any ) => void;
-    template: string;
+    onSelect: ( template: string | undefined ) => void;
+    template: string | undefined;
 }
 
 export default function Select( props: SelectProps ) {
@@ -32,13 +32,13 @@ export default function Select( props: SelectProps ) {
 
     return (
         <FormControl fullWidth>
-          <InputLabel id = "select-template-label"> בחר אופצייה </InputLabel>
-          <MSelect
-             dir      = "rtl"
-             labelId  = "select-template-label"
-             value    = { props.template }
-             onChange = { handleChange } > { options2Render }
-          </MSelect>
+            <InputLabel id = "select-template-label"> בחר אופצייה </InputLabel>
+            <MSelect
+                dir      = "rtl"
+                labelId  = "select-template-label"
+                value    = { props.template }
+                onChange = { handleChange } > { options2Render }
+            </MSelect>
         </FormControl>
     )
 }

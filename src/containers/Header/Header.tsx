@@ -14,6 +14,7 @@ import { DarkMode, LightMode, GitHub } from '@material-ui/icons';
 
 import { version } from '../../../package.json';
 import Input from '../../components/UI/Input/Input';
+import { OptionType } from '../../Data';
 
 const useStyles = makeStyles(({ palette }: Theme) => createStyles({
     appHeader: {
@@ -60,7 +61,7 @@ const darkIcon   = <DarkMode  style = {{ color: '#343a40' }} />;
 const lightIcon  = <LightMode style = {{ color: '#ffee00' }} />;
 const githubIcon = <GitHub    style = {{ color: 'white' }} />
 
-const themeOptions = [
+const themeOptions: OptionType[] = [
     {
         label: <>{ lightIcon } - בהיר</>,
         value: 'light'
@@ -78,7 +79,7 @@ export interface UserSettings {
 
 interface HeaderProps {
     userSettings: UserSettings | {};
-    onSaveChanges: ( values: any ) => void;
+    onSaveChanges: ( values: UserSettings ) => void;
 }
 
 export default function Header( props: HeaderProps ) {

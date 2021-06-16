@@ -11,18 +11,20 @@ import {
     FormLabel
 } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
+import { ForumData } from '../../../API';
 
 import ForumImgPreview from '../../../containers/ForumImgPreview/ForumImgPreview';
+import { OptionType } from '../../../Data';
 
 interface InputProps extends StandardTextFieldProps {
     name: string;
     value: any;
-    onChange: any;
+    onChange: ( ...args: any ) => void;
     hint?: any;
-    autoCompleteOptions?: any;
-    onAutoCompleteChange?: ( value: any ) => void;
-    selectOptions?: any[];
-    radioOptions?: any[];
+    autoCompleteOptions?: ForumData[];
+    onAutoCompleteChange?: ( data: ForumData | any ) => void;
+    selectOptions?: OptionType[];
+    radioOptions?: OptionType[];
 }
 
 export default function Input( props: InputProps ) {
@@ -34,7 +36,7 @@ export default function Input( props: InputProps ) {
                 <Autocomplete
                     fullWidth
                     freeSolo
-                    options        = { props.autoCompleteOptions }
+                    options        = { props.autoCompleteOptions || [] }
                     getOptionLabel = { ( forum: any ) => forum.forumName }
                     onChange       = { ( e, value ) => props.onAutoCompleteChange && props.onAutoCompleteChange( value ) }
                     renderInput    = { params =>
@@ -61,8 +63,7 @@ export default function Input( props: InputProps ) {
                         value    = { props.value }
                         onChange = { props.onChange } >
                         {
-                            // @ts-ignore
-                            props.selectOptions.map( ({ label, value }) => (
+                            props.selectOptions?.map( ({ label, value }) => (
                                 <MenuItem
                                     key   = {value}
                                     value = {value} > {label} </MenuItem>
@@ -82,8 +83,7 @@ export default function Input( props: InputProps ) {
                         value      = { props.value }
                         onChange   = { props.onChange } >
                         {
-                            // @ts-ignore
-                            props.radioOptions.map( ({ label, value }) => (
+                            props.radioOptions?.map( ({ label, value }) => (
                                 <FormControlLabel
                                     key   = { value }
                                     value   = { value }

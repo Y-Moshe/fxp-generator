@@ -8,21 +8,21 @@ import {
 import './App.css';
 
 import { DECLARATION_WEEKLY_CHALLENGES, DECLARATION_WEEKLY_RESPONSE } from './Data';
-import { getForumsList } from './API';
+import { ForumData, getForumsList } from './API';
 
 import Footer from './components/Footer/Footer';
 import Header, { UserSettings } from './containers/Header/Header';
 import RTL from './components/UI/RTL/RTL';
 import Select from './components/UI/Select/Select';
 import Template from './containers/Template/Template';
-import SnackAlert from './components/UI/SnackAlert/SnackAlert';
+import SnackAlert, { SnackAlertProps } from './components/UI/SnackAlert/SnackAlert';
 
 function App() {
     const [ userSettings, setUserSettings ] = useState<UserSettings | {}>( {} );
-    const [ template, setTemplate ] = useState( '' );
-    const [ htmlCode, setHtmlCode ] = useState( '' );
-    const [ alert, setAlert ] = useState<any>( null );
-    const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<any[]>( [] );
+    const [ template, setTemplate ] = useState<string | undefined>( '' );
+    const [ BBCode, setBBCode ] = useState( '' );
+    const [ alert, setAlert ] = useState<SnackAlertProps | null>( null );
+    const [ autoCompleteOptions, setAutoCompleteOptions ] = useState<ForumData[]>( [] );
     
     const theme = useMemo(() => createMuiTheme({
         direction: 'rtl',
@@ -31,7 +31,7 @@ function App() {
         }
     }), [ userSettings ]);
 
-    const textAreaRef = useRef<any>();
+    const textAreaRef = useRef<HTMLTextAreaElement | any>();
 
     useEffect(() => {
         const list = getForumsList();
@@ -49,30 +49,36 @@ function App() {
         localStorage.setItem('userSettings', JSON.stringify( settings ));
         setUserSettings({ ...settings });
 
-        popupMessage( 'נשמר בהצלחה!', 'success' );
+        popupMessage({
+            message: 'נשמר בהצלחה!',
+            status: 'success'
+        })
     };
 
-    const handleSubmission = ( htmlCode: string ) => {
-        setHtmlCode( htmlCode );
+    const handleSubmission = ( BBCode: string ) => {
+        setBBCode( BBCode );
 
         handleCopy();
     };
     
     const handleCopy = () => {
-        textAreaRef.current?.select();
+        (textAreaRef.current as HTMLTextAreaElement)?.select();
         document.execCommand('copy');
 
-        popupMessage( 'התוצאה הועתקה בהצלחה(clipboard copied)', 'success' );
+        popupMessage({
+            message: 'התוצאה הועתקה בהצלחה(clipboard copied)',
+            status: 'success'
+        })
     };
 
     const handleReset = () => {
         setTemplate( '' );
-        setHtmlCode( '' );
+        setBBCode( '' );
         setAlert( null );
     };
 
-    const popupMessage = ( message: string, status: string ) => {
-        setAlert({ message, status });
+    const popupMessage = ( { status, message }: SnackAlertProps ) => {
+        setAlert({ status, message });
         setTimeout(() => setAlert( null ), 3000);
     }
 
@@ -105,7 +111,7 @@ function App() {
                 <div className = "TemplateContainer">
                     <Select
                         template = { template }
-                        onSelect = { value => setTemplate( value) } />
+                        onSelect = { value => setTemplate( value ) } />
                     {template && <Template
                         userSettings        = { userSettings }
                         autoCompleteOptions = { autoCompleteOptions }
@@ -114,7 +120,7 @@ function App() {
                         onReset             = { handleReset } />}
                 </div>
 
-                {htmlCode && <div className = "HtmlTemplate">
+                {BBCode && <div className = "HtmlTemplate">
                     <Button
                         type    = "button"
                         color   = "inherit"
@@ -126,12 +132,11 @@ function App() {
                          ? 'black' : theme.palette.text.primary }}
                         readOnly
                         ref   = { textAreaRef }
-                        value = { htmlCode }></textarea>
+                        value = { BBCode }></textarea>
                 </div>}
             </main>
 
             {alert && <SnackAlert
-                isOpen  = { alert !== null }
                 message = { alert.message }
                 status  = { alert.status }
                 onClose = { () => setAlert( null ) } />}

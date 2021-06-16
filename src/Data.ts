@@ -31,7 +31,7 @@ export const options = [
 ];
 
 export interface OptionType {
-    label: string;
+    label: string | JSX.Element;
     value: any;
 }
 
@@ -95,7 +95,7 @@ const warningSelect: InputType = {
     validationSchema: yup.string().required('נא לבחור אזהרה')
 };
 
-export const inputs: { [key: string]: InputType[] } = {
+export const inputs: { [template: string]: InputType[] } = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: [
         {
             ...basicInputs[0]
