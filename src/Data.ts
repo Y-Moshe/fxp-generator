@@ -30,7 +30,21 @@ export const options = [
     { id: IMPROPER_LANGUAGE_USE_WARNING, title: 'אזהרה - שימוש בשפה לא נאותה' }
 ];
 
-const basicInputs = [
+export interface OptionType {
+    label: string;
+    value: any;
+}
+
+export interface InputType {
+    label: string;
+    name: string;
+    type: 'text' | 'select' | 'autocomplete' | 'radio' | 'number';
+    validationSchema: yup.AnySchema;
+    options?: OptionType[];
+    radios?: OptionType[];
+}
+
+const basicInputs: InputType[] = [
     {
         label: 'שם הפורום',
         name: 'forumName',
@@ -64,7 +78,7 @@ const basicInputs = [
     }
 ];
 
-const warningSelect = {
+const warningSelect: InputType = {
     label: 'אזהרה',
     name: 'warning',
     type: 'select',
@@ -80,15 +94,8 @@ const warningSelect = {
     ],
     validationSchema: yup.string().required('נא לבחור אזהרה')
 };
-/*
-    {
-        label: 'textLabel',
-        name: 'inputName',
-        type: 'text' | 'select' | 'autocomplete' | 'radio',
-        validationSchema: yup.string().min(5, 'קצר מידי').required('נדרש למלא!').... and so on.
-    }
-*/
-export const inputs: any = {
+
+export const inputs: { [key: string]: InputType[] } = {
     [ DECLARATION_WEEKLY_CHALLENGES ]: [
         {
             ...basicInputs[0]
@@ -162,6 +169,7 @@ export const inputs: any = {
             label: 'דרגה נוכחית של הזוכה',
             name: 'currentRank',
             type: 'radio',
+            validationSchema: yup.string().required(),
             radios: [
                 {
                     label: 'משתמש ללא דרגה',
