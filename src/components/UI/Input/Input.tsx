@@ -13,7 +13,7 @@ import {
 import { Autocomplete } from '@material-ui/lab';
 import { ForumData } from '../../../API';
 
-import ForumImgPreview from '../../../containers/ForumImgPreview/ForumImgPreview';
+import ImgPreview from '../../../containers/ImgPreview/ImgPreview';
 import { OptionType } from '../../../Data';
 
 interface InputProps extends StandardTextFieldProps {
@@ -113,7 +113,7 @@ export default function Input( props: InputProps ) {
                     {
                         props.value && !props.error &&
                         props.name === 'forumImg' &&
-                        <ForumImgPreview imageURL = { props.value } />
+                        <ImgPreview imageURL = { props.value } />
                     }
             </>);
             break;

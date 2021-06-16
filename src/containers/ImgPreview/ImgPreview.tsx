@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@material-ui/core';
 
-interface ForumImgPreviewProps {
+interface ImgPreviewProps {
     imageURL: string;
 }
 
-export default function ForumImgPreview( props: ForumImgPreviewProps ) {
+export default function ImgPreview( props: ImgPreviewProps ) {
     const [isLoading, setIsLoading] = useState( true );
 
     useEffect(() => {
