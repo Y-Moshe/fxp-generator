@@ -107,7 +107,7 @@ export const inputs: { [template: string]: InputType[] } = {
             validationSchema: yup.string()
                                  .required('נא לציין קישור לתמונת הפורום')
                                  .min(3, 'קצר מידי')
-                                 .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/)
+                                 .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/, 'קישור שגוי!')
         },
         {
             label: 'ניק המשקיען',
