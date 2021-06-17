@@ -102,7 +102,7 @@ const htmlTemplates = {
 
         [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
         ${ winnerName ? `[IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#daa520]${ winnerName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]`
-            : '[COLOR=#daa520][B][SIZE=3]לא נימצא משקיען[/SIZE][/B][/COLOR]' }
+            : '[COLOR=#daa520][B][SIZE=3]לא נמצא משקיען[/SIZE][/B][/COLOR]' }
 
         [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
         ${ postWinner ?
@@ -110,7 +110,7 @@ const htmlTemplates = {
             [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
 
             [U][B][COLOR=#daa520]אשר פתח את האשכול[/COLOR][/B][/U]: [URL="${ encodeURI( postLink ) }"][SIZE=4]"[B]${ postName }[/B]"[/SIZE][/URL]
-        ` : '[COLOR=#daa520][B][SIZE=3]לא נימצא אשכול[/SIZE][/B][/COLOR]'}
+        ` : '[COLOR=#daa520][B][SIZE=3]לא נמצא אשכול[/SIZE][/B][/COLOR]'}
         ---------
         ${ winnerName || postWinner ?
         `
