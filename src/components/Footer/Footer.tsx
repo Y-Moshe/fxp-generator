@@ -16,6 +16,12 @@ const useStyles = makeStyles(({ palette }: Theme) => createStyles({
         margin: 5,
         textDecoration: 'none',
         color: palette.info[palette.type]
+    },
+    issueSpan: {
+        backgroundColor: '#238636',
+        color: 'white',
+        padding: 3,
+        borderRadius: 5
     }
 }))
 
@@ -34,7 +40,16 @@ export default function Footer() {
 
     return (
         <footer className = { classes.appFooter }>
-            <p className = { classes.primaryColor }> אהבתם את הכלי? מצאתם באג? תרגישו חופשי לשלוח הודעה
+            <p className = { classes.primaryColor }> לכל שינוי בפורומים עדכון/הוספה/בעיה היכנסו לפה
+                <a
+                    className = { classes.linkStyle }
+                    href      = "https://github.com/Y-Moshe/fxp-generator/issues"
+                    target    = "_blank"
+                    rel       = "noreferrer">
+                        Issues
+                </a> ולחצו על <span className = { classes.issueSpan }>New Issue</span> וציינו את הבעיה.
+            </p>
+            <p className = { classes.primaryColor }>תוכלו גם לשלוח לי הודעה באתר, אבל ייתכן שיקח לי זמן להגיב, פעיל יותר באתר שציינתי
                 <a
                     className = { classes.linkStyle }
                     href      = "https://www.fxp.co.il/member.php?username=Y_Moshe"
