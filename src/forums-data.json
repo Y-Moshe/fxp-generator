@@ -1,5 +1,15 @@
 {
     "forums": {
+        "016e62f2-c9e3-42e2-999a-b02385s115e9": {
+            "forumImg": "https://i.imagesup.co/images2/e31debcb7f414ff2b877a7eb6b64b57fa53ac59d.png",
+            "forumName": "The Elder Scrolls",
+            "challengeLink": "https://www.fxp.co.il/showthread.php?t=11399121"
+        },
+        "046e62f2-c9e3-42e2-999a-b02385f115e9": {
+            "forumImg": "https://i.imagesup.co/images2/c1613cce26e714ea2b539c79bc25a1d74b57dd96.png",
+            "forumName": "Path of Exile",
+            "challengeLink": "https://www.fxp.co.il/showthread.php?t=20886148"
+        },
         "006e62f2-c9e3-42e2-999a-b02385d115e9": {
             "forumImg": "https://images.weserv.nl/?url=i.imgur.com/RjnuCPC.png",
             "forumName": "VALHEIM"
