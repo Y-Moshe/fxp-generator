@@ -63,10 +63,10 @@ export default function Input( props: InputProps ) {
                         value    = { props.value }
                         onChange = { props.onChange } >
                         {
-                            props.selectOptions?.map( ({ label, value }) => (
+                            props.selectOptions?.map( ({ label, value, id }) => (
                                 <MenuItem
-                                    key   = {value}
-                                    value = {value} > {label} </MenuItem>
+                                    key   = { id }
+                                    value = { value } >{ label }</MenuItem>
                             ))
                         }
                     </Select>

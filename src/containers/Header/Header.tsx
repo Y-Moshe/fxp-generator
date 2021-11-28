@@ -63,10 +63,12 @@ const githubIcon = <GitHub    style = {{ color: 'white' }} />
 
 const themeOptions: OptionType[] = [
     {
+        id: 1,
         label: <>{ lightIcon } - בהיר</>,
         value: 'light'
     },
     {
+        id: 2,
         label: <>{ darkIcon } - כהה</>,
         value: 'dark'
     }

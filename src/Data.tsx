@@ -33,6 +33,7 @@ export const options = [
 export interface OptionType {
     label: string | JSX.Element;
     value: any;
+    id: number;
 }
 
 export interface InputType {
@@ -84,10 +85,12 @@ const warningSelect: InputType = {
     type: 'select',
     options: [
         {
+            id: 1,
             label: 'צהובה',
             value: 'yellow'
         },
         {
+            id: 2,
             label: 'אדומה',
             value: 'red'
         }
@@ -108,6 +111,38 @@ export const inputs: { [template: string]: InputType[] } = {
                                  .required('נא לציין קישור לתמונת הפורום')
                                  .min(3, 'קצר מידי')
                                  .matches(/^(http|https).+(\.png|\.jpg|\.jpeg)$/, 'קישור שגוי!')
+        },
+        {
+            label: 'סטייל',
+            name: 'style',
+            type: 'select',
+            options: [
+                {
+                    id: 1,
+                    label: <img src = "https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    value: {
+                        winner: 'https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png',
+                        poster: 'https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png'
+                    }
+                },
+                {
+                    id: 2,
+                    label: <img src = "https://i.imagesup.co/images2/79871b8685b53f86137c3808e7a086530d160367.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    value: {
+                        winner: 'https://i.imagesup.co/images2/79871b8685b53f86137c3808e7a086530d160367.png',
+                        poster: 'https://i.imagesup.co/images2/3eb74fb255eaac141f9bfb342769420f28f5fce2.png'
+                    }
+                },
+                {
+                    id: 3,
+                    label: <img src = "https://i.imagesup.co/images2/a43c8509bd98afb74e9569731c87b0b49f147c5e.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    value: {
+                        winner: 'https://i.imagesup.co/images2/a43c8509bd98afb74e9569731c87b0b49f147c5e.png',
+                        poster: 'https://i.imagesup.co/images2/5cfd3f4412657d09d581fc8f192997fe73f997cf.png'
+                    }
+                }
+            ],
+            validationSchema: yup.object()
         },
         {
             label: 'ניק המשקיען',
@@ -172,18 +207,22 @@ export const inputs: { [template: string]: InputType[] } = {
             validationSchema: yup.string().required(),
             radios: [
                 {
+                    id: 1,
                     label: 'משתמש ללא דרגה',
                     value: 'unRanked'
                 },
                 {
+                    id: 2,
                     label: 'משתמש ווינר',
                     value: 'winner'
                 },
                 {
+                    id: 3,
                     label: 'מנהל/ת',
                     value: 'admin'
                 },
                 {
+                    id: 4,
                     label: 'חבר/ת צוות',
                     value: 'teammate'
                 }
