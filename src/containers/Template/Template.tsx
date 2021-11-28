@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, useTheme } from '@material-ui/core';
 
-import inputs, { PM_WINNER } from '../../Data';
+import inputs, { DECLARATION_WEEKLY_CHALLENGES, OptionType, PM_WINNER } from '../../Data';
 import { getHtmlTemplate, getFormatDate, ForumData } from '../../API';
 import Input from '../../components/UI/Input/Input';
 import { UserSettings } from '../Header/Header';
@@ -30,6 +30,11 @@ export default function Template( props: TemplateProps ) {
         for (const [ , inpObjects ] of Object.entries( inputs )) {
             for (const inpObj of inpObjects) {
                 initObj[ inpObj.name ] = '';
+
+                if ( inpObj.name === inputs[ DECLARATION_WEEKLY_CHALLENGES ][2].name ) {
+                    // setting default value to "style" options
+                    initObj[ inpObj.name ] = ( inputs[ DECLARATION_WEEKLY_CHALLENGES ][2].options as OptionType[] )[0].value;
+                }
             }
         }
 

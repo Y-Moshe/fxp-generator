@@ -89,7 +89,7 @@ const getRankNote = (currentRank: string) => {
 
 /** each `templateData` must be identical to it's own 'name' inputs prop declared at `Data.tsx` */
 const htmlTemplates = {
-    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, winnerName, postWinner, postLink, postName }: any) =>
+    [ DECLARATION_WEEKLY_CHALLENGES ]: ({ date, forumName, forumImg, winnerName, postWinner, style, postLink, postName }: any) =>
     `
         [CENTER][SIZE=3][FONT=tahoma]
         [IMG]https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png[/IMG]
@@ -100,11 +100,11 @@ const htmlTemplates = {
         כמדי שבוע, יבחר המשתמש אשר השקיע ובלט מבין שאר הגולשים ואשכול מושקע ו/או שעניין את הגולשים.
         [U]אז, קבלו את משקיען ואשכול השבוע לתאריך [B][COLOR=#008080]${ date }[/COLOR][/B] בפורום ${ forumName }:[/U]
 
-        [IMG]https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png[/IMG]
+        [IMG]${ style.winner }[/IMG]
         ${ winnerName ? `[IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][SIZE=5][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( winnerName ) }"][COLOR=#daa520]${ winnerName }[/COLOR][/URL][/SIZE][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]`
             : '[COLOR=#daa520][B][SIZE=3]לא נמצא משקיען[/SIZE][/B][/COLOR]' }
 
-        [IMG]https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png[/IMG]
+        [IMG]${ style.poster }[/IMG]
         ${ postWinner ?
         `
             [IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG][U][B][URL="https://www.fxp.co.il/member.php?username=${ encodeURI( postWinner ) }"][COLOR=#daa520][SIZE=5]${ postWinner }[/SIZE][/COLOR][/URL][/B][/U][IMG]https://images.weserv.nl/?url=i.imgur.com/ThPiUoI.png[/IMG]
