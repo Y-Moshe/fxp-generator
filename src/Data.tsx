@@ -300,6 +300,19 @@ export const inputs: { [template: string]: InputType[] } = {
     ]
 };
 
-export const contributors = [ 'Y_Moshe', 'MultiApple', 'DeLucifer' ];
+export const contributors = [
+    {
+        userName: 'Y_Moshe',
+        profileLink: 'https://www.fxp.co.il/member.php?u=924810'
+    },
+    {
+        userName: 'MultiApple',
+        profileLink: 'https://www.fxp.co.il/member.php?u=1026230'
+    },
+    {
+        userName: 'DeLucifer',
+        profileLink: 'https://www.fxp.co.il/member.php?u=750003'
+    }
+];
 
 export default inputs;
