@@ -1,7 +1,7 @@
 # FxP - Generator
 A Generate tool used to generate [BBCode](https://en.wikipedia.org/wiki/BBCode) for [Fxp](https://www.fxp.co.il) common tasks.
 
-Tool URL: https://y-moshe.github.io/fxp-generator
+Tool URL: https://ym-fxp-generator.netlify.app/
 
 ## Getting Started
 
