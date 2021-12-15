@@ -45,6 +45,14 @@ const useStyles = makeStyles(({ palette }: Theme) => createStyles({
         padding: 5,
         width: 250
     },
+    bbCode: {
+        padding: 5,
+        color: 'white',
+        backgroundColor: palette.grey[900],
+        borderRadius: 10,
+        textDecoration: 'none',
+        fontSize: '0.7em'
+    },
 
     '@media (min-width: 1048px)': {
         appHeader: {
@@ -109,24 +117,31 @@ export default function Header( props: HeaderProps ) {
                 alt       = "fxp logo"
                 className = { classes.logo } />
 
-            <main className = { classes.appInfo }>
-                <h2 className = { classes.appVersion }> FxP Generator v{version} -
+            <div className = { classes.appInfo }>
+                <h2 className = { classes.appVersion }>
                     <a
                         href   = "https://github.com/Y-Moshe/fxp-generator"
                         target = "_blank"
                         rel    = "noreferrer">
                         { githubIcon }
                     </a>
+                    - FxP - Generator | v{version}
                 </h2>
 
-                <h2> כלי לייצור קוד להכרזות, הודעות פרטיות, אזהרות ועוד. </h2>
-            </main>
-
+                <h2> כלי לייצור <a
+                    className = { classes.bbCode }
+                    href = "https://en.wikipedia.org/wiki/BBCode"
+                    target = "_blank"
+                    rel = "noreferrer">BBCode</a>, להכרזות, הודעות פרטיות, אזהרות ועוד. </h2>
+            </div>
             
-            { !matches && <Switch
+            {
+                !matches &&
+                <Switch
                     color       = "primary"
                     onChange    = { () => setShowPanel( prevVal => !prevVal ) }
-                    checked     = { showPanel } />}
+                    checked     = { showPanel } />
+            }
             <div
                 className = {  classes.userSettings }
                 hidden = { !showPanel }>
