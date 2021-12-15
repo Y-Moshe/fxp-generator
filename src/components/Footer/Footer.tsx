@@ -41,7 +41,7 @@ export default function Footer() {
 
     return (
         <footer className = { classes.appFooter }>
-            <p className = { classes.primaryColor }>לכל שינוי בפורומים עדכון/הוספה/בעיה אם הנך בעל חשבון Github ניתן לפתוח
+            <p className = { classes.primaryColor }>לשינויים בפורומים - עדכון, הוספה או בעיה - לבעלי חשבון Github ניתן לפתוח
                 <Link
                     className = { classes.issueStyle }
                     href      = "https://github.com/Y-Moshe/fxp-generator/issues"
