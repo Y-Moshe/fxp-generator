@@ -119,10 +119,10 @@ export const inputs: { [template: string]: InputType[] } = {
             options: [
                 {
                     id: 1,
-                    label: <img src = "https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/84dc2f601852f01ca8bba4bd395a4d5756784812.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
                     value: {
-                        winner: 'https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png',
-                        poster: 'https://images.weserv.nl/?url=i.imgur.com/Rb4j5af.png'
+                        winner: 'https://i.imagesup.co/images2/84dc2f601852f01ca8bba4bd395a4d5756784812.png',
+                        poster: 'https://i.imagesup.co/images2/7fbf9fbeeecf126bbc52549eab92bfa859ef6981.png'
                     }
                 },
                 {
