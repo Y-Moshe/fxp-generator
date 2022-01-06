@@ -119,7 +119,7 @@ export const inputs: { [template: string]: InputType[] } = {
             options: [
                 {
                     id: 1,
-                    label: <img src = "https://i.imagesup.co/images2/84dc2f601852f01ca8bba4bd395a4d5756784812.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/84dc2f601852f01ca8bba4bd395a4d5756784812.png" alt = "default style" style = {{ maxHeight: 50 }} />,
                     value: {
                         winner: 'https://i.imagesup.co/images2/84dc2f601852f01ca8bba4bd395a4d5756784812.png',
                         poster: 'https://i.imagesup.co/images2/7fbf9fbeeecf126bbc52549eab92bfa859ef6981.png'
@@ -127,7 +127,7 @@ export const inputs: { [template: string]: InputType[] } = {
                 },
                 {
                     id: 2,
-                    label: <img src = "https://i.imagesup.co/images2/79871b8685b53f86137c3808e7a086530d160367.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/79871b8685b53f86137c3808e7a086530d160367.png" alt = "second style" style = {{ maxHeight: 50 }} />,
                     value: {
                         winner: 'https://i.imagesup.co/images2/79871b8685b53f86137c3808e7a086530d160367.png',
                         poster: 'https://i.imagesup.co/images2/3eb74fb255eaac141f9bfb342769420f28f5fce2.png'
@@ -135,7 +135,7 @@ export const inputs: { [template: string]: InputType[] } = {
                 },
                 {
                     id: 3,
-                    label: <img src = "https://i.imagesup.co/images2/a43c8509bd98afb74e9569731c87b0b49f147c5e.png" alt = "placeholder" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/a43c8509bd98afb74e9569731c87b0b49f147c5e.png" alt = "third style" style = {{ maxHeight: 50 }} />,
                     value: {
                         winner: 'https://i.imagesup.co/images2/a43c8509bd98afb74e9569731c87b0b49f147c5e.png',
                         poster: 'https://i.imagesup.co/images2/5cfd3f4412657d09d581fc8f192997fe73f997cf.png'
