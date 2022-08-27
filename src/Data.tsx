@@ -143,10 +143,10 @@ export const inputs: { [template: string]: InputType[] } = {
                 },
                 {
                     id: 4,
-                    label: <img src = "https://i.imagesup.co/images2/cdc5fa12a20faa1f23646d3a6d159c115de5680e.png" alt = "fouth style" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/80043f099016ebfc34c801eb6ff9eac409dd9173.png" alt = "fouth style" style = {{ maxHeight: 50 }} />,
                     value: {
                         winner: 'https://i.imagesup.co/images2/cdc5fa12a20faa1f23646d3a6d159c115de5680e.png',
-                        poster: 'https://i.imagesup.co/images2/965018352062253060252ec3757c627d28dea4a9.png'
+                        poster: 'https://i.imagesup.co/images2/deeded2a2dc704989297e502b5fbc8310c4882f6.png'
                     }
                 }
             ],
