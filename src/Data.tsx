@@ -151,7 +151,7 @@ export const inputs: { [template: string]: InputType[] } = {
                 },
                 {
                     id: 5,
-                    label: <img src = "https://i.imagesup.co/images2/419a94e46311c1fd8d1d81ffd32fbc418ede2306.png" alt = "fouth style" style = {{ maxHeight: 50 }} />,
+                    label: <img src = "https://i.imagesup.co/images2/419a94e46311c1fd8d1d81ffd32fbc418ede2306.png" alt = "fifth style" style = {{ maxHeight: 50 }} />,
                     value: {
                         winner: 'https://i.imagesup.co/images2/419a94e46311c1fd8d1d81ffd32fbc418ede2306.png',
                         poster: 'https://i.imagesup.co/images2/5eae3afff0714268709570aa2e7cb9c890690762.png'
