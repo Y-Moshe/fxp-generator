@@ -148,6 +148,14 @@ export const inputs: { [template: string]: InputType[] } = {
                         winner: 'https://i.imagesup.co/images2/80043f099016ebfc34c801eb6ff9eac409dd9173.png',
                         poster: 'https://i.imagesup.co/images2/deeded2a2dc704989297e502b5fbc8310c4882f6.png'
                     }
+                },
+                {
+                    id: 5,
+                    label: <img src = "https://i.imagesup.co/images2/419a94e46311c1fd8d1d81ffd32fbc418ede2306.png" alt = "fouth style" style = {{ maxHeight: 50 }} />,
+                    value: {
+                        winner: 'https://i.imagesup.co/images2/419a94e46311c1fd8d1d81ffd32fbc418ede2306.png',
+                        poster: 'https://i.imagesup.co/images2/5eae3afff0714268709570aa2e7cb9c890690762.png'
+                    }
                 }
             ],
             validationSchema: yup.object()
