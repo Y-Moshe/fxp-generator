@@ -58,14 +58,14 @@ export default function Footer() {
                     rel       = "noreferrer">
                         Y_Moshe
                 </Link>
-                או ל- 
+                או
                 <Link
                     className = { classes.m }
                     href      = "https://www.fxp.co.il/member.php?u=939450"
                     target    = "_blank"
                     rel       = "noreferrer">
-                        Arcy
-                </Link> :)
+                        ק ל
+                </Link>.
             </p>
             <h4 className = { classes.primaryColor }> Developed By: { contributors2Render } 10.01.21 - { date } </h4>
         </footer>
