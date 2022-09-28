@@ -674,11 +674,6 @@
       "forumName": "סקייטבורד",
       "challengeLink": "https://www.fxp.co.il/showthread.php?t=14488415"
     },
-    "id-136": {
-      "forumImg": "https://images.weserv.nl/?url=i.imgur.com/7zrTIox.png",
-      "forumName": "חתימות",
-      "challengeLink": "https://www.fxp.co.il/showthread.php?t=15825873"
-    },
     "id-137": {
       "forumImg": "https://i.imagesup.co/images2/626d8078bda04aa54b87d508b1990c04dbefa3bb.png",
       "forumName": "Linux",
@@ -950,9 +945,9 @@
       "challengeLink": "https://www.fxp.co.il/showthread.php?t=20746328"
     },
     "id-191": {
-      "forumImg": "https://i.imagesup.co/images2/766dfe946e4aa84e39c761385bd3c9d1d98f896e.png",
-      "forumName": "לוגואים וסמלים",
-      "challengeLink": "https://www.fxp.co.il/showthread.php?t=14593842"
+      "forumImg": "https://images.weserv.nl/?url=i.imgur.com/7zrTIox.png",
+      "forumName": "חתימות ולוגואים",
+      "challengeLink": "https://www.fxp.co.il/showthread.php?t=15825873"
     },
     "id-192": {
       "forumImg": "https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
@@ -1056,7 +1051,6 @@
     },
     "id-212": {
       "forumImg": "https://i.imagesup.co/images2/b7d5534d4410524abc992d2c864b70ab10d90001.png",
-      "forumName": "אנדרואיד – כללי",
       "challengeLink": "https://www.fxp.co.il/showthread.php?t=7697979"
     },
     "id-213": {
@@ -1266,7 +1260,7 @@
     },
     "id-254": {
       "forumImg": "https://i.imagesup.co/images2/57768d7d389fb61388c46340f7cbcb0e37a94ad0.png",
-      "forumName": "גרפיקה ואומנות – כללי",
+      "forumName": "עולם הגרפיקה והאומנות",
       "challengeLink": "https://www.fxp.co.il/showthread.php?t=15862730"
     },
     "id-255": {
@@ -1283,11 +1277,6 @@
       "forumImg": "https://i.imagesup.co/images2/65c22d1497bf42ab9add05efd097bcffd3320d36.png",
       "forumName": "רומים ותוכנות",
       "challengeLink": "https://www.fxp.co.il/showthread.php?t=14792115"
-    },
-    "id-258": {
-      "forumImg": "https://images.weserv.nl/?url=i.imgur.com/7zrTIox.png",
-      "forumName": "תמיכה גרפית",
-      "challengeLink": "https://www.fxp.co.il/showthread.php?t=15156777"
     },
     "id-259": {
       "forumImg": "https://i.imagesup.co/images2/7c3f691b3c5c4719d32aed4750308fc4720bd5e7.png",
