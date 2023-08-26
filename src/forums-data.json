@@ -1,94 +1,94 @@
 {
    "forums":{
       "id-1":{
-         "forumName":"New World",
-         "forumImg":"https://i.imagesup.co/images2/cea764907e6ac8d079a84f626fff9035b263bb5f.png",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21103946"
+         "forumImg":"https://img001.prntscr.com/file/img001/iS9aD1b8QymBtmUuiJHyRg.png",
+         "forumName":"בינה מלאכותית – AI",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21522799"
       },
       "id-2":{
-         "forumImg":"https://i.imagesup.co/images2/7170fe917defd868ee1486437ad3332431234bd7.png",
-         "forumName":"תוכנות להורדה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8728808"
+         "forumImg":"https://i.imagesup.co/images2/6060c28a439822349a33421a99d1d6c2f5aa5393.png",
+         "forumName":"NBA ויורוליג",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18894837"
       },
       "id-3":{
+         "forumImg":"https://i.imagesup.co/images2/cca8be68a3ad513e991106a2f87b378c99c93ea2.png",
+         "forumName":"אוכל ומתכונים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21421823"
+      },
+      "id-4":{
+         "forumImg":"https://image.ibb.co/hGiwAQ/support50.png",
+         "forumName":"תמיכה טכנית – מחשבים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9674289"
+      },
+      "id-5":{
+         "forumImg":"https://i.imagesup.co/images2/e64219bbd9040bf16ab7e937336b0f7ccc2f382e.png",
+         "forumName":"שפות עיליות ואסמבלי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15945715"
+      },
+      "id-6":{
          "forumImg":"https://i.imagesup.co/images2/a534ed8cb27fd23b7ea4f5397f42b8604d53373b.png",
          "forumName":"מחשבים, אינטרנט ותוכנה",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=9661574"
       },
-      "id-4":{
-         "forumImg":"https://i.imagesup.co/images2/ed3beefd5a13d18b1bd93e25ad4791e78d5b3655.png",
-         "forumName":"תנועות נוער ומחויבות אישית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11066763"
-      },
-      "id-5":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/PEwyHGp.png",
-         "forumName":"צבא וביטחון",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8594414"
-      },
-      "id-6":{
-         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__059a31eabf09c7.jpg",
-         "forumName":"מדיה – אוהדים בארץ",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192304"
-      },
       "id-7":{
-         "forumImg":"https://static.fcdn.co.il/suimagesmobile/413821129_80.jpg",
+         "forumImg":"https://i.imagesup.co/images2/f23c2cba32cbb517399abde068a570a768beb87b.png",
+         "forumName":"קניות ברשת",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10690202"
+      },
+      "id-8":{
+         "forumImg":"https://i.imagesup.co/images2/7170fe917defd868ee1486437ad3332431234bd7.png",
+         "forumName":"תוכנות להורדה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8728808"
+      },
+      "id-9":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png",
+         "forumName":"דיונים ואקטואליה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21502145"
+      },
+      "id-10":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png",
+         "forumName":"Python +",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21307116"
+      },
+      "id-11":{
+         "forumImg":"https://i.imagesup.co/images2/a963909fa966e94cd543ba4416d4f51ed2a94a7e.png",
+         "forumName":"ריאל מדריד",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17586905"
+      },
+      "id-12":{
+         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__059934fc651e83.jpg",
+         "forumName":"סחר ברשת",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15137882"
+      },
+      "id-13":{
+         "forumImg":"https://i.imagesup.co/images2/733c8aa631b514e2d236c876621bd3281f908c23.png",
          "forumName":"אופנה וטיפוח אישי",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=8212326"
       },
-      "id-8":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקה שחורה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5826270"
-      },
-      "id-9":{
-         "forumImg":"https://i.imagesup.co/images2/8b2432fff539b4fdab897cbdd2dfc5c643d18a2b.png",
-         "forumName":"באיירן מינכן",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15570834"
-      },
-      "id-10":{
-         "forumImg":"https://i.imagesup.co/images2/0d80e8240efbb7f0ad88bf01be7a49275a2983fb.png",
-         "forumName":"בגרויות ומה שביניהן",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8083135"
-      },
-      "id-11":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/R9eY5YF.png",
-         "forumName":"פוקימון",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17503814"
-      },
-      "id-12":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/XpEoM.png",
-         "forumName":"MapleStory",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20768048"
-      },
-      "id-13":{
-         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__05a80735f239ad.jpg",
-         "forumName":"מטבעות דיגיטליים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18559383"
-      },
       "id-14":{
-         "forumImg":"https://i.imagesup.co/images2/f48c21189644486d481beaad72d5bca3784eb8fe.png",
-         "forumName":"האח הגדול",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21275633"
+         "forumImg":"https://i.imagesup.co/images2/6a9a98b12f924e9eabd347ded1296ab5897ceb2d.png",
+         "forumName":"תכנות ובניית אתרים – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16134815"
       },
       "id-15":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"רוק ומטאל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8109348"
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/DPZXQRv.png",
+         "forumName":"FullStack",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16159041"
       },
       "id-16":{
-         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
-         "forumName":"ציוד היקפי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205319"
+         "forumImg":"https://i.imagesup.co/images2/ccd3a0a25cccc78e6869bee14605f95b6bca8cee.png",
+         "forumName":"תמונות הגולשים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11697465"
       },
       "id-17":{
-         "forumImg":"https://i.imagesup.co/images2/07a0a9043f883dead619c6e45b0d9910884403fb.png",
-         "forumName":"יהדות ותורה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20124380"
+         "forumImg":"https://i.imagesup.co/images2/42195aced846406c4878e9aff02c3650e2a18526.png",
+         "forumName":"מנצ\\'סטר יונייטד",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19904207"
       },
       "id-18":{
-         "forumImg":"https://i.imagesup.co/images2/3ced572af1235b994d68e388110b1ffed0728d11.png",
-         "forumName":"ליברפול",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13655927"
+         "forumImg":"https://i.imagesup.co/images2/3d85a82257f254455b8b8f49d4a12056e0380977.png",
+         "forumName":"משחקייה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15153027"
       },
       "id-19":{
          "forumImg":"https://i.imagesup.co/images2/b6c8469080893c5fc8868a0ac143080fe57ecf43.png",
@@ -96,959 +96,659 @@
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=14423396"
       },
       "id-20":{
-         "forumImg":"https://i.imagesup.co/images2/c30898cb1b3e3d5473fdb9b5c63a6b39c906aab0.png",
-         "forumName":"MU Online",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14800854"
-      },
-      "id-21":{
-         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__059934fc651e83.jpg",
-         "forumName":"סחר ברשת",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15137882"
-      },
-      "id-22":{
-         "forumImg":"https://static.fcdn.co.il/images_new/x.gif",
-         "forumName":"בית\"ר ירושלים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192365"
-      },
-      "id-23":{
-         "forumImg":"https://i.imagesup.co/images2/8ca67d52d9a8bbc28131d08943d79a843363e346.png",
-         "forumName":"מערכות הפעלה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18801954"
-      },
-      "id-24":{
-         "forumImg":"https://i.imagesup.co/images2/086a1ca616eaf3e7da33eba59b3e53edc60bc00e.png",
-         "forumName":"Rainbow Six Siege",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17014573"
-      },
-      "id-25":{
-         "forumImg":"https://i.imagesup.co/images2/03a13f6813c9d367dd57b0d57d79abf2f4357634.png",
-         "forumName":"Black Desert Online",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20910367"
-      },
-      "id-26":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/utKAaVe.png",
-         "forumName":"Gamer",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808336"
-      },
-      "id-27":{
-         "forumImg":"https://i.imagesup.co/images2/e1eda253a8d4a12f8ef02e737e2c916941f00703.png",
-         "forumName":"League of Legends",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15693482"
-      },
-      "id-28":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/mO2Xwm1.png",
-         "forumName":"סדרות אנימציה ונוסטלגיה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14137157"
-      },
-      "id-29":{
-         "forumImg":"https://i.imagesup.co/images2/d29f1f4ffb1ff59b866b7c39a85f00b19aee4e9b.png",
-         "forumName":"טוטנהאם",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16545429"
-      },
-      "id-30":{
-         "forumImg":"https://i.imagesup.co/images2/69e2e01265c6c9701744f71b6bb32619da56cbef.png",
-         "forumName":"תפקידים – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8563284"
-      },
-      "id-31":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2F78Y69K8.png",
-         "forumName":"מכבי חיפה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192333"
-      },
-      "id-32":{
-         "forumImg":"https://i.imagesup.co/images2/460c587e211864aba36672812d001855f51ad15d.png",
-         "forumName":"פריז סן־ז'רמן",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20524697"
-      },
-      "id-33":{
-         "forumImg":"https://i.imagesup.co/images2/7de454ec0ad672b253ccdf93a685df6529e2e277.png",
-         "forumName":"Xbox Series",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20527979"
-      },
-      "id-34":{
-         "forumImg":"https://i.imagesup.co/images2/40a15a4b88b0bb176c6079ff2545f5e06af0f830.png",
-         "forumName":"אתאיזם",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10665584"
-      },
-      "id-35":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FbedxQCG.png&output=webp",
-         "forumName":"מזרחית ודיכאון",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5593884"
-      },
-      "id-36":{
-         "forumImg":"https://i.imagesup.co/images2/2246e6fd7dd3af1fd599a114c9abc8a3dbf2ffb1.png",
-         "forumName":"Apex Legends",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19460966"
-      },
-      "id-37":{
-         "forumImg":"https://images.weserv.nl/?url=imageshack.us%2Fa%2Fimg197%2F6654%2Fqocw.png",
-         "forumName":"קולנוע וסרטים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13841667"
-      },
-      "id-38":{
-         "forumImg":"https://i.imagesup.co/images2/7cae0597f98c3842963b8c570709f24d69f870bf.png",
-         "forumName":"פילוסופיות ותאוריות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20316266"
-      },
-      "id-39":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"מוטוריקה ורכב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19647074"
-      },
-      "id-40":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"ציוד סאונד והגברה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11076329"
-      },
-      "id-41":{
-         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
-         "forumName":"מארזים, מודינג וספקי כוח",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12452960"
-      },
-      "id-42":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/9IBs5l9.png",
-         "forumName":"ייעוץ מיני",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16250882"
-      },
-      "id-43":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"צלילה ודיג",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16017902"
-      },
-      "id-44":{
-         "forumImg":"https://i.imagesup.co/images2/99443dcd5021cbe74fe58fb6a69b31e792d18169.png",
-         "forumName":"שחמט ומשחקי לוח",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20667526"
-      },
-      "id-45":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/PmyM7QY.png",
-         "forumName":"תחביבים – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19993240"
-      },
-      "id-46":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/B0xX3Hi.png",
-         "forumName":"מכבי נתניה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18471985"
-      },
-      "id-47":{
-         "forumImg":"https://i.imagesup.co/images2/7a5bf472830a22fee08d4acda18ede23803febeb.png",
-         "forumName":"צילום ועריכת סרטים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14596869"
-      },
-      "id-48":{
-         "forumImg":"https://i.imagesup.co/images2/42195aced846406c4878e9aff02c3650e2a18526.png",
-         "forumName":"מנצ'סטר יונייטד",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19904207"
-      },
-      "id-49":{
-         "forumImg":"https://i.imagesup.co/images2/0__05bd2fe8ab3b70.jpg",
-         "forumName":"כלי נגינה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14560375"
-      },
-      "id-50":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/VijEiaH.png",
-         "forumName":"OC וקירור",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14843814"
-      },
-      "id-51":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FRuB1bNn.png",
-         "forumName":"דרגון בול",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16982094"
-      },
-      "id-52":{
-         "forumImg":"https://i.imagesup.co/images2/0fb89e94ac2e7a655cb0c85e8ba106ff064d3dd6.png",
-         "forumName":"קסמים ואמנות חושים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17146431"
-      },
-      "id-53":{
-         "forumImg":"https://i.imagesup.co/images2/17724651aca163e66134a4184f77d75b34d2282a.png",
-         "forumName":"דו־גלגלי וטרקטורונים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20012710"
-      },
-      "id-54":{
-         "forumImg":"https://i.imagesup.co/images2/c6e19d9155528fc4c541327634177b6dd559e053.png",
-         "forumName":"מתמטיקה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5017008"
-      },
-      "id-55":{
-         "forumImg":"https://i.imagesup.co/images2/f8f366c372b1b28f8feffd4d1a5a71c23a7d7fd3.png",
-         "forumName":"Assassin's Creed",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894236"
-      },
-      "id-56":{
-         "forumImg":"https://i.imagesup.co/images2/4ec332eeacfa174107aedf88a85640565f6acf7a.png",
-         "forumName":"כימיה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749201"
-      },
-      "id-57":{
-         "forumImg":"https://i.imagesup.co/images2/c71af8ddeeab598116a33cfae3b67db14bdd280b.png",
-         "forumName":"iTunes/iCloud",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15191485"
-      },
-      "id-58":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקה ישראלית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8995231"
-      },
-      "id-59":{
-         "forumImg":"https://i.imagesup.co/images2/f35685fbc403944464a1c02c688a31114bf1a159.png",
-         "forumName":"טלוויזיות ומסכים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12720421"
-      },
-      "id-60":{
-         "forumImg":"https://i.imagesup.co/images2/994c3328bb3ee25cf8cfe95f2a25ed47fa9f2aec.png",
-         "forumName":"תמיכה טכנית – חומרה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18411312"
-      },
-      "id-61":{
-         "forumImg":"https://i.imagesup.co/images2/0a0b0616c652882d01372fef17eaed47da045756.png",
-         "forumName":"וואן פיס",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14289062"
-      },
-      "id-62":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/XAKjdGY.png",
-         "forumName":"FIFA",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808416"
-      },
-      "id-63":{
-         "forumImg":"https://i.imagesup.co/images2/548b3a1f5480a26d26bbffb1a8e912fd5284f95a.png",
-         "forumName":"ביולוגיה ומדעי הרפואה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8223513"
-      },
-      "id-64":{
-         "forumImg":"https://i.imagesup.co/images2/98ade9e9f2b958506239d92e5b233a53a86954e7.png",
-         "forumName":"טכנולוגיה – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13899786"
-      },
-      "id-65":{
-         "forumImg":"https://i.imagesup.co/images2/fbc8a8c177b159b627ff1142c51240341106293e.png",
-         "forumName":"מנצ'סטר סיטי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17072444"
-      },
-      "id-66":{
-         "forumImg":"https://i.imagesup.co/images2/017a1b11a3c26deb9a93ddb5f3f8c818d0b1d009.png",
-         "forumName":"אוהדים בחו\"ל – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16090175"
-      },
-      "id-67":{
-         "forumImg":"https://static1.squarespace.com/static/5374fb82e4b000761fd4e581/542da8d5e4b00283745062f3/542da92fe4b06d289a2215a6/1412278576677/Pages-from-pretty_little_liars_11-22-10-1.png",
-         "forumName":"שקרניות קטנות ויפות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8663286"
-      },
-      "id-68":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/Up8UBhV.png",
-         "forumName":"ספורט אתגרי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14138014"
-      },
-      "id-69":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FlkqZ3.png",
-         "forumName":"יוצרים מוזיקה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19252883"
-      },
-      "id-70":{
-         "forumImg":"https://i.imagesup.co/images2/af654fdcd8bc60536a246ba4744e45e678da3f85.png",
-         "forumName":"השפה העברית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10348478"
-      },
-      "id-71":{
-         "forumImg":"https://i.imagesup.co/images2/c6a7fc31550272c28f59565dc83542fa84cfe508.png",
-         "forumName":"Dota 2",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9995307"
-      },
-      "id-72":{
-         "forumImg":"https://i.imagesup.co/images2/4b5122d1c111e803fbdff5f5a7a147e21000883f.png",
-         "forumName":"צמחונות וטבעונות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20528736"
-      },
-      "id-73":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"עשה זאת בעצמך",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16015771"
-      },
-      "id-74":{
-         "forumImg":"https://i.imagesup.co/images2/62ffa52f2e4f55c72cbc0a0870e790efa0f131f2.png",
-         "forumName":"Steam וחנויות דיגיטליות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808412"
-      },
-      "id-75":{
-         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
-         "forumName":"מפרטי מחשב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205381"
-      },
-      "id-76":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"איירסופט",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9190361"
-      },
-      "id-77":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקה אלקטרונית וטכנו",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14560478"
-      },
-      "id-78":{
-         "forumImg":"https://i.imagesup.co/images2/75545942de1dc4308a370ba9e55d4c4ab9986889.png",
-         "forumName":"גאים בעצמנו",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=6626582"
-      },
-      "id-79":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/a0OBrFG.png",
-         "forumName":"Minecraft",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15422872"
-      },
-      "id-80":{
-         "forumImg":"https://i.imagesup.co/images2/fb677e94f739e653e1400c750e886946d9d130f1.png",
-         "forumName":"פיקאפ ופיתוח עצמי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18682083"
-      },
-      "id-81":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"פופ ו־RnB",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=6926088"
-      },
-      "id-82":{
-         "forumImg":"https://i.imagesup.co/images2/676ff5f77b3d12893236a3ded47f826702c783cd.png",
-         "forumName":"Far Cry",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894263"
-      },
-      "id-83":{
-         "forumImg":"https://media.discordapp.net/attachments/796388423182450719/796416040254570586/12.png",
-         "forumName":"משחקי ספורט - כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808400"
-      },
-      "id-84":{
-         "forumImg":"https://i.imagesup.co/images2/ca4e42df212fd27122756422d7ce9b5cab67934d.png",
-         "forumName":"מכשירים סלולריים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12720391"
-      },
-      "id-85":{
-         "forumImg":"https://i.imagesup.co/images2/f69eb39d618d17039447faee131759f22c958dc9.png",
-         "forumName":"חידות ואתגרי חשיבה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20494073"
-      },
-      "id-86":{
-         "forumImg":"https://i.imagesup.co/images2/b60918646dba3aa4ceedb3c63f38180d69a8cb76.png",
-         "forumName":"גינון וגידול צמחים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20315598"
-      },
-      "id-87":{
-         "forumImg":"https://hod2017.com/wp-content/uploads/2018/05/summer-300x300.png",
-         "forumName":"אומנויות לחימה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11363290"
-      },
-      "id-88":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/PIe5lGN.png",
-         "forumName":"סדרות ישראליות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16308681"
-      },
-      "id-89":{
-         "forumImg":"https://i.imagesup.co/images2/d63a801f078f7b8dfbb45a35008031d39c206964.png",
-         "forumName":"פסיכומטרי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18671283"
-      },
-      "id-90":{
-         "forumImg":"https://i.imagesup.co/images2/fe36f3cd88e922cd24353ab24915c767431e45c6.png",
-         "forumName":"צ'לסי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15182204"
-      },
-      "id-91":{
-         "forumImg":"https://i.imagesup.co/images2/2870a71c86c07a348b8537da7840f2a09967f571.png",
-         "forumName":"סקרים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15460407"
-      },
-      "id-92":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/C2K7xAQ.png",
-         "forumName":"TikTok",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20001881"
-      },
-      "id-93":{
-         "forumImg":"https://i.imagesup.co/images2/53d38ec465a17671eea19abe37e17258184dbc4f.png",
-         "forumName":"כלכלה ועסקים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17251427"
-      },
-      "id-94":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/v5toB5C.png",
-         "forumName":"ויקינגים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16904725"
-      },
-      "id-95":{
-         "forumImg":"https://i.imagesup.co/images2/3bde058a03f7af7fdbf757ce243134d74c5a5a09.png",
-         "forumName":"בעלי חיים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9234843"
-      },
-      "id-96":{
-         "forumImg":"https://i.imagesup.co/images2/7f1beba851df261220c06f9ea2a3d2ea25e7f1a5.png",
-         "forumName":"PlayStation 5",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20402971"
-      },
-      "id-97":{
-         "forumImg":"https://i.imagesup.co/images2/1bce5d6cf9b353a5d337b7e70daa36bec27f5e89.png",
-         "forumName":"מלב אל לב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13136490"
-      },
-      "id-98":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
-         "forumName":"כושר ופיתוח הגוף",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16253116"
-      },
-      "id-99":{
-         "forumImg":"https://images.weserv.nl/?url=https://images.weserv.nl/?url=i.imgur.com/s1ZEiwI.png",
-         "forumName":"תכנות ובניית אתרים – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16134815"
-      },
-      "id-100":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FWKnoQpQ.png",
-         "forumName":"כדורסל בארץ – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192291"
-      },
-      "id-101":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/5KJhomH.png",
-         "forumName":"סדרות חו\"ל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14053670"
-      },
-      "id-102":{
-         "forumImg":"https://cdn.discordapp.com/attachments/480105025847427093/574578914505261090/6.png",
-         "forumName":"זיכרונות RAM, כוננים קשיחים ו־SSD",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19622687"
-      },
-      "id-103":{
-         "forumImg":"https://i.imagesup.co/images2/0d91238f3774be1793d1b9677eb6d8051e0c7b8d.png",
-         "forumName":"היסטוריה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19180705"
-      },
-      "id-104":{
-         "forumImg":"https://i.imagesup.co/images2/d48895c56f6f12deec612b783e4fc9c18304f783.png",
-         "forumName":"מדעי המחשב והנדסת חשמל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17251417"
-      },
-      "id-105":{
-         "forumImg":"https://i.imagesup.co/images2/999bd184982008aa1b0beaf74abc3f3e42f31bb6.png",
-         "forumName":"NBA",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18894837"
-      },
-      "id-106":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"רחפנים, טיסנים ומכוניות שלט",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17158750"
-      },
-      "id-107":{
-         "forumImg":"https://i.imagesup.co/images2/644c6ba8f69c93b04b866eb2cd37560907918648.png",
-         "forumName":"אביזרי שמע",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12720413"
-      },
-      "id-108":{
-         "forumImg":"https://i.imagesup.co/images2/9cffe2764cbe4e29cb7c10831d462cd3b3f1cd2b.png",
-         "forumName":"ברצלונה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12999099"
-      },
-      "id-109":{
-         "forumImg":"https://images.weserv.nl/?url=i.gyazo.com%2Ff5f3ce30bcf5645c1b2c020d0c4e3d53.png",
-         "forumName":"רקעים למחשב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11271580"
-      },
-      "id-110":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/fJAQ4dl.png",
-         "forumName":"Street Workout",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16015406"
-      },
-      "id-111":{
-         "forumImg":"https://cdn.discordapp.com/attachments/697060360003518535/697140638780489759/PUBG_FXP.png",
-         "forumName":"PUBG",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18113763"
-      },
-      "id-112":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/ELY1BpX.png",
-         "forumName":"מכבי תל אביב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192629"
-      },
-      "id-113":{
-         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
-         "forumName":"מחשבים ניידים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13846071"
-      },
-      "id-114":{
-         "forumImg":"https://i.imagesup.co/images2/9fce3828deeae0cfc6337e79982d9ef1fa564261.png",
-         "forumName":"יובנטוס",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11457405"
-      },
-      "id-115":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/Qgac039.png",
-         "forumName":"הפועל תל אביב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192631"
-      },
-      "id-116":{
-         "forumImg":"https://i.imagesup.co/images2/a963909fa966e94cd543ba4416d4f51ed2a94a7e.png",
-         "forumName":"ריאל מדריד",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17586905"
-      },
-      "id-117":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/FzuEAsg.png",
-         "forumName":"מכבי תל אביב כדורסל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192632"
-      },
-      "id-118":{
-         "forumImg":"https://i.imagesup.co/images2/8698797f72925cb45fe66941c17e94b10bd906c6.png",
-         "forumName":"משחקי כדור",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13644715"
-      },
-      "id-119":{
-         "forumImg":"https://i.imagesup.co/images2/db02b47162fddac0649e264e2ad28716134e6801.png",
-         "forumName":"אתלטיקו מדריד",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16432816"
-      },
-      "id-120":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/ZqzuNXG.png",
-         "forumName":"בקשות אנימה ומנגה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14958075"
-      },
-      "id-121":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/U9SL69h.png",
-         "forumName":"PlayStation 4",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12803955"
-      },
-      "id-122":{
-         "forumImg":"https://i.imagesup.co/images2/0__05f64ad4246e15.jpg",
-         "forumName":"Disney",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20525205"
-      },
-      "id-123":{
-         "forumImg":"https://i.imagesup.co/images2/b7d5534d4410524abc992d2c864b70ab10d90001.png",
-         "forumName":"אנדרואיד – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7697979"
-      },
-      "id-124":{
-         "forumImg":"https://i.imagesup.co/images2/69c26e718d783a12943113c107e299cf13c91c66.png",
-         "forumName":"הסיפורים שלכם",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21359503"
-      },
-      "id-125":{
-         "forumImg":"https://i.imagesup.co/images2/69533e8c515f690f7802eb7de5a6a3e4ce3cd022.png",
-         "forumName":"Overwatch",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17216323"
-      },
-      "id-126":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/r4ZPrdL.png",
-         "forumName":"יצירת ועריכת סרטים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14289082"
-      },
-      "id-127":{
-         "forumImg":"https://i.imagesup.co/images2/88742ce1ba4610c8de0b455c38fa97d741cc864a.png",
-         "forumName":"iPhone",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5581296"
-      },
-      "id-128":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקת אינדי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16683587"
-      },
-      "id-129":{
-         "forumImg":"https://images.weserv.nl/?url=i45.tinypic.com%2Fe8jv3k.png",
-         "forumName":"Top Eleven",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8592051"
-      },
-      "id-130":{
-         "forumImg":"https://i.imagesup.co/images2/8d8cfbc185768b6a83827b4712b74f620118545f.png",
-         "forumName":"תחבורה ציבורית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16605900"
-      },
-      "id-131":{
-         "forumImg":"https://i.imagesup.co/images2/1540b9d6e16422303bfe8aa892e97eed9630569a.png",
-         "forumName":"Battlefield",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18140845"
-      },
-      "id-132":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp-m.png",
-         "forumName":"גאדג'טים ואביזרים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13919012"
-      },
-      "id-133":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"כותבים שירים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=4010236"
-      },
-      "id-134":{
-         "forumImg":"https://i.imagesup.co/images2/0f3571cb8f8ca7469c7071e6947111c1c9634dbb.png",
-         "forumName":"לימודים ובית ספר",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12484759"
-      },
-      "id-135":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/mJT22FD.png",
-         "forumName":"מעבדים ולוחות אם",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21202777"
-      },
-      "id-136":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/X4pAQYy.png",
-         "forumName":"Facebook",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15107541"
-      },
-      "id-137":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/7Ou1SWr.png",
-         "forumName":"נארוטו",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18085378"
-      },
-      "id-138":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/FWf09d4.png",
-         "forumName":"GTA",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16495699"
-      },
-      "id-139":{
-         "forumImg":"https://i.imagesup.co/images2/7c38dcc9ddae69b404d1af562e683e1b03515e36.png",
-         "forumName":"פעולה – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894177"
-      },
-      "id-140":{
-         "forumImg":"https://i.imagesup.co/images2/56b94cda4a6a5acd2e32b1b37ed5e1ba7b566b2f.png",
-         "forumName":"RuneScape",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15810969"
-      },
-      "id-141":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/NY5db3V.png?1",
-         "forumName":"Apple – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15191283"
-      },
-      "id-142":{
-         "forumImg":"https://i.imagesup.co/images2/994c3328bb3ee25cf8cfe95f2a25ed47fa9f2aec.png",
-         "forumName":"חומרה – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18316415"
-      },
-      "id-143":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/zkAChNj.png",
-         "forumName":"רשתות ואינטרנט",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205334"
-      },
-      "id-144":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp-m.png",
-         "forumName":"מציאות מדומה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17007367"
-      },
-      "id-145":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"קונספירציות ומיתוסים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16021932"
-      },
-      "id-146":{
-         "forumImg":"https://i.imagesup.co/images2/ea93780a73c1783db1973b93094188d7776cea8a.png",
-         "forumName":"השכלה גבוהה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19807175"
-      },
-      "id-147":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקה אסייתית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14789703"
-      },
-      "id-148":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/w6ewoci.png",
-         "forumName":"תמונות הגולשים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11697465"
-      },
-      "id-149":{
-         "forumImg":"https://i.imagesup.co/images2/8b388c8cf27ecf3475ac5999c08b759c024c97d3.png",
-         "forumName":"Genshin Impact",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20755414"
-      },
-      "id-150":{
-         "forumImg":"https://i.imagesup.co/images2/6e80a9866e0d2efe9c5d20db2894f89c06e45041.png",
-         "forumName":"אנגלית ושפות זרות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749317"
-      },
-      "id-151":{
-         "forumImg":"https://i.imagesup.co/images2/e64219bbd9040bf16ab7e937336b0f7ccc2f382e.png",
-         "forumName":"שפות עיליות ואסמבלי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15945715"
-      },
-      "id-152":{
-         "forumImg":"https://i.imagesup.co/images2/7c3f691b3c5c4719d32aed4750308fc4720bd5e7.png",
-         "forumName":"Fortnite",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18472308"
-      },
-      "id-153":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/OeTVc5R.png",
-         "forumName":"Rocket League",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16483281"
-      },
-      "id-154":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/I63GNwA.png",
-         "forumName":"אוכל ומתכונים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21421823"
-      },
-      "id-155":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/Hgmk6uP.png",
-         "forumName":"אנימה ומנגה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14289025"
-      },
-      "id-156":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/E1LkQYe.png",
-         "forumName":"Nintendo",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16016829"
-      },
-      "id-157":{
-         "forumImg":"https://i.imagesup.co/images2/a04ca88090cbac68f8ea3bf34eb021397deef38a.png",
-         "forumName":"Call of Duty",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894313"
-      },
-      "id-158":{
-         "forumImg":"https://i.imagesup.co/images2/2b92799baf6b7409b0ddbe9fde65cffeb2d3e1d1.png",
-         "forumName":"לימודי נהיגה ותאוריה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16792837"
-      },
-      "id-159":{
-         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__05aa66ff9233c0.jpg",
-         "forumName":"Spotify",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18745906"
-      },
-      "id-160":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
-         "forumName":"מוזיקה כללית",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7970114"
-      },
-      "id-161":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FilyK24C.png",
-         "forumName":"אוהדים בארץ – כללי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19785537"
-      },
-      "id-162":{
-         "forumImg":"https://i.imagesup.co/images2/f880dc71d9663c673a3bfd1cd400e528af52783c.png",
-         "forumName":"מדע וחלל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11421526"
-      },
-      "id-163":{
-         "forumImg":"https://images.weserv.nl/?url=vgboxart.com%2Fresources%2Flogo%2F3172_the-walking-dead-prev.png",
-         "forumName":"המתים המהלכים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16923423"
-      },
-      "id-164":{
-         "forumImg":"https://i.imagesup.co/images2/dc5ae028a172ec9a517bb9ae36bc8997a5b5ced0.png",
-         "forumName":"פיזיקה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21022750"
-      },
-      "id-165":{
-         "forumImg":"https://i.imagesup.co/images2/37b0b1ab48b2c9a902956b3e48cee8641b51a123.png",
-         "forumName":"ספרים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11537212"
-      },
-      "id-166":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/wVq53SI.png",
-         "forumName":"טיולים בארץ ובחו\"ל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16609818"
-      },
-      "id-167":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/nQGcV2l.png",
-         "forumName":"חיי לילה ובילויים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=6738636"
-      },
-      "id-168":{
-         "forumImg":"https://us.battle.net/forums/static/images/game-logos/game-logo-wow.png",
-         "forumName":"World of Warcraft",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7144991"
-      },
-      "id-169":{
-         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
-         "forumName":"כרטיסי מסך",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8274064"
-      },
-      "id-170":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/BTO16dZ.png",
-         "forumName":"מיסטיקה ומאגיה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10773367"
-      },
-      "id-171":{
-         "forumImg":"https://i.imagesup.co/images2/44a592d4361432691f3249d416bcefdce0940502.png",
-         "forumName":"דיונים ואקטואליה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11454280"
-      },
-      "id-172":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/KlfHNK8.png",
-         "forumName":"תעופה וסימולטורים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7194608"
-      },
-      "id-173":{
-         "forumImg":"https://i.imagesup.co/images2/c773bb53e0b93a9afb85f4671a4c516866472704.png",
-         "forumName":"ייעוץ לעבודה ודרושים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14842738"
-      },
-      "id-174":{
-         "forumImg":"https://images.weserv.nl/?url=www.israup.net%2Fimages%2Fc9325b27c22e5d1f2439534ba7c7566c.png",
-         "forumName":"משחקי נוסטלגיה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808380"
-      },
-      "id-175":{
-         "forumImg":"https://i.imagesup.co/images2/f23c2cba32cbb517399abde068a570a768beb87b.png",
-         "forumName":"קניות ברשת",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10690202"
-      },
-      "id-176":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
-         "forumName":"היאבקות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17470882"
-      },
-      "id-177":{
-         "forumImg":"https://i.imagesup.co/sz/1200x-/images/0__05aaa663f91caa.jpg",
-         "forumName":"סדרות Netflix",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749453"
-      },
-      "id-178":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/TRZmQW0.png",
-         "forumName":"YouTube",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16985833"
-      },
-      "id-179":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/LMVRKPn.png",
-         "forumName":"משחקייה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15153027"
-      },
-      "id-180":{
          "forumImg":"https://images.weserv.nl/?url=i.imgur.com/3di3mIZ.png",
          "forumName":"אבטחת מידע",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=9752140"
       },
-      "id-181":{
-         "forumImg":"https://i.imagesup.co/images2/0__05c5b56acb636c.jpg",
-         "forumName":"Marvel ,DC וגיבורי על",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16249462"
+      "id-21":{
+         "forumImg":"https://i.imagesup.co/images2/9cffe2764cbe4e29cb7c10831d462cd3b3f1cd2b.png",
+         "forumName":"ברצלונה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12999099"
       },
-      "id-182":{
-         "forumImg":"https://image.ibb.co/hGiwAQ/support50.png",
-         "forumName":"תמיכה טכנית – מחשבים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9674289"
+      "id-22":{
+         "forumImg":"https://i.imagesup.co/images2/7c38dcc9ddae69b404d1af562e683e1b03515e36.png",
+         "forumName":"פעולה – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894177"
       },
-      "id-183":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
-         "forumName":"בריאות ותזונה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19989030"
+      "id-23":{
+         "forumImg":"https://i.imagesup.co/images2/8b2432fff539b4fdab897cbdd2dfc5c643d18a2b.png",
+         "forumName":"באיירן מינכן",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15570834"
       },
-      "id-184":{
-         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FBwJaee9.png",
-         "forumName":"CS:GO",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16254239"
+      "id-24":{
+         "forumImg":"https://i.imagesup.co/images2/8e9c2ea4ea07f6f03052513c228575854f70cc03.png",
+         "forumName":"Diablo IV",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10301460"
       },
-      "id-185":{
-         "forumImg":"https://i.imagesup.co/images2/1fd48773e039815da1e81554492fa0f8a710a1c2.png",
-         "forumName":"מכשירי Samsung",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14792127"
+      "id-25":{
+         "forumImg":"https://hod2017.com/wp-content/uploads/2018/05/summer-300x300.png",
+         "forumName":"אומנויות לחימה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11363290"
       },
-      "id-186":{
-         "forumImg":"https://images.weserv.nl/?url=up419.siz.co.il%2Fup2%2F2gmydizm1um0.png",
-         "forumName":"כתוביות ותרגומים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15515512"
+      "id-26":{
+         "forumImg":"https://i.imagesup.co/images2/7cae0597f98c3842963b8c570709f24d69f870bf.png",
+         "forumName":"פילוסופיות ותאוריות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20316266"
       },
-      "id-187":{
-         "forumImg":"https://i.imagesup.co/images2/093bf6464ada9fa433fbd664b75cd1f5903500b7.png",
-         "forumName":"קורקינטים ואופניים חשמליים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15693651"
+      "id-27":{
+         "forumImg":"https://i.imagesup.co/images2/460c587e211864aba36672812d001855f51ad15d.png",
+         "forumName":"פריז סן־ז\\'רמן",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20524697"
       },
-      "id-188":{
+      "id-28":{
+         "forumImg":"https://i.imagesup.co/images2/fa7371c66a46870cb1b06b94fdbd3dbcd0cb3ad3.png",
+         "forumName":"מיסטיקה ומאגיה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10773367"
+      },
+      "id-29":{
          "forumImg":"https://i.imagesup.co/images2/0acc2272a3fbdd5c61e816b887b9ae3b8f6505bc.png",
          "forumName":"ארסנל",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=17260490"
       },
-      "id-189":{
-         "forumImg":"https://i.imagesup.co/images2/63d02b02a505712b8ede6fe547966c190029082b.png",
-         "forumName":"בריאות הנפש",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18793156"
+      "id-30":{
+         "forumImg":"https://i.imagesup.co/images2/69e7366e062b292d6b4fafe8cbf98eaf6a5fe41e.png",
+         "forumName":"רשתות חברתיות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15107541"
       },
-      "id-190":{
-         "forumImg":"https://i.imagesup.co/images2/daff4b30f89a04ef5ab22024dc79dac87bc3ec33.png",
-         "forumName":"Instagram",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12696338"
-      },
-      "id-191":{
-         "forumImg":"https://i.imagesup.co/images2/f728bfdfaf807f598936bb171e3369610bc8d1a7.png",
-         "forumName":"קהילת NFT ישראל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21276251"
-      },
-      "id-192":{
-         "forumImg":"https://i.imagesup.co/images2/30785b15c9d1c79b29568298b297521094cf41bd.png",
-         "forumName":"Python +",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21307116"
-      },
-      "id-193":{
-         "forumImg":"https://i.imagesup.co/images2/30785b15c9d1c79b29568298b297521094cf41bd.png",
-         "forumName":"הפועל באר שבע",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192338"
-      },
-      "id-194":{
-         "forumImg":"https://i.imagesup.co/images2/30785b15c9d1c79b29568298b297521094cf41bd.png",
-         "forumName":"טהרן",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21271391"
-      },
-      "id-195":{
-         "forumImg":"https://i.imagesup.co/images2/b07a0d0201eda5c961bffa49af51d5ca5e75caf1.png",
-         "forumName":"פאודה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15828342"
-      },
-      "id-196":{
-         "forumImg":"https://i.imagesup.co/images2/59e2e31f254d138f396688da0bd52817bce35ae4.png",
-         "forumName":"Valorant",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20276930"
-      },
-      "id-197":{
-         "forumImg":"https://i.imagesup.co/images2/72bc36548c613808be4eb5dfb6b9c99c98942595.png",
-         "forumName":" Lost Ark",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21203440"
-      },
-      "id-198":{
-         "forumImg":"https://i.imagesup.co/images2/31b26c98d3c2421ba12b11c4477284a8f68fd74b.png",
-         "forumName":"Final Fantasy XIV",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21159148"
-      },
-      "id-199":{
-         "forumImg":"https://i.imagesup.co/images2/c36bb44da1e146b09dd6a16cabeb7ef4b3f6c46b.png",
-         "forumName":"משחקי אינדי",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808360"
-      },
-      "id-200":{
-         "forumImg":"https://i.imagesup.co/images2/d588e4e04ac7fd5ebfcc05d403560e582c51b640.png",
-         "forumName":"משחקי אפליקציות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12074747"
-      },
-      "id-201":{
-         "forumImg":"https://i.imagesup.co/images2/4658351c86b53387c554289d0262183d8ff14e1c.jpg",
-         "forumName":"תמיכה טכנית – משחקים",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18207232"
-      },
-      "id-202":{
-         "forumImg":"https://i.imagesup.co/images2/30785b15c9d1c79b29568298b297521094cf41bd.png",
-         "forumName":"DayZ",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808420"
-      },
-      "id-203":{
-         "forumImg":"https://i.imagesup.co/images2/0__05b4d2c212bb52.jpg",
-         "forumName":"מילים שבלב",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10149618"
-      },
-      "id-204":{
+      "id-31":{
          "forumImg":"https://i.imagesup.co/images2/69c26e718d783a12943113c107e299cf13c91c66.png",
          "forumName":"ספרים וכתיבה",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=21359503"
       },
-      "id-205":{
-         "forumImg":"https://i.imagesup.co/images2/4f8ec5ffe0a7d02144577972372f99ae1d0a12b2.png",
-         "forumName":"הישרדות",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16713964"
+      "id-32":{
+         "forumImg":"https://i.imagesup.co/images2/eb4b2d3173a99f8034279d792373f7f9726c1243.png",
+         "forumName":"חיי לילה ובילויים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=6738636"
       },
-      "id-206":{
-         "forumImg":"https://i.imagesup.co/images2/c426979be69aa311ab7ac2bec4d3bfa5c5bd87ac.png",
-         "forumName":"נינג'ה ישראל",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19042819"
+      "id-33":{
+         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
+         "forumName":"בריאות ותזונה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19989030"
       },
-      "id-207":{
-         "forumImg":"https://i.imagesup.co/images2/b4459e1094779d2dca9d3f58bccd0d32740876aa.png",
-         "forumName":"הזמר במסכה",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20537427"
+      "id-34":{
+         "forumImg":"https://i.imagesup.co/images2/676ff5f77b3d12893236a3ded47f826702c783cd.png",
+         "forumName":"Far Cry",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894263"
       },
-      "id-208":{
+      "id-35":{
+         "forumImg":"https://i.imagesup.co/images2/c3f80f05f0d47ff9b48a95d8d24e94a9c6ea6f20.png",
+         "forumName":"רוקדים עם כוכבים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21231898"
+      },
+      "id-36":{
+         "forumImg":"https://i.imagesup.co/images2/d29f1f4ffb1ff59b866b7c39a85f00b19aee4e9b.png",
+         "forumName":"טוטנהאם",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16545429"
+      },
+      "id-37":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/U9SL69h.png",
+         "forumName":"PlayStation 4",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12803955"
+      },
+      "id-38":{
+         "forumImg":"https://i.imagesup.co/images2/086a1ca616eaf3e7da33eba59b3e53edc60bc00e.png",
+         "forumName":"Rainbow Six Siege",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17014573"
+      },
+      "id-39":{
+         "forumImg":"https://1.bp.blogspot.com/-Ytl6cOYvaKE/VagwvBDFVUI/AAAAAAAAPwM/PH1YJI7-QXI/s1600/Chelsea%2BFC.png",
+         "forumName":"צ\\'לסי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15182204"
+      },
+      "id-40":{
+         "forumImg":"https://i.imagesup.co/images2/7c3f691b3c5c4719d32aed4750308fc4720bd5e7.png",
+         "forumName":"Fortnite",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18472308"
+      },
+      "id-41":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FX59QhWI.png",
+         "forumName":"בית&quot;ר ירושלים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570270"
+      },
+      "id-42":{
+         "forumImg":"https://i.imagesup.co/images2/1540b9d6e16422303bfe8aa892e97eed9630569a.png",
+         "forumName":"Battlefield",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18140845"
+      },
+      "id-43":{
+         "forumImg":"https://i.imagesup.co/images2/69e2e01265c6c9701744f71b6bb32619da56cbef.png",
+         "forumName":"תפקידים – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8563284"
+      },
+      "id-44":{
+         "forumImg":"https://i.imagesup.co/images2/fbc8a8c177b159b627ff1142c51240341106293e.png",
+         "forumName":"מנצ\\'סטר סיטי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17072444"
+      },
+      "id-45":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/FzuEAsg.png",
+         "forumName":"מכבי תל אביב כדורסל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570278"
+      },
+      "id-46":{
+         "forumImg":"https://i.imagesup.co/images2/017a1b11a3c26deb9a93ddb5f3f8c818d0b1d009.png",
+         "forumName":"אוהדים בחו&quot;ל – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16090175"
+      },
+      "id-47":{
+         "forumImg":"https://i.imagesup.co/images2/2870a71c86c07a348b8537da7840f2a09967f571.png",
+         "forumName":"סקרים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15460407"
+      },
+      "id-48":{
+         "forumImg":"https://i.imagesup.co/images2/7f1beba851df261220c06f9ea2a3d2ea25e7f1a5.png",
+         "forumName":"PlayStation 5",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20402971"
+      },
+      "id-49":{
+         "forumImg":"https://i.imagesup.co/images2/62ffa52f2e4f55c72cbc0a0870e790efa0f131f2.png",
+         "forumName":"Steam וחנויות דיגיטליות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808412"
+      },
+      "id-50":{
+         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
+         "forumName":"כושר ופיתוח הגוף",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16253116"
+      },
+      "id-51":{
+         "forumImg":"https://i.imagesup.co/images2/ff02d6d96408d431b6e65328ed543ab093fcb0d3.png",
+         "forumName":"טיולים בארץ ובחו&quot;ל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16609818"
+      },
+      "id-52":{
+         "forumImg":"https://i.imagesup.co/images2/8ca67d52d9a8bbc28131d08943d79a843363e346.png",
+         "forumName":"מערכות הפעלה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18801954"
+      },
+      "id-53":{
+         "forumImg":"https://i.imagesup.co/images2/3ced572af1235b994d68e388110b1ffed0728d11.png",
+         "forumName":"ליברפול",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13655927"
+      },
+      "id-54":{
+         "forumImg":"https://i.imagesup.co/images2/7de454ec0ad672b253ccdf93a685df6529e2e277.png",
+         "forumName":"Xbox Series X|S",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20527979"
+      },
+      "id-55":{
+         "forumImg":"https://i.imagesup.co/images2/b7d5534d4410524abc992d2c864b70ab10d90001.png",
+         "forumName":"אנדרואיד – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7697979"
+      },
+      "id-56":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FZEwp8zx.png",
+         "forumName":"מכבי חיפה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570269"
+      },
+      "id-57":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/HeZ0NHj.png",
+         "forumName":"הפועל באר שבע",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21498196"
+      },
+      "id-58":{
+         "forumImg":"https://i.imagesup.co/images2/0__05c5b56acb636c.jpg",
+         "forumName":"Marvel ,DC וגיבורי על",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16249462"
+      },
+      "id-59":{
+         "forumImg":"https://i.imagesup.co/images2/96bd72bc7ec94ee4e03ee5ba59dad11b6615a4d1.png",
+         "forumName":"מכבי נתניה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570277"
+      },
+      "id-60":{
+         "forumImg":"https://i.imagesup.co/images2/f8f366c372b1b28f8feffd4d1a5a71c23a7d7fd3.png",
+         "forumName":"Assassin\\'s Creed",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894236"
+      },
+      "id-61":{
+         "forumImg":"https://i.imagesup.co/images2/0f3571cb8f8ca7469c7071e6947111c1c9634dbb.png",
+         "forumName":"לימודים ובית ספר",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12484759"
+      },
+      "id-62":{
+         "forumImg":"https://i.imagesup.co/images2/b0554633256fab6a0257e9540fb8b0796aadd590.png",
+         "forumName":"GTA",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16495699"
+      },
+      "id-63":{
+         "forumImg":"https://i.imagesup.co/images2/a04ca88090cbac68f8ea3bf34eb021397deef38a.png",
+         "forumName":"Call of Duty",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14894313"
+      },
+      "id-64":{
+         "forumImg":"https://i.imagesup.co/images2/87a9147fb9ef428efd2e03d6a2057d9293aab1c9.png",
+         "forumName":"מציאות מדומה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17007367"
+      },
+      "id-65":{
+         "forumImg":"https://i.imagesup.co/images2/1215793fa573f0ed34f148a81f1b95774c9ec08e.png",
+         "forumName":"סדרות חו&quot;ל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14053670"
+      },
+      "id-66":{
+         "forumImg":"https://i.imagesup.co/images2/b6c8469080893c5fc8868a0ac143080fe57ecf43.png",
+         "forumName":"קולנוע וסרטים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13841667"
+      },
+      "id-67":{
+         "forumImg":"https://i.imagesup.co/images2/8b388c8cf27ecf3475ac5999c08b759c024c97d3.png",
+         "forumName":"Genshin Impact",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20755414"
+      },
+      "id-68":{
+         "forumImg":"https://i.imagesup.co/images2/68c5b71c410aa61f90c3d831fe5f2d85e9e8c17a.png",
+         "forumName":"World of Warcraft",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7144991"
+      },
+      "id-69":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/Qgac039.png",
+         "forumName":"הפועל תל אביב",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570275"
+      },
+      "id-70":{
+         "forumImg":"https://i.imagesup.co/images2/94be8184d7d911f1f38a77a4fb72932db81fecb0.png",
+         "forumName":"League of Legends",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15693482"
+      },
+      "id-71":{
+         "forumImg":"https://i.imagesup.co/images2/14c4b19357b2fba4298eee200e121bd11084c87c.png",
+         "forumName":"CS:GO",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16254239"
+      },
+      "id-72":{
+         "forumImg":"https://i.imagesup.co/images2/0d80e8240efbb7f0ad88bf01be7a49275a2983fb.png",
+         "forumName":"בגרויות ומה שביניהן",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8083135"
+      },
+      "id-73":{
+         "forumImg":"https://i.imagesup.co/images2/3291895c9bf83202c3ea02d2ca8dd55f0e7fba30.png",
+         "forumName":"משפטים ואכיפת חוק",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21530673"
+      },
+      "id-74":{
+         "forumImg":"https://i.imagesup.co/images2/f35685fbc403944464a1c02c688a31114bf1a159.png",
+         "forumName":"טלוויזיות ומסכים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12720421"
+      },
+      "id-75":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/49v3iQt.png",
+         "forumName":"כתוביות ותרגומים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15515512"
+      },
+      "id-76":{
+         "forumImg":"https://i.imagesup.co/images2/1fd48773e039815da1e81554492fa0f8a710a1c2.png",
+         "forumName":"מכשירי Samsung",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14792127"
+      },
+      "id-77":{
+         "forumImg":"https://i.imagesup.co/images2/c30898cb1b3e3d5473fdb9b5c63a6b39c906aab0.png",
+         "forumName":"MU Online",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14800854"
+      },
+      "id-78":{
+         "forumImg":"https://i.imagesup.co/images2/2b92799baf6b7409b0ddbe9fde65cffeb2d3e1d1.png",
+         "forumName":"לימודי נהיגה ותאוריה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16792837"
+      },
+      "id-79":{
+         "forumImg":"https://i.imagesup.co/images2/2246e6fd7dd3af1fd599a114c9abc8a3dbf2ffb1.png",
+         "forumName":"Apex Legends",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19460966"
+      },
+      "id-80":{
+         "forumImg":"https://i.imagesup.co/images2/40a15a4b88b0bb176c6079ff2545f5e06af0f830.png",
+         "forumName":"אתאיזם",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10665584"
+      },
+      "id-81":{
+         "forumImg":"https://i.imagesup.co/images2/923872c767bb49a9ca76428f409c80c5a6a28614.png",
+         "forumName":"Minecraft",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15422872"
+      },
+      "id-82":{
          "forumImg":"https://i.imagesup.co/images2/1fd89fdcff170cd5896700284c37d0f20f6b02e6.png",
          "forumName":"Maple Story",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=20768048"
       },
-      "id-209":{
-         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp-m.png",
-         "forumName":"FullStack",
-         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16159041"
-      }, 
-      "id-210": {
+      "id-83":{
+         "forumImg":"https://i.imagesup.co/images2/69533e8c515f690f7802eb7de5a6a3e4ce3cd022.png",
+         "forumName":"Overwatch 2",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17216323"
+      },
+      "id-84":{
+         "forumImg":"https://i.imagesup.co/images2/30fc10a119e262391e02c58b5fc03a1a7a3392dd.png",
+         "forumName":"מכבי תל אביב",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21570272"
+      },
+      "id-85":{
+         "forumImg":"https://static.fcdn.co.il/images3/logo-fxp.png",
+         "forumName":"ספורט אתגרי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14138014"
+      },
+      "id-86":{
+         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
+         "forumName":"חומרה – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18316415"
+      },
+      "id-87":{
+         "forumImg":"https://i.imagesup.co/images2/f69eb39d618d17039447faee131759f22c958dc9.png",
+         "forumName":"חידות ואתגרי חשיבה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20494073"
+      },
+      "id-88":{
+         "forumImg":"https://i.imagesup.co/images2/ca4e42df212fd27122756422d7ce9b5cab67934d.png",
+         "forumName":"מכשירים סלולריים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12720391"
+      },
+      "id-89":{
+         "forumImg":"https://i.imagesup.co/images2/1f073f3aecb706e9e1cf2bd03477140cd84874a2.png",
+         "forumName":"FIFA",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808416"
+      },
+      "id-90":{
+         "forumImg":"https://i.imagesup.co/images2/59ce1ac8f835ca159420057d19f67dce91368641.png",
+         "forumName":"סדרות אנימציה ונוסטלגיה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14137157"
+      },
+      "id-91":{
+         "forumImg":"https://images.weserv.nl/?url=embed.gyazo.com%2F47c1a80db383455d5af3e9e676379337.png",
+         "forumName":"תמיכה טכנית – חומרה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18411312"
+      },
+      "id-92":{
+         "forumImg":"https://i.imagesup.co/images2/11299e9fbc17ebd44f9e7c6265a753a05db7478a.png",
+         "forumName":"סדרות ישראליות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16308681"
+      },
+      "id-93":{
+         "forumImg":"https://i.imagesup.co/images2/c6e19d9155528fc4c541327634177b6dd559e053.png",
+         "forumName":"מתמטיקה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5017008"
+      },
+      "id-94":{
+         "forumImg":"https://i.imagesup.co/images2/53d38ec465a17671eea19abe37e17258184dbc4f.png",
+         "forumName":"כלכלה ועסקים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17251427"
+      },
+      "id-95":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
+         "forumName":"רוק ומטאל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8109348"
+      },
+      "id-96":{
+         "forumImg":"https://i.imagesup.co/images2/a088dd5ad84510e1969979dbe5cbcc76a25429fd.png",
+         "forumName":"קורקינטים ואופניים חשמליים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15693651"
+      },
+      "id-97":{
+         "forumImg":"https://i.imagesup.co/images2/af654fdcd8bc60536a246ba4744e45e678da3f85.png",
+         "forumName":"השפה העברית",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=10348478"
+      },
+      "id-98":{
+         "forumImg":"https://i.imagesup.co/images2/ea93780a73c1783db1973b93094188d7776cea8a.png",
+         "forumName":"השכלה גבוהה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19807175"
+      },
+      "id-99":{
+         "forumImg":"https://i.imagesup.co/images2/06594b95fa4204dbeb48e41c747c80ae54618bbf.png",
+         "forumName":"מדע וחלל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=11421526"
+      },
+      "id-100":{
          "forumImg":"https://images.weserv.nl/?url=i.imgur.com/E1LkQYe.png",
-         "forumName":"נינטנדו סוויץ' \ Nintendo Switch",
+         "forumName":"נינטנדו סוויץ\\' \\\\ Nintendo Switch",
          "challengeLink":"https://www.fxp.co.il/showthread.php?t=15757893"
+      },
+      "id-101":{
+         "forumImg":"https://i.imagesup.co/images2/d63a801f078f7b8dfbb45a35008031d39c206964.png",
+         "forumName":"פסיכומטרי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18671283"
+      },
+      "id-102":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/utKAaVe.png",
+         "forumName":"Gamer",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15808336"
+      },
+      "id-103":{
+         "forumImg":"https://i.imagesup.co/images2/59e2e31f254d138f396688da0bd52817bce35ae4.png",
+         "forumName":"Valorant",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20276930"
+      },
+      "id-104":{
+         "forumImg":"https://i.imagesup.co/images2/b60918646dba3aa4ceedb3c63f38180d69a8cb76.png",
+         "forumName":"גינון וגידול צמחים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20315598"
+      },
+      "id-105":{
+         "forumImg":"https://i.imagesup.co/images2/6a639d76ce9d40a5a2648842cf5acdf75a6dabe0.png",
+         "forumName":"מחשבים ניידים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13846071"
+      },
+      "id-106":{
+         "forumImg":"https://i.imagesup.co/images2/f48c163f25f2eba622ba2cc36d81815f0a7a264a.png",
+         "forumName":"וואן פיס",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14289062"
+      },
+      "id-107":{
+         "forumImg":"https://i.imagesup.co/images2/4b5122d1c111e803fbdff5f5a7a147e21000883f.png",
+         "forumName":"צמחונות וטבעונות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20528736"
+      },
+      "id-108":{
+         "forumImg":"https://cdn.discordapp.com/attachments/480105025847427093/574578914505261090/6.png",
+         "forumName":"זיכרונות RAM, כוננים קשיחים ו־SSD",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19622687"
+      },
+      "id-109":{
+         "forumImg":"https://i.imagesup.co/images2/0d6bf8423749e3924d3762c4826ce18b0728b18f.png",
+         "forumName":"מוטוריקה ורכב",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19647074"
+      },
+      "id-110":{
+         "forumImg":"https://i.imagesup.co/images2/0c7844a5264c88658ef6a36cd629d94a91b93b79.png",
+         "forumName":"דו־גלגלי וטרקטורונים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20012710"
+      },
+      "id-111":{
+         "forumImg":"https://i.imagesup.co/images2/dc5ae028a172ec9a517bb9ae36bc8997a5b5ced0.png",
+         "forumName":"פיזיקה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21022750"
+      },
+      "id-112":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FilyK24C.png",
+         "forumName":"אוהדים בארץ – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19785537"
+      },
+      "id-113":{
+         "forumImg":"https://i.imagesup.co/images2/3bde058a03f7af7fdbf757ce243134d74c5a5a09.png",
+         "forumName":"בעלי חיים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=9234843"
+      },
+      "id-114":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/n2g0Bcx.png",
+         "forumName":"מוזיקה כללית",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=7970114"
+      },
+      "id-115":{
+         "forumImg":"https://i.imagesup.co/images2/062fd40503d96f7bca1ac86cfd5d023c449c4f57.png",
+         "forumName":"Netflix ושירותי סטרימינג",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749453"
+      },
+      "id-116":{
+         "forumImg":"https://cdn.discordapp.com/attachments/697060360003518535/697140638780489759/PUBG_FXP.png",
+         "forumName":"PUBG",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18113763"
+      },
+      "id-117":{
+         "forumImg":"https://i.imagesup.co/images2/86490162516554b28b41b2f3e54db637faef08dc.png",
+         "forumName":"מעבדים ולוחות אם",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21202777"
+      },
+      "id-118":{
+         "forumImg":"https://i.imagesup.co/images2/1bce5d6cf9b353a5d337b7e70daa36bec27f5e89.png",
+         "forumName":"מלב אל לב",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13136490"
+      },
+      "id-119":{
+         "forumImg":"https://i.imagesup.co/images2/31fc96d58c1195fb67a3d7c5b52d8672fa69a086.png",
+         "forumName":"פוקימון",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17503814"
+      },
+      "id-120":{
+         "forumImg":"https://i.imagesup.co/images2/266484500e85a3992409bbce677b5f6538f1cb0a.png",
+         "forumName":"מפרטי מחשב",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205381"
+      },
+      "id-121":{
+         "forumImg":"https://i.imagesup.co/images2/bab74664cd4cfc78209945751821414fde22a74a.png",
+         "forumName":"אנימה ומנגה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14289025"
+      },
+      "id-122":{
+         "forumImg":"https://i.imagesup.co/images2/e740d70d6bec711727e5399d5a5417413f8f5ada.png",
+         "forumName":"כרטיסי מסך",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8274064"
+      },
+      "id-123":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FlkqZ3.png",
+         "forumName":"יוצרים מוזיקה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19252883"
+      },
+      "id-124":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com%2FWKnoQpQ.png",
+         "forumName":"כדורסל בארץ – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17192291"
+      },
+      "id-125":{
+         "forumImg":"https://i.imagesup.co/images2/4ec332eeacfa174107aedf88a85640565f6acf7a.png",
+         "forumName":"כימיה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749201"
+      },
+      "id-126":{
+         "forumImg":"https://i.imagesup.co/images2/91fde867da4aa1002fbb2ecd495d6676b2dba3f9.png",
+         "forumName":"Apple \\\\ אפל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=15191283"
+      },
+      "id-127":{
+         "forumImg":"https://i.imagesup.co/images2/09b81ebf12c3d2ff3e1952b4c9f1661a983d5378.png",
+         "forumName":"תחביבים – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=19993240"
+      },
+      "id-128":{
+         "forumImg":"https://i.imagesup.co/images2/7a5bf472830a22fee08d4acda18ede23803febeb.png",
+         "forumName":"גרפיקה ועריכת סרטים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14596869"
+      },
+      "id-129":{
+         "forumImg":"https://i.imagesup.co/images2/a07e7c4d4160bbd89f9a2bc33b8e0fda653877ba.png",
+         "forumName":"YouTube",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16985833"
+      },
+      "id-130":{
+         "forumImg":"https://i.imagesup.co/images2/98ade9e9f2b958506239d92e5b233a53a86954e7.png",
+         "forumName":"טכנולוגיה – כללי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13899786"
+      },
+      "id-131":{
+         "forumImg":"https://i.imagesup.co/images2/07a0a9043f883dead619c6e45b0d9910884403fb.png",
+         "forumName":"יהדות ותורה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20124380"
+      },
+      "id-132":{
+         "forumImg":"https://i.imagesup.co/images2/c72b759d4b702f43c8c101222ec58e0b7fc85f97.png",
+         "forumName":"רשתות ואינטרנט",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205334"
+      },
+      "id-133":{
+         "forumImg":"https://i.imagesup.co/images2/d48895c56f6f12deec612b783e4fc9c18304f783.png",
+         "forumName":"מדעי המחשב והנדסת חשמל",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17251417"
+      },
+      "id-134":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/9IBs5l9.png",
+         "forumName":"ייעוץ מיני",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16250882"
+      },
+      "id-135":{
+         "forumImg":"https://i.imagesup.co/images2/99443dcd5021cbe74fe58fb6a69b31e792d18169.png",
+         "forumName":"שחמט ומשחקי לוח",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=20667526"
+      },
+      "id-136":{
+         "forumImg":"https://i.imagesup.co/images2/4658351c86b53387c554289d0262183d8ff14e1c.jpg",
+         "forumName":"תמיכה טכנית – משחקים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18207232"
+      },
+      "id-137":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/C2K7xAQ.png",
+         "forumName":"פיקאפ ופיתוח עצמי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18682083"
+      },
+      "id-138":{
+         "forumImg":"https://i.imagesup.co/images2/47c8e5223616e8fb0fe7c35c0bfdba58dd8f27df.png",
+         "forumName":"קונספירציות ומיתוסים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16021932"
+      },
+      "id-139":{
+         "forumImg":"https://i.imagesup.co/images2/17dd0064427967a5a79c6275f6595b519ba12f16.png",
+         "forumName":"גאדג\\'טים ואביזרים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=13919012"
+      },
+      "id-140":{
+         "forumImg":"https://i.imagesup.co/images2/66d500bc1a358108583a01c86259c530bb912292.png",
+         "forumName":"רחפנים, טיסנים ומכוניות שלט",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=17158750"
+      },
+      "id-141":{
+         "forumImg":"https://i.imagesup.co/images2/548b3a1f5480a26d26bbffb1a8e912fd5284f95a.png",
+         "forumName":"ביולוגיה ומדעי הרפואה",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8223513"
+      },
+      "id-142":{
+         "forumImg":"https://i.imagesup.co/images2/6e80a9866e0d2efe9c5d20db2894f89c06e45041.png",
+         "forumName":"אנגלית ושפות זרות",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18749317"
+      },
+      "id-143":{
+         "forumImg":"https://images.weserv.nl/?url=i.gyazo.com%2Fb9732c19d5d5c71883f3196a99fa864f.png",
+         "forumName":"ייעוץ לעבודה ודרושים",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=14842738"
+      },
+      "id-144":{
+         "forumImg":"https://i.imagesup.co/images2/f8bb13610b187667196321b39d960807040d9eb3.png",
+         "forumName":"‫מארזים, מודינג, ספקי כוח,‬‎ קירור ו-OC",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=12452960"
+      },
+      "id-145":{
+         "forumImg":"https://images.weserv.nl/?url=i.imgur.com/PEwyHGp.png",
+         "forumName":"צבא וביטחון",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=8594414"
+      },
+      "id-146":{
+         "forumImg":"https://i.imagesup.co/images2/b35786f5e1426212fcb34d7a293607e8a84c6cc7.png",
+         "forumName":"דרגון בול",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=16982094"
+      },
+      "id-147":{
+         "forumImg":"https://i.imagesup.co/images2/75545942de1dc4308a370ba9e55d4c4ab9986889.png",
+         "forumName":"גאים בעצמנו",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=6626582"
+      },
+      "id-148":{
+         "forumImg":"https://i.imagesup.co/images2/f956e980e8055448ca45828644b7fef162a92803.png",
+         "forumName":"iPhone",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=5581296"
+      },
+      "id-149":{
+         "forumImg":"https://i.imagesup.co/images2/fd815e4d4b1eae9171b3df1abb15f1324b046f68.png",
+         "forumName":"נארוטו",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=18085378"
+      },
+      "id-150":{
+         "forumImg":"https://i.imagesup.co/images2/f4262692d83a6c1d74591798ccf2a2cd1f90d82b.png",
+         "forumName":"ציוד היקפי",
+         "challengeLink":"https://www.fxp.co.il/showthread.php?t=21205319"
       }
    }
 }
