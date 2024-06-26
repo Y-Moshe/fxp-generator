@@ -236,11 +236,6 @@ export const inputs: { [template: string]: InputType[] } = {
                     id: 3,
                     label: 'מנהל/ת',
                     value: 'admin'
-                },
-                {
-                    id: 4,
-                    label: 'חבר/ת צוות',
-                    value: 'teammate'
                 }
             ]
         },
