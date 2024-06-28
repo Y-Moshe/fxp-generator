@@ -237,11 +237,12 @@ export const inputs: { [template: string]: InputType[] } = {
                     label: 'מנהל/ת',
                     value: 'admin'
                 },
-                {
-                    id: 4,
-                    label: 'חבר/ת צוות',
-                    value: 'teammate'
-                }
+                // Comment out as for issue: https://github.com/Y-Moshe/fxp-generator/issues/48
+                // {
+                //     id: 4,
+                //     label: 'חבר/ת צוות',
+                //     value: 'teammate'
+                // }
             ]
         },
         {
