@@ -75,9 +75,10 @@ const getRankNote = (currentRank: string) => {
         case 'admin':
             text2Return = 'משום שאת/ה מנהל/ת, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם באמצעות פתיחת אשכול ב[URL="https://www.fxp.co.il/forumdisplay.php?f=4723"]תת פורום פרסים[/URL] :)';
             break;
-        case 'teammate':
-            text2Return = 'כיוון שאת/ה חבר/ת צוות, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם כיוון שאת/ה חבר/ת צוות, יש לך גישה להיכל התהילה, לכן לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם :)';
-            break;
+        // Comment out as for issue: https://github.com/Y-Moshe/fxp-generator/issues/48
+        // case 'teammate':
+        //     text2Return = 'כיוון שאת/ה חבר/ת צוות, לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם, ותוכל/י לממשם כיוון שאת/ה חבר/ת צוות, יש לך גישה להיכל התהילה, לכן לא תקבל/י עכשיו את ימי הווינר, אך את/ה זכאי/ת להם :)';
+        //     break;
         //    unRanked
         default:
             text2Return = '';
