@@ -71,6 +71,11 @@ function App() {
         })
     };
 
+    const handleSelect = ( value ) => {
+        setTemplate( value );
+        setBBCode( '' );
+    };
+  
     const handleReset = () => {
         setTemplate( '' );
         setBBCode( '' );
@@ -111,7 +116,7 @@ function App() {
                 <div className = "TemplateContainer">
                     <Select
                         template = { template }
-                        onSelect = { value => setTemplate( value ) } />
+                        onSelect = { handleSelect } />
                     {template && <Template
                         userSettings        = { userSettings }
                         autoCompleteOptions = { autoCompleteOptions }
